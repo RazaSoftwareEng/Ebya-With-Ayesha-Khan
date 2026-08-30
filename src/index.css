@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-heading: "Poppins", system-ui, sans-serif;
+
+  --color-navy-950: #060f22;
+  --color-navy-900: #0b1f3a;
+  --color-navy-800: #10294c;
+  --color-navy-700: #163760;
+  --color-navy-600: #1f4a7d;
+
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-500: #2563eb;
+  --color-brand-600: #1d4ed8;
+  --color-brand-700: #1e40af;
+
+  --color-gold-400: #f7b955;
+  --color-gold-500: #f5a623;
+  --color-gold-600: #d88f12;
+
+  --animate-fade-up: fade-up 0.7s ease both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
