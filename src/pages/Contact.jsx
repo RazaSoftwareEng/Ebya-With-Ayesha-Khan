@@ -105,7 +105,7 @@ export default function Contact() {
                     href={c.href}
                     target={c.external ? '_blank' : undefined}
                     rel={c.external ? 'noopener noreferrer' : undefined}
-                    className="mt-4 inline-block rounded-full bg-gold-500 px-4 py-2 text-xs font-bold text-navy-900 transition hover:bg-gold-400"
+                    className="mt-4 inline-block rounded-full bg-brand-600 px-4 py-2 text-xs font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-700"
                   >
                     {c.cta}
                   </a>

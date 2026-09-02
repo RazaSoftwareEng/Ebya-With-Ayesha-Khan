@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
+import ChatBot from './components/ChatBot'
 import Home from './pages/Home'
 import Courses from './pages/Courses'
 import Services from './pages/Services'
@@ -34,6 +35,7 @@ function App() {
         </main>
         <Footer />
         <WhatsAppButton />
+        <ChatBot />
       </div>
     </BrowserRouter>
   )

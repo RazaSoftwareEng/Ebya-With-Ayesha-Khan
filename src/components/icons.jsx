@@ -200,10 +200,42 @@ export function IconYoutube(props) {
   )
 }
 
+export function IconChat(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={26} height={26} fill="currentColor" {...props}>
+      <path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+    </svg>
+  )
+}
+
+export function IconSend(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={18} height={18} fill="currentColor" {...props}>
+      <path d="M3 11.5 21 3l-6 18-3.5-7.5L3 11.5Z" />
+    </svg>
+  )
+}
+
 export function IconChevronDown(props) {
   return (
     <svg viewBox="0 0 24 24" width={20} height={20} {...base} {...props}>
       <path d="M6 9l6 6 6-6" />
+    </svg>
+  )
+}
+
+export function IconPlus(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={18} height={18} {...base} {...props}>
+      <path d="M12 5v14M5 12h14" />
+    </svg>
+  )
+}
+
+export function IconArrowLeft(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={20} height={20} {...base} {...props}>
+      <path d="M19 12H5M11 6l-6 6 6 6" />
     </svg>
   )
 }

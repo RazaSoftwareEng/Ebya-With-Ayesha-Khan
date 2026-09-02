@@ -11,11 +11,11 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2.5">
             <span className="grid h-10 w-10 place-items-center rounded-xl bg-gold-500 font-heading text-lg font-bold text-navy-900">
-              EK
+              AK
             </span>
             <span className="font-heading text-white">
-              <span className="block text-base font-bold">Ebay With</span>
-              <span className="-mt-1 block text-sm font-semibold text-gold-400">Ayesha Khan</span>
+              <span className="block text-base font-bold">Ayesha Khan</span>
+              <span className="-mt-1 block text-sm font-semibold text-gold-400">Official</span>
             </span>
           </div>
           <p className="mt-4 text-sm leading-relaxed">
@@ -99,7 +99,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 py-5 text-xs sm:flex-row lg:px-8">
-          <p>© {year} Ebay With Ayesha Khan. All rights reserved.</p>
+          <p>© {year} Ayesha Khan Official. All rights reserved.</p>
           <p>Empowering students &amp; companies to sell online with confidence.</p>
         </div>
       </div>

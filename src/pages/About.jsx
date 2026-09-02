@@ -52,8 +52,8 @@ export default function About() {
     <>
       <PageHero
         eyebrow="About Us"
-        title="Meet Ebay With Ayesha Khan"
-        subtitle="A training academy built on one simple belief: anyone can build a real online business with the right guidance."
+        title="Meet Ayesha Khan Official"
+        subtitle="A training institute built on one simple belief: anyone can build a real online business with the right guidance."
       />
 
       <section className="bg-white py-16 lg:py-20">
@@ -63,10 +63,10 @@ export default function About() {
               Our Story
             </span>
             <h2 className="mt-3 font-heading text-2xl font-extrabold text-navy-900 sm:text-3xl">
-              From One Seller's Experience to a Trusted Academy
+              From One Seller's Experience to a Trusted Institute
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              Ebay With Ayesha Khan began with a simple goal — helping everyday people understand how
+              Ayesha Khan Official began with a simple goal — helping everyday people understand how
               online selling really works, without the confusion, jargon or unrealistic promises often
               found online.
             </p>
@@ -156,7 +156,7 @@ export default function About() {
               Our Journey
             </span>
             <h2 className="mt-3 font-heading text-2xl font-extrabold sm:text-3xl">
-              How We Grew Into a Trusted Academy
+              How We Grew Into a Trusted Institute
             </h2>
           </div>
 

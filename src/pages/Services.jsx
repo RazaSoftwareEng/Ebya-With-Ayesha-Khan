@@ -162,7 +162,7 @@ export default function Services() {
           <div className="mt-8 text-center">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 text-sm font-bold text-navy-900 shadow-lg shadow-gold-500/30 transition hover:bg-gold-400"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-600/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
             >
               Discuss Your Requirements <IconArrowRight />
             </Link>
