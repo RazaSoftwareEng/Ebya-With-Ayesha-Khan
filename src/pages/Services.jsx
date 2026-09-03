@@ -1,5 +1,6 @@
 import PageHero from '../components/PageHero'
 import CTASection from '../components/CTASection'
+import Seo from '../components/Seo'
 import {
   IconArrowRight,
   IconAward,
@@ -67,6 +68,12 @@ const process = [
 export default function Services() {
   return (
     <>
+      <Seo
+        title="Our Services"
+        description="eBay store setup, product research, dropshipping automation, 1-on-1 mentorship and corporate ecommerce training."
+        path="/services"
+      />
+
       <PageHero
         eyebrow="Our Services"
         title="More Than Courses — Full Ecommerce Support"

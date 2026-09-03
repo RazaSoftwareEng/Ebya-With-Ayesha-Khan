@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import PageHero from '../components/PageHero'
+import Seo from '../components/Seo'
 import {
   IconCheck,
   IconClock,
@@ -77,6 +78,12 @@ export default function Contact() {
 
   return (
     <>
+      <Seo
+        title="Contact Us"
+        description="Get in touch with Ayesha Khan Official for course enrollment, corporate training or general questions — by phone, WhatsApp, email or our contact form."
+        path="/contact"
+      />
+
       <PageHero
         eyebrow="Contact Us"
         title="Let's Start Your Ecommerce Journey Today"

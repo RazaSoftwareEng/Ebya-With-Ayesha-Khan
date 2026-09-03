@@ -1,5 +1,6 @@
 import PageHero from '../components/PageHero'
 import CTASection from '../components/CTASection'
+import Seo from '../components/Seo'
 import {
   IconAward,
   IconCheck,
@@ -50,6 +51,12 @@ const milestones = [
 export default function About() {
   return (
     <>
+      <Seo
+        title="About Us"
+        description="Meet Ayesha Khan Official — a training institute built on practical, mentor-led ecommerce education trusted by thousands of students and companies."
+        path="/about"
+      />
+
       <PageHero
         eyebrow="About Us"
         title="Meet Ayesha Khan Official"

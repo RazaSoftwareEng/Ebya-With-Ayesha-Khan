@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import CTASection from '../components/CTASection'
+import Seo from '../components/Seo'
 import { IconArrowRight, IconBox, IconCheck, IconChart, IconClock, IconRocket, IconStar, IconUsers, IconGlobe, IconTarget } from '../components/icons'
 
 const courses = [
@@ -95,6 +96,12 @@ const courses = [
 export default function Courses() {
   return (
     <>
+      <Seo
+        title="Courses"
+        description="Short, practical courses in eBay selling, dropshipping, product research and ecommerce growth — for beginners through to companies."
+        path="/courses"
+      />
+
       <PageHero
         eyebrow="Our Courses"
         title="Short Courses Designed to Get You Selling, Fast"

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal'
+import Seo from '../components/Seo'
 import banner1 from '../components/assets/1.png'
 import banner2 from '../components/assets/2.png'
 import banner3 from '../components/assets/3.png'
@@ -477,6 +478,12 @@ export default function Home() {
 
   return (
     <>
+      <Seo
+        title="eBay, Dropshipping & Ecommerce Courses"
+        description="Learn eBay selling and dropshipping through practical, mentor-led short courses. Trusted by 2,500+ students and companies across Pakistan."
+        path="/"
+      />
+
       <section className="relative bg-white py-8 lg:py-10">
         <Reveal>{heroContent}</Reveal>
       </section>
