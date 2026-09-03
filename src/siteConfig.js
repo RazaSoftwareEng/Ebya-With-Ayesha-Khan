@@ -1,6 +1,5 @@
 // Update these with the real business details before going live.
-// siteUrl is a placeholder — replace with the real production domain once one is connected.
-export const siteUrl = 'https://ayeshakhanofficial.netlify.app'
+export const siteUrl = 'https://ayeshakhanofficial.com'
 
 export const site = {
   name: 'Ayesha Khan Official',
