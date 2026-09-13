@@ -36,23 +36,19 @@ export default function Blog() {
               <Reveal
                 key={post.slug}
                 delay={i * 80}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:ring-brand-100"
               >
-                <span
-                  className={`h-1.5 w-full bg-gradient-to-r ${post.bar}`}
-                  aria-hidden="true"
-                />
-                <div className="flex flex-1 flex-col p-6">
-                  <div className="flex items-center justify-between gap-3">
-                    <div className={`grid h-12 w-12 place-items-center rounded-xl ${post.tint}`}>
-                      <post.icon width={22} height={22} />
-                    </div>
-                    <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-bold text-brand-600">
-                      {post.category}
-                    </span>
-                  </div>
+                <div className={`relative flex h-36 items-center justify-center bg-gradient-to-br ${post.thumb}`}>
+                  <span className="absolute top-3 right-3 rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-white backdrop-blur-sm">
+                    {post.category}
+                  </span>
+                  <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white/15 text-white shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                    <post.icon width={26} height={26} />
+                  </span>
+                </div>
 
-                  <h2 className="mt-5 font-heading text-lg font-bold text-navy-900">
+                <div className="flex flex-1 flex-col p-6">
+                  <h2 className="font-heading text-lg font-bold text-navy-900">
                     {post.title}
                   </h2>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">

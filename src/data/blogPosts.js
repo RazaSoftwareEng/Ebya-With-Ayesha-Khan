@@ -1,4 +1,4 @@
-import { IconBox, IconRocket, IconTarget } from '../components/icons'
+import { IconBox, IconMegaphone, IconRocket, IconSparkles, IconTarget, IconTiktok } from '../components/icons'
 
 // All articles below are original write-ups produced for this site — not copied from
 // any external source. Update dates/author as new posts are published.
@@ -13,8 +13,7 @@ export const blogPosts = [
     date: '2026-07-18',
     readTime: '6 min read',
     icon: IconBox,
-    tint: 'bg-violet-50 text-violet-600',
-    bar: 'from-violet-500 to-violet-300',
+    thumb: 'from-slate-800 to-slate-950',
     body: [
       {
         type: 'p',
@@ -57,7 +56,7 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'None of these fixes require advanced skills — they require attention and a bit of structure, which is exactly what we walk through step by step inside our eBay Selling Fundamentals course.',
+        text: 'None of these fixes require advanced skills — they require attention and a bit of structure, which is exactly what we walk through step by step inside our eBay Selling Mastery course.',
       },
     ],
   },
@@ -71,8 +70,7 @@ export const blogPosts = [
     date: '2026-08-02',
     readTime: '7 min read',
     icon: IconTarget,
-    tint: 'bg-amber-50 text-amber-600',
-    bar: 'from-amber-500 to-orange-400',
+    thumb: 'from-amber-500 to-orange-600',
     body: [
       {
         type: 'p',
@@ -119,7 +117,7 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'Product research is a skill, and like any skill it gets faster and more accurate with repetition. We walk through this exact process — tools included — inside our Product Research & Sourcing course.',
+        text: 'Product research is a skill, and like any skill it gets faster and more accurate with repetition. We walk through this exact process — tools included — inside our Shopify Store Mastery course.',
       },
     ],
   },
@@ -133,8 +131,7 @@ export const blogPosts = [
     date: '2026-08-20',
     readTime: '6 min read',
     icon: IconRocket,
-    tint: 'bg-emerald-50 text-emerald-600',
-    bar: 'from-emerald-500 to-emerald-300',
+    thumb: 'from-emerald-600 to-teal-700',
     body: [
       {
         type: 'p',
@@ -173,6 +170,157 @@ export const blogPosts = [
       {
         type: 'p',
         text: 'There is no universally "better" model — only the model that matches where you are right now. We cover both paths in depth, including exactly when and how to transition between them, inside our course tracks.',
+      },
+    ],
+  },
+  {
+    slug: 'tiktok-shop-beginners-guide',
+    title: 'TikTok Shop for Beginners: How Selling Actually Works',
+    excerpt:
+      'TikTok Shop lets you sell without ever leaving the app — but it works differently from a traditional marketplace. Here is what beginners need to understand before their first listing.',
+    category: 'TikTok Shop',
+    author: 'Ayesha Khan',
+    date: '2026-09-05',
+    readTime: '6 min read',
+    icon: IconTiktok,
+    thumb: 'from-rose-600 to-fuchsia-700',
+    body: [
+      {
+        type: 'p',
+        text: "TikTok Shop is one of the fastest-growing sales channels we teach right now, and also one of the most misunderstood. Sellers coming from eBay or Shopify often assume it works the same way with a different interface — it doesn't. Here is what actually matters if you're starting from zero.",
+      },
+      { type: 'h2', text: 'What makes TikTok Shop different' },
+      {
+        type: 'p',
+        text: "On a marketplace like eBay, buyers arrive already searching for something specific. On TikTok Shop, most sales start with someone who wasn't looking to buy anything — they got interested because of a video. That single difference changes almost everything about how you should approach the platform.",
+      },
+      { type: 'h2', text: 'Content comes before ads' },
+      {
+        type: 'p',
+        text: "New sellers often want to jump straight to paid promotion. On TikTok Shop, organic content is what proves a product works before you spend anything on ads. A handful of genuine, well-made product videos will teach you more about what resonates than a week of guessing with an ad budget.",
+      },
+      { type: 'h2', text: 'Setting up a shop that gets approved' },
+      {
+        type: 'p',
+        text: 'TikTok reviews shops and products before they go live, and incomplete information is the most common reason for delays. Have your business details, product images and category information ready and accurate before you apply — rushing this step is the easiest way to add days to your launch.',
+      },
+      { type: 'h2', text: 'Working with creators and affiliates' },
+      {
+        type: 'p',
+        text: "You don't have to be on camera yourself. TikTok Shop's affiliate program lets creators promote your products for a commission, which means your catalog can get in front of audiences you'd never reach alone. Start with a handful of small creators in your niche rather than chasing the biggest names first.",
+      },
+      { type: 'h2', text: 'Common beginner mistakes' },
+      {
+        type: 'ul',
+        items: [
+          'Treating it like a listing platform instead of a content platform',
+          'Giving up after two or three videos that didn\'t perform',
+          'Ignoring comments, which hurts how much reach future videos get',
+          'Pricing without accounting for TikTok Shop\'s commission structure',
+        ],
+      },
+      {
+        type: 'p',
+        text: "TikTok Shop rewards consistency and content quality more than ad budget, which is exactly what makes it accessible to new sellers. We walk through account setup, content strategy and the affiliate program step by step inside our TikTok Shop Selling course.",
+      },
+    ],
+  },
+  {
+    slug: 'ai-tools-for-ecommerce-sellers',
+    title: '5 Practical Ways Ecommerce Sellers Are Using AI Right Now',
+    excerpt:
+      'AI tools are cutting the time sellers spend on research, listings and customer support. Here are five practical use cases you can start applying this week.',
+    category: 'AI Tools',
+    author: 'Ayesha Khan',
+    date: '2026-09-10',
+    readTime: '5 min read',
+    icon: IconSparkles,
+    thumb: 'from-brand-600 to-navy-800',
+    body: [
+      {
+        type: 'p',
+        text: "Most of the AI discussion online is about the future. This is about right now — the specific, unglamorous tasks our students are already handing off to AI tools to save real hours every week. None of it requires technical skill, just knowing where to point the tool.",
+      },
+      { type: 'h2', text: 'Product and niche research, faster' },
+      {
+        type: 'p',
+        text: 'Instead of manually browsing category after category, sellers are using AI to summarize trend data, compare competing products and shortlist ideas worth a closer look. It doesn\'t replace your own judgment — it just gets you to the shortlist faster so you can spend your time validating, not searching.',
+      },
+      { type: 'h2', text: "Writing listings that don't sound robotic" },
+      {
+        type: 'p',
+        text: 'A first AI draft of a listing is rarely ready to publish as-is, but it\'s a genuinely useful starting point — it gets the structure and keywords in place so you\'re editing instead of starting from a blank page. The sellers who get the best results still rewrite the first two lines themselves, since that\'s what buyers actually read.',
+      },
+      { type: 'h2', text: 'Basic product photography and image cleanup' },
+      {
+        type: 'p',
+        text: 'Background removal, simple touch-ups and generating lifestyle-style backgrounds for a plain product photo used to require design skills or a paid editor. AI image tools have made this a five-minute task, which matters most for sellers who can\'t arrange a full photoshoot for every item.',
+      },
+      { type: 'h2', text: 'A first line of customer support' },
+      {
+        type: 'p',
+        text: 'A simple AI chatbot trained on your shipping policy, return policy and FAQs can handle the repetitive questions that eat up a seller\'s day, while flagging anything unusual for a real response from you. This is especially useful outside business hours, when a buyer\'s question would otherwise sit unanswered.',
+      },
+      { type: 'h2', text: "What AI still can't do for you" },
+      {
+        type: 'p',
+        text: "AI won't vet a supplier, won't catch a policy violation specific to your marketplace, and won't build the kind of customer trust a genuinely thoughtful reply does. Treat it as a way to move faster through repetitive work, not a replacement for the judgment calls that actually grow a store.",
+      },
+      {
+        type: 'p',
+        text: "The sellers seeing the biggest time savings aren't using more tools than everyone else — they're using a handful of them consistently, inside a workflow. That workflow is exactly what we build with students inside our AI for Ecommerce Sellers course.",
+      },
+    ],
+  },
+  {
+    slug: 'facebook-google-ads-budget-for-beginners',
+    title: "How Much Should You Spend on Ads? A Beginner's Budget Framework",
+    excerpt:
+      'Most new sellers either spend too little to learn anything or too much before they understand what is working. Here is a simple framework for budgeting your first ad campaigns.',
+    category: 'Digital Marketing',
+    author: 'Ayesha Khan',
+    date: '2026-09-13',
+    readTime: '6 min read',
+    icon: IconMegaphone,
+    thumb: 'from-sky-600 to-blue-800',
+    body: [
+      {
+        type: 'p',
+        text: "\"How much should I spend on ads?\" is one of the first questions every new seller asks us, and it's also one of the easiest to get wrong in both directions. Spend too little and you never collect enough data to learn anything. Spend too much before you understand your numbers, and you can lose real money fast. Here is the framework we teach.",
+      },
+      { type: 'h2', text: 'Start with a testing budget, not a growth budget' },
+      {
+        type: 'p',
+        text: "Your first two to three weeks of ad spend should be treated as the cost of learning, not the cost of scaling. The goal isn't profit yet — it's finding out which audience, creative and offer combination actually gets a response, on a budget small enough that a bad result doesn't hurt.",
+      },
+      { type: 'h2', text: 'Know your numbers before you spend a rupee' },
+      {
+        type: 'p',
+        text: "Before any ad goes live, know your product margin and roughly what you can afford to pay to acquire a customer and still profit. Without that number, you have no way to judge whether a campaign is actually working or just feels exciting because sales are coming in.",
+      },
+      { type: 'h2', text: 'Split your budget across a small number of tests' },
+      {
+        type: 'ul',
+        items: [
+          'Two to three audiences, not ten, so each gets enough spend to mean something',
+          'Two to three ad creatives per audience, tested against each other',
+          'One clear offer per test — don\'t change the price and the creative at the same time',
+          'A fixed daily budget you won\'t exceed no matter how tempting it feels',
+        ],
+      },
+      { type: 'h2', text: 'When to increase spend' },
+      {
+        type: 'p',
+        text: 'Increase budget on a campaign only after it has shown a consistent, profitable result over several days — not after one good afternoon. Scale gradually, in steps of around 20 to 30 percent, rather than doubling a budget overnight, which often makes the same campaign perform worse.',
+      },
+      { type: 'h2', text: 'When to cut a campaign' },
+      {
+        type: 'p',
+        text: "If a campaign has spent roughly two to three times your target cost-per-sale with no results, it has told you what you need to know — stop it and move that budget to your next test. Holding onto an underperforming campaign out of hope is the single most common way beginners waste their ad budget.",
+      },
+      {
+        type: 'p',
+        text: "None of this requires a large budget to start — it requires structure. We build this exact testing and scaling framework with students, across Facebook, Instagram, Google and TikTok, inside our Digital Marketing for Ecommerce course.",
       },
     ],
   },

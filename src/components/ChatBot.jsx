@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { IconChat, IconClose, IconSend } from './icons'
 import { site, whatsappLink } from '../siteConfig'
+import { courses } from '../data/courses'
 
 const quickReplies = [
   { label: 'Our Courses', key: 'courses' },
@@ -9,14 +10,7 @@ const quickReplies = [
   { label: 'Talk to a Human', key: 'human' },
 ]
 
-const courseNames = [
-  'eBay Selling Fundamentals',
-  'Dropshipping Mastery',
-  'Product Research & Sourcing',
-  'Ecommerce Store Growth',
-  'Multi-Channel Selling',
-  'Corporate Team Training',
-]
+const courseNames = courses.map((c) => c.title)
 
 function botReplyFor(key) {
   switch (key) {

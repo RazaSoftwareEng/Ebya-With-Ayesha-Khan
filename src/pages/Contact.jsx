@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import Seo from '../components/Seo'
 import {
@@ -10,6 +11,7 @@ import {
   IconWhatsApp,
 } from '../components/icons'
 import { site, whatsappLink } from '../siteConfig'
+import { courses } from '../data/courses'
 
 const contactCards = [
   {
@@ -41,10 +43,13 @@ const contactCards = [
   },
 ]
 
-const initialForm = { name: '', email: '', phone: '', course: '', message: '' }
+const emptyForm = { name: '', email: '', phone: '', course: '', message: '' }
 
 export default function Contact() {
-  const [form, setForm] = useState(initialForm)
+  const [searchParams] = useSearchParams()
+  const prefilledCourse = courses.find((c) => c.slug === searchParams.get('course'))?.title || ''
+
+  const [form, setForm] = useState({ ...emptyForm, course: prefilledCourse })
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
 
@@ -72,7 +77,7 @@ export default function Contact() {
     setErrors(errs)
     if (Object.keys(errs).length === 0) {
       setSubmitted(true)
-      setForm(initialForm)
+      setForm(emptyForm)
     }
   }
 
@@ -207,11 +212,10 @@ export default function Contact() {
                       className="mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
                     >
                       <option value="">Select an option</option>
-                      <option>eBay Selling Fundamentals</option>
-                      <option>Dropshipping Mastery</option>
-                      <option>Product Research & Sourcing</option>
-                      <option>Ecommerce Store Growth</option>
-                      <option>Corporate Team Training</option>
+                      {courses.map((c) => (
+                        <option key={c.slug}>{c.title}</option>
+                      ))}
+                      <option>Corporate / Team Training</option>
                       <option>Something Else</option>
                     </select>
                   </div>

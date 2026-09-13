@@ -93,9 +93,10 @@ export default function BlogDetail() {
         jsonLd={jsonLd}
       />
 
-      <section className="relative overflow-hidden bg-navy-900 text-white">
-        <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-brand-600/30 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-gold-500/20 blur-3xl" />
+      <section className={`relative overflow-hidden bg-gradient-to-br ${post.thumb} text-white`}>
+        <div className="absolute inset-0 bg-navy-950/55" />
+        <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-20">
           <nav className="flex items-center gap-2 text-xs font-semibold text-white/60">
             <Link to="/" className="hover:text-white">Home</Link>
@@ -167,19 +168,23 @@ export default function BlogDetail() {
                 <Reveal
                   key={r.slug}
                   delay={i * 80}
-                  className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+                  className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:ring-brand-100"
                 >
-                  <div className={`grid h-12 w-12 place-items-center rounded-xl ${r.tint}`}>
-                    <r.icon width={22} height={22} />
+                  <div className={`relative flex h-32 items-center justify-center bg-gradient-to-br ${r.thumb}`}>
+                    <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white/15 text-white shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                      <r.icon width={26} height={26} />
+                    </span>
                   </div>
-                  <h3 className="mt-4 font-heading text-lg font-bold text-navy-900">{r.title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{r.excerpt}</p>
-                  <Link
-                    to={`/blog/${r.slug}`}
-                    className="mt-5 flex items-center gap-2 text-sm font-bold text-brand-600 hover:text-brand-700"
-                  >
-                    Read Article <IconArrowRight width={16} height={16} />
-                  </Link>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="font-heading text-lg font-bold text-navy-900">{r.title}</h3>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{r.excerpt}</p>
+                    <Link
+                      to={`/blog/${r.slug}`}
+                      className="mt-5 flex items-center gap-2 text-sm font-bold text-brand-600 hover:text-brand-700"
+                    >
+                      Read Article <IconArrowRight width={16} height={16} />
+                    </Link>
+                  </div>
                 </Reveal>
               ))}
             </div>

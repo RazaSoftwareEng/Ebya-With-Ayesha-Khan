@@ -147,6 +147,33 @@ export function IconTarget(props) {
   )
 }
 
+export function IconMonitor(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={26} height={26} {...base} {...props}>
+      <rect x="3" y="4" width="18" height="13" rx="2" />
+      <path d="M8 21h8M12 17v4" />
+    </svg>
+  )
+}
+
+export function IconCode(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={26} height={26} {...base} {...props}>
+      <path d="M9 8 4 12l5 4M15 8l5 4-5 4" />
+    </svg>
+  )
+}
+
+export function IconAdTarget(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={26} height={26} {...base} {...props}>
+      <circle cx="10" cy="14" r="7" />
+      <circle cx="10" cy="14" r="3" />
+      <path d="M14.5 9.5 21 3M21 3h-5M21 3v5" />
+    </svg>
+  )
+}
+
 export function IconBox(props) {
   return (
     <svg viewBox="0 0 24 24" width={26} height={26} {...base} {...props}>
@@ -200,6 +227,68 @@ export function IconYoutube(props) {
   )
 }
 
+export function IconLinkedin(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={20} height={20} fill="currentColor" {...props}>
+      <path d="M4.98 3.5a2.48 2.48 0 1 1 0 4.96 2.48 2.48 0 0 1 0-4.96ZM3 9.5h4v11H3v-11Zm7 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v6.45h-4v-5.72c0-1.37-.02-3.12-1.9-3.12-1.9 0-2.2 1.48-2.2 3.02v5.82h-4v-11Z" />
+    </svg>
+  )
+}
+
+export function IconTiktok(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={20} height={20} fill="currentColor" {...props}>
+      <path d="M16.5 2h-3.2v13.6a2.9 2.9 0 1 1-2.05-2.77V9.6a6.1 6.1 0 1 0 5.25 6.04V9.03a7.7 7.7 0 0 0 4.5 1.44V7.27c-1.9 0-3.5-1.1-4.2-2.6-.2-.42-.3-.87-.3-1.35V2Z" />
+    </svg>
+  )
+}
+
+export function IconShoppingBag(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={26} height={26} {...base} {...props}>
+      <path d="M6 8h12l1 13H5L6 8Z" />
+      <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+    </svg>
+  )
+}
+
+export function IconGift(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={26} height={26} {...base} {...props}>
+      <rect x="3.5" y="9" width="17" height="12" rx="1.5" />
+      <path d="M3.5 9h17M12 9v12" />
+      <path d="M12 9c-1-3-3-4.5-4.5-4.5S5 5.8 5 7c0 1.2 1 2 2.5 2M12 9c1-3 3-4.5 4.5-4.5S19 5.8 19 7c0 1.2-1 2-2.5 2" />
+    </svg>
+  )
+}
+
+export function IconTag(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={26} height={26} {...base} {...props}>
+      <path d="M11.5 3.5H5a1.5 1.5 0 0 0-1.5 1.5v6.5a1.5 1.5 0 0 0 .44 1.06l9 9a1.5 1.5 0 0 0 2.12 0l6.5-6.5a1.5 1.5 0 0 0 0-2.12l-9-9a1.5 1.5 0 0 0-1.06-.44Z" />
+      <circle cx="8.2" cy="8.2" r="1.4" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+export function IconSparkles(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={26} height={26} {...base} {...props}>
+      <path d="M12 3.5c.5 3 2 4.5 5 5-3 .5-4.5 2-5 5-.5-3-2-4.5-5-5 3-.5 4.5-2 5-5Z" />
+      <path d="M19 14c.3 1.5 1 2.2 2.5 2.5-1.5.3-2.2 1-2.5 2.5-.3-1.5-1-2.2-2.5-2.5 1.5-.3 2.2-1 2.5-2.5Z" />
+    </svg>
+  )
+}
+
+export function IconMegaphone(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={26} height={26} {...base} {...props}>
+      <path d="M3 10v4a1 1 0 0 0 1 1h2l1 5h2l-1-5h1l9 4V6l-9 4H4a1 1 0 0 0-1 1Z" />
+      <path d="M19 9.5a3.5 3.5 0 0 1 0 5" />
+    </svg>
+  )
+}
+
 export function IconChat(props) {
   return (
     <svg viewBox="0 0 24 24" width={26} height={26} fill="currentColor" {...props}>
@@ -228,6 +317,15 @@ export function IconPlus(props) {
   return (
     <svg viewBox="0 0 24 24" width={18} height={18} {...base} {...props}>
       <path d="M12 5v14M5 12h14" />
+    </svg>
+  )
+}
+
+export function IconSearch(props) {
+  return (
+    <svg viewBox="0 0 24 24" width={18} height={18} {...base} {...props}>
+      <circle cx="11" cy="11" r="7" />
+      <path d="M21 21l-4.3-4.3" />
     </svg>
   )
 }

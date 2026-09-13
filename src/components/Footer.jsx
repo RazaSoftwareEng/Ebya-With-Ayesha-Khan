@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { IconPhone, IconMail, IconLocation, IconClock, IconFacebook, IconInstagram, IconYoutube } from './icons'
 import { site } from '../siteConfig'
+import { courses } from '../data/courses'
+import ayeshaAvatar from './assets/ayesha-avatar.png'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -10,9 +12,11 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <div className="flex items-center gap-2.5">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gold-500 font-heading text-lg font-bold text-navy-900">
-              AK
-            </span>
+            <img
+              src={ayeshaAvatar}
+              alt="Ayesha Khan"
+              className="h-11 w-11 shrink-0 rounded-full object-cover ring-2 ring-white/15"
+            />
             <span className="font-heading text-white">
               <span className="block text-base font-bold">Ayesha Khan</span>
               <span className="-mt-1 block text-sm font-semibold text-gold-400">Official</span>
@@ -66,10 +70,11 @@ export default function Footer() {
             Our Courses
           </h4>
           <ul className="mt-4 space-y-2.5 text-sm">
-            <li><Link to="/courses" className="hover:text-gold-400">eBay Selling Fundamentals</Link></li>
-            <li><Link to="/courses" className="hover:text-gold-400">Dropshipping Mastery</Link></li>
-            <li><Link to="/courses" className="hover:text-gold-400">Product Research &amp; Sourcing</Link></li>
-            <li><Link to="/courses" className="hover:text-gold-400">Ecommerce Store Growth</Link></li>
+            {courses.map((c) => (
+              <li key={c.slug}>
+                <Link to={`/courses/${c.slug}`} className="hover:text-gold-400">{c.title}</Link>
+              </li>
+            ))}
           </ul>
         </div>
 

@@ -4,8 +4,10 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
 import ChatBot from './components/ChatBot'
+import SocialSidebar from './components/SocialSidebar'
 import Home from './pages/Home'
 import Courses from './pages/Courses'
+import CourseDetail from './pages/CourseDetail'
 import Services from './pages/Services'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -30,6 +32,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/courses/:slug" element={<CourseDetail />} />
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
@@ -38,6 +41,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <SocialSidebar />
         <WhatsAppButton />
         <ChatBot />
       </div>
