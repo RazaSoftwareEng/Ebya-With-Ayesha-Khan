@@ -28,12 +28,14 @@ export default function Seo({
   description,
   path = '/',
   type = 'website',
+  image = '/og-image.jpg',
   jsonLd,
   noindex = false,
 }) {
   useEffect(() => {
     const fullTitle = title ? `${title} | Ayesha Khan Official` : 'Ayesha Khan Official'
     const url = `${siteUrl}${path}`
+    const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`
 
     document.title = fullTitle
     upsertMeta('name', 'description', description)
@@ -42,9 +44,11 @@ export default function Seo({
     upsertMeta('property', 'og:description', description)
     upsertMeta('property', 'og:type', type)
     upsertMeta('property', 'og:url', url)
+    upsertMeta('property', 'og:image', imageUrl)
     upsertMeta('name', 'twitter:card', 'summary_large_image')
     upsertMeta('name', 'twitter:title', fullTitle)
     upsertMeta('name', 'twitter:description', description)
+    upsertMeta('name', 'twitter:image', imageUrl)
     upsertLink('canonical', url)
 
     let script = null
@@ -64,7 +68,7 @@ export default function Seo({
         document.getElementById('seo-jsonld')?.remove()
       }
     }
-  }, [title, description, path, type, jsonLd, noindex])
+  }, [title, description, path, type, image, jsonLd, noindex])
 
   return null
 }

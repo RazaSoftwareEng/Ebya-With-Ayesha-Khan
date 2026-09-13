@@ -24,8 +24,8 @@ export default function Courses() {
   return (
     <>
       <Seo
-        title="Courses"
-        description="Practical, mentor-led courses in eBay, Shopify, TikTok Shop, Etsy, AI for ecommerce, and digital marketing — for beginners through to companies."
+        title="eBay, Shopify & TikTok Shop Courses"
+        description="Practical, mentor-led courses in eBay, Shopify, TikTok Shop, Etsy, AI for ecommerce, and digital marketing in Lahore, Pakistan — for beginners through to companies."
         path="/courses"
       />
 

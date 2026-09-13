@@ -72,16 +72,27 @@ export default function BlogDetail() {
 
   const related = getRelatedPosts(post.slug)
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.excerpt,
-    author: { '@type': 'Person', name: post.author },
-    publisher: { '@type': 'Organization', name: site.name },
-    datePublished: post.date,
-    mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
-  }
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: post.title,
+      description: post.excerpt,
+      author: { '@type': 'Person', name: post.author },
+      publisher: { '@type': 'Organization', name: site.name },
+      datePublished: post.date,
+      mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` },
+        { '@type': 'ListItem', position: 3, name: post.title, item: `${siteUrl}/blog/${post.slug}` },
+      ],
+    },
+  ]
 
   return (
     <>

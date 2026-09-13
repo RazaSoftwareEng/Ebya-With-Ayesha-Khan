@@ -52,8 +52,8 @@ export default function About() {
   return (
     <>
       <Seo
-        title="About Us"
-        description="Meet Ayesha Khan Official — a training institute built on practical, mentor-led ecommerce education trusted by thousands of students and companies."
+        title="About Ayesha Khan | Ecommerce Mentor, Lahore"
+        description="Meet Ayesha Khan Official — a Lahore-based training institute built on practical, mentor-led eBay, Shopify and ecommerce education trusted by thousands of students and companies."
         path="/about"
       />
 

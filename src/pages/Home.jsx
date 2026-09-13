@@ -558,8 +558,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="eBay, Dropshipping & Ecommerce Courses"
-        description="Learn eBay selling and dropshipping through practical, mentor-led short courses. Trusted by 2,500+ students and companies across Pakistan."
+        title="eBay, Shopify & TikTok Shop Courses in Lahore, Pakistan"
+        description="Learn eBay, Shopify, TikTok Shop, Etsy, AI tools and digital marketing through practical, mentor-led courses in Lahore, Pakistan. Trusted by 2,500+ students and companies — online and in-person batches."
         path="/"
       />
 

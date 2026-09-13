@@ -3,7 +3,7 @@ import Seo from '../components/Seo'
 import CTASection from '../components/CTASection'
 import Reveal from '../components/Reveal'
 import { courses } from '../data/courses'
-import { enrollFormUrl } from '../siteConfig'
+import { enrollFormUrl, site, siteUrl } from '../siteConfig'
 import { IconArrowLeft, IconArrowRight, IconCheck, IconClock, IconGlobe, IconUsers } from '../components/icons'
 
 export default function CourseDetail() {
@@ -14,12 +14,45 @@ export default function CourseDetail() {
 
   const otherCourses = courses.filter((c) => c.slug !== slug).slice(0, 3)
 
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Course',
+      name: course.title,
+      description: course.desc,
+      provider: {
+        '@type': 'Organization',
+        name: site.name,
+        sameAs: siteUrl,
+      },
+      hasCourseInstance: {
+        '@type': 'CourseInstance',
+        courseMode: course.mode,
+        courseWorkload: course.duration,
+        location: {
+          '@type': 'Place',
+          name: site.address,
+        },
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Courses', item: `${siteUrl}/courses` },
+        { '@type': 'ListItem', position: 3, name: course.title, item: `${siteUrl}/courses/${course.slug}` },
+      ],
+    },
+  ]
+
   return (
     <>
       <Seo
         title={course.title}
-        description={course.desc}
+        description={`${course.desc} Taught in Lahore, Pakistan — online and in-person batches available.`}
         path={`/courses/${course.slug}`}
+        jsonLd={jsonLd}
       />
 
       <section className={`relative overflow-hidden bg-gradient-to-br ${course.thumb} text-white`}>
