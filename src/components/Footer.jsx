@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { IconPhone, IconMail, IconLocation, IconClock, IconFacebook, IconInstagram, IconYoutube } from './icons'
-import { site } from '../siteConfig'
+import { IconPhone, IconMail, IconLocation, IconClock, IconFacebook, IconInstagram, IconLinkedin, IconTiktok, IconWhatsApp } from './icons'
+import { site, whatsappLink } from '../siteConfig'
 import { courses } from '../data/courses'
 import ayeshaAvatar from './assets/ayesha-avatar.png'
 
@@ -28,7 +28,18 @@ export default function Footer() {
           </p>
           <div className="mt-5 flex gap-3">
             <a
+              href={whatsappLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-gold-500 hover:text-navy-900"
+            >
+              <IconWhatsApp width={20} height={20} />
+            </a>
+            <a
               href={site.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-gold-500 hover:text-navy-900"
             >
@@ -36,17 +47,30 @@ export default function Footer() {
             </a>
             <a
               href={site.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-gold-500 hover:text-navy-900"
             >
               <IconInstagram />
             </a>
             <a
-              href={site.social.youtube}
-              aria-label="YouTube"
+              href={site.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-gold-500 hover:text-navy-900"
             >
-              <IconYoutube />
+              <IconLinkedin />
+            </a>
+            <a
+              href={site.social.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+              className="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-gold-500 hover:text-navy-900"
+            >
+              <IconTiktok />
             </a>
           </div>
         </div>

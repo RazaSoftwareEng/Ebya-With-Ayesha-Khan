@@ -1,7 +1,8 @@
-import { IconFacebook, IconInstagram, IconLinkedin, IconTiktok } from './icons'
-import { site } from '../siteConfig'
+import { IconFacebook, IconInstagram, IconLinkedin, IconTiktok, IconWhatsApp } from './icons'
+import { site, whatsappLink } from '../siteConfig'
 
 const items = [
+  { href: whatsappLink(), label: 'WhatsApp', Icon: IconWhatsApp, bg: 'bg-[#25D366]' },
   { href: site.social.facebook, label: 'Facebook', Icon: IconFacebook, bg: 'bg-[#1877F2]' },
   {
     href: site.social.instagram,
