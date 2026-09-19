@@ -11,6 +11,7 @@ import {
   IconWhatsApp,
 } from '../components/icons'
 import { site, whatsappLink } from '../siteConfig'
+import { useHydrated } from '../useHydrated'
 import { courses } from '../data/courses'
 
 const contactCards = [
@@ -47,9 +48,12 @@ const emptyForm = { name: '', email: '', phone: '', course: '', message: '' }
 
 export default function Contact() {
   const [searchParams] = useSearchParams()
-  const prefilledCourse = courses.find((c) => c.slug === searchParams.get('course'))?.title || ''
+  const hydrated = useHydrated()
+  const prefilledCourse = hydrated
+    ? courses.find((c) => c.slug === searchParams.get('course'))?.title || ''
+    : ''
 
-  const [form, setForm] = useState({ ...emptyForm, course: prefilledCourse })
+  const [form, setForm] = useState(emptyForm)
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
 
@@ -207,7 +211,7 @@ export default function Contact() {
                     <select
                       id="course"
                       name="course"
-                      value={form.course}
+                      value={form.course || prefilledCourse}
                       onChange={handleChange}
                       className="mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
                     >

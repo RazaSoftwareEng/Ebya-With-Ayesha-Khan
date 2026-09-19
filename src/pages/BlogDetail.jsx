@@ -4,7 +4,8 @@ import Reveal from '../components/Reveal'
 import CTASection from '../components/CTASection'
 import { IconArrowLeft, IconArrowRight, IconClock, IconUsers } from '../components/icons'
 import { getBlogPostBySlug, getRelatedPosts } from '../data/blogPosts'
-import { site, siteUrl } from '../siteConfig'
+import { site } from '../siteConfig'
+import { pageUrl } from '../seoUtils'
 
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-US', {
@@ -60,7 +61,7 @@ export default function BlogDetail() {
               The article you're looking for doesn't exist or may have been moved.
             </p>
             <Link
-              to="/blog"
+              to="/blog/"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-brand-700"
             >
               <IconArrowLeft width={16} height={16} /> Back to Blog
@@ -83,15 +84,15 @@ export default function BlogDetail() {
       author: { '@type': 'Person', name: post.author },
       publisher: { '@type': 'Organization', name: site.name },
       datePublished: post.date,
-      mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
+      mainEntityOfPage: pageUrl(`/blog/${post.slug}`),
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` },
-        { '@type': 'ListItem', position: 3, name: post.title, item: `${siteUrl}/blog/${post.slug}` },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: pageUrl('/') },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: pageUrl('/blog') },
+        { '@type': 'ListItem', position: 3, name: post.title, item: pageUrl(`/blog/${post.slug}`) },
       ],
     },
   ]
@@ -114,7 +115,7 @@ export default function BlogDetail() {
           <nav className="flex items-center gap-2 text-xs font-semibold text-white/60">
             <Link to="/" className="hover:text-white">Home</Link>
             <span>/</span>
-            <Link to="/blog" className="hover:text-white">Blog</Link>
+            <Link to="/blog/" className="hover:text-white">Blog</Link>
           </nav>
 
           <span className="mt-5 inline-block rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-gold-400">
@@ -149,13 +150,13 @@ export default function BlogDetail() {
 
           <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-slate-100 pt-6">
             <Link
-              to="/blog"
+              to="/blog/"
               className="flex items-center gap-2 text-sm font-bold text-brand-600 hover:text-brand-700"
             >
               <IconArrowLeft width={16} height={16} /> Back to Blog
             </Link>
             <Link
-              to="/contact"
+              to="/contact/"
               className="flex items-center gap-2 rounded-full bg-brand-600 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700"
             >
               <IconUsers width={16} height={16} /> Talk to Our Team
@@ -192,7 +193,7 @@ export default function BlogDetail() {
                     <h3 className="font-heading text-lg font-bold text-navy-900">{r.title}</h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{r.excerpt}</p>
                     <Link
-                      to={`/blog/${r.slug}`}
+                      to={`/blog/${r.slug}/`}
                       className="mt-5 flex items-center gap-2 text-sm font-bold text-brand-600 hover:text-brand-700"
                     >
                       Read Article <IconArrowRight width={16} height={16} />

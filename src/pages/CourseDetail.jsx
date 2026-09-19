@@ -6,13 +6,14 @@ import { courses } from '../data/courses'
 import { buildCourseFaqs } from '../data/courseFaqs'
 import { verifiedReviews } from '../data/reviews'
 import { enrollFormUrl, site, siteUrl } from '../siteConfig'
+import { pageUrl } from '../seoUtils'
 import { IconArrowLeft, IconArrowRight, IconCheck, IconClock, IconGlobe, IconPlus, IconUsers } from '../components/icons'
 
 export default function CourseDetail() {
   const { slug } = useParams()
   const course = courses.find((c) => c.slug === slug)
 
-  if (!course) return <Navigate to="/courses" replace />
+  if (!course) return <Navigate to="/courses/" replace />
 
   const otherCourses = courses.filter((c) => c.slug !== slug).slice(0, 3)
   const faqs = buildCourseFaqs(course)
@@ -62,9 +63,9 @@ export default function CourseDetail() {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-        { '@type': 'ListItem', position: 2, name: 'Courses', item: `${siteUrl}/courses` },
-        { '@type': 'ListItem', position: 3, name: course.title, item: `${siteUrl}/courses/${course.slug}` },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: pageUrl('/') },
+        { '@type': 'ListItem', position: 2, name: 'Courses', item: pageUrl('/courses') },
+        { '@type': 'ListItem', position: 3, name: course.title, item: pageUrl(`/courses/${course.slug}`) },
       ],
     },
     {
@@ -93,7 +94,7 @@ export default function CourseDetail() {
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
         <div className="relative mx-auto max-w-5xl px-5 py-16 lg:px-8 lg:py-20">
           <Link
-            to="/courses"
+            to="/courses/"
             className="inline-flex items-center gap-2 text-sm font-semibold text-white/70 transition-colors duration-300 hover:text-gold-400"
           >
             <IconArrowLeft width={16} height={16} /> All Courses
@@ -234,7 +235,7 @@ export default function CourseDetail() {
               {otherCourses.map((c) => (
                 <Link
                   key={c.slug}
-                  to={`/courses/${c.slug}`}
+                  to={`/courses/${c.slug}/`}
                   className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-brand-100"
                 >
                   <div className={`relative flex h-32 items-center justify-center bg-gradient-to-br ${c.thumb}`}>

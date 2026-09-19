@@ -80,7 +80,7 @@ console.log('prerendered 404.html')
 const urls = routes
   .map(
     (r) =>
-      `  <url>\n    <loc>${SITE_URL}${r.path === '/' ? '/' : r.path}</loc>\n` +
+      `  <url>\n    <loc>${SITE_URL}${r.path === '/' ? '/' : `${r.path}/`}</loc>\n` +
       (r.lastmod ? `    <lastmod>${r.lastmod}</lastmod>\n` : '') +
       `    <priority>${r.priority}</priority>\n  </url>`,
   )

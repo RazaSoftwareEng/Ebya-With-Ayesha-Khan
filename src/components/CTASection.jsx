@@ -15,7 +15,7 @@ export default function CTASection({
         <p className="mx-auto mt-3 max-w-xl text-white/80">{subtitle}</p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
-            to="/contact"
+            to="/contact/"
             className="flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-navy-900 shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
           >
             Contact Us Immediately

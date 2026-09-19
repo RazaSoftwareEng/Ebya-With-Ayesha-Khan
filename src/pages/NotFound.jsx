@@ -28,7 +28,7 @@ export default function NotFound() {
               Go to Homepage
             </Link>
             <Link
-              to="/courses"
+              to="/courses/"
               className="flex items-center gap-2 rounded-full border-2 border-slate-200 px-7 py-3 text-sm font-bold text-navy-900 transition-all duration-300 hover:border-brand-200 hover:bg-brand-50"
             >
               View Courses <IconArrowRight width={16} height={16} />

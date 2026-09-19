@@ -81,11 +81,11 @@ export default function Footer() {
           </h4>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li><Link to="/" className="hover:text-gold-400">Home</Link></li>
-            <li><Link to="/courses" className="hover:text-gold-400">Courses</Link></li>
-            <li><Link to="/services" className="hover:text-gold-400">Our Services</Link></li>
-            <li><Link to="/blog" className="hover:text-gold-400">Blog</Link></li>
-            <li><Link to="/about" className="hover:text-gold-400">About Us</Link></li>
-            <li><Link to="/contact" className="hover:text-gold-400">Contact</Link></li>
+            <li><Link to="/courses/" className="hover:text-gold-400">Courses</Link></li>
+            <li><Link to="/services/" className="hover:text-gold-400">Our Services</Link></li>
+            <li><Link to="/blog/" className="hover:text-gold-400">Blog</Link></li>
+            <li><Link to="/about/" className="hover:text-gold-400">About Us</Link></li>
+            <li><Link to="/contact/" className="hover:text-gold-400">Contact</Link></li>
           </ul>
         </div>
 
@@ -96,7 +96,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm">
             {courses.map((c) => (
               <li key={c.slug}>
-                <Link to={`/courses/${c.slug}`} className="hover:text-gold-400">{c.title}</Link>
+                <Link to={`/courses/${c.slug}/`} className="hover:text-gold-400">{c.title}</Link>
               </li>
             ))}
           </ul>

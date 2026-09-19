@@ -109,8 +109,8 @@ export default function Services() {
   return (
     <>
       <Seo
-        title="eBay Consultancy & Shopify Marketing Services in Lahore"
-        description="eBay consultancy and store management, Shopify stores and marketing, TikTok Shop, business websites, Google & Meta ads, and custom software & CRM development in Lahore, Pakistan."
+        title="eBay Consultancy & Shopify Marketing in Lahore"
+        description="eBay consultancy and store management, Shopify marketing, TikTok Shop, business websites and Google & Meta ads for sellers in Lahore, Pakistan."
         path="/services"
       />
 
@@ -220,7 +220,7 @@ export default function Services() {
           </div>
           <div className="mt-8 text-center">
             <Link
-              to="/contact"
+              to="/contact/"
               className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-600/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
             >
               Discuss Your Requirements <IconArrowRight />

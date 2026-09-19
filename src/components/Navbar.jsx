@@ -57,7 +57,7 @@ export default function Navbar() {
   const submitSearch = (e) => {
     e.preventDefault()
     const term = query.trim()
-    navigate(term ? `/courses?q=${encodeURIComponent(term)}` : '/courses')
+    navigate(term ? `/courses/?q=${encodeURIComponent(term)}` : '/courses/')
     setQuery('')
     closeAll()
   }
@@ -158,7 +158,7 @@ export default function Navbar() {
             <NavLink to="/" end className={navLinkClass}>
               Home
             </NavLink>
-            <NavLink to="/about" className={navLinkClass}>
+            <NavLink to="/about/" className={navLinkClass}>
               About Us
             </NavLink>
 
@@ -169,7 +169,7 @@ export default function Navbar() {
               onMouseLeave={() => setCoursesOpen(false)}
             >
               <NavLink
-                to="/courses"
+                to="/courses/"
                 onClick={closeAll}
                 onFocus={() => setCoursesOpen(true)}
                 aria-expanded={coursesOpen}
@@ -197,7 +197,7 @@ export default function Navbar() {
                 {courses.map((c) => (
                   <NavLink
                     key={c.slug}
-                    to={`/courses/${c.slug}`}
+                    to={`/courses/${c.slug}/`}
                     onClick={closeAll}
                     className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors duration-200 hover:bg-brand-50/70"
                   >
@@ -211,7 +211,7 @@ export default function Navbar() {
                   </NavLink>
                 ))}
                 <NavLink
-                  to="/courses"
+                  to="/courses/"
                   onClick={closeAll}
                   className="mt-1 flex items-center justify-center gap-1.5 rounded-xl bg-brand-50 py-2.5 text-sm font-bold text-brand-700 transition-colors duration-200 hover:bg-brand-100"
                 >
@@ -220,13 +220,13 @@ export default function Navbar() {
               </div>
             </div>
 
-            <NavLink to="/services" className={navLinkClass}>
+            <NavLink to="/services/" className={navLinkClass}>
               Services
             </NavLink>
-            <NavLink to="/blog" className={navLinkClass}>
+            <NavLink to="/blog/" className={navLinkClass}>
               Blog
             </NavLink>
-            <NavLink to="/contact" className={navLinkClass}>
+            <NavLink to="/contact/" className={navLinkClass}>
               Contact Us
             </NavLink>
           </nav>
@@ -305,7 +305,7 @@ export default function Navbar() {
               Home
             </NavLink>
             <NavLink
-              to="/about"
+              to="/about/"
               onClick={closeAll}
               className={({ isActive }) =>
                 `block rounded-lg border px-3 py-2.5 text-sm font-semibold transition-all duration-300 ${
@@ -341,7 +341,7 @@ export default function Navbar() {
                   {courses.map((c) => (
                     <NavLink
                       key={c.slug}
-                      to={`/courses/${c.slug}`}
+                      to={`/courses/${c.slug}/`}
                       onClick={closeAll}
                       className="block rounded-lg px-3 py-2 text-sm text-slate-600 transition-colors duration-200 hover:bg-brand-50/60 hover:text-brand-700"
                     >
@@ -349,7 +349,7 @@ export default function Navbar() {
                     </NavLink>
                   ))}
                   <NavLink
-                    to="/courses"
+                    to="/courses/"
                     onClick={closeAll}
                     className="block rounded-lg px-3 py-2 text-sm font-bold text-brand-700"
                   >
@@ -360,7 +360,7 @@ export default function Navbar() {
             </div>
 
             <NavLink
-              to="/services"
+              to="/services/"
               onClick={closeAll}
               className={({ isActive }) =>
                 `block rounded-lg border px-3 py-2.5 text-sm font-semibold transition-all duration-300 ${
@@ -373,7 +373,7 @@ export default function Navbar() {
               Services
             </NavLink>
             <NavLink
-              to="/blog"
+              to="/blog/"
               onClick={closeAll}
               className={({ isActive }) =>
                 `block rounded-lg border px-3 py-2.5 text-sm font-semibold transition-all duration-300 ${
@@ -386,7 +386,7 @@ export default function Navbar() {
               Blog
             </NavLink>
             <NavLink
-              to="/contact"
+              to="/contact/"
               onClick={closeAll}
               className={({ isActive }) =>
                 `block rounded-lg border px-3 py-2.5 text-sm font-semibold transition-all duration-300 ${

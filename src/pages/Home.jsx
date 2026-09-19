@@ -232,7 +232,7 @@ function BrandSlide() {
 
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <Link
-            to="/courses"
+            to="/courses/"
             className="flex items-center gap-2 rounded-full bg-brand-600 px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-600/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-xl"
           >
             Explore Courses <IconArrowRight />
@@ -338,7 +338,7 @@ function MarketingSlide() {
             </div>
 
             <Link
-              to="/courses"
+              to="/courses/"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 text-sm font-bold text-navy-900 shadow-lg shadow-gold-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-400 hover:shadow-xl"
             >
               Start Your Journey Today <IconArrowRight width={16} height={16} />
@@ -501,7 +501,7 @@ function ConsultancySlide() {
               <IconWhatsApp width={18} height={18} /> Get a Free Consultation
             </a>
             <Link
-              to="/services"
+              to="/services/"
               className="flex items-center gap-2 rounded-full border-2 border-slate-200 px-7 py-3.5 text-sm font-bold text-navy-900 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-200 hover:bg-brand-50"
             >
               View Services <IconArrowRight width={16} height={16} />
@@ -686,7 +686,7 @@ export default function Home() {
     <>
       <Seo
         rawTitle="eBay with Ayesha Khan – eBay & Ecommerce Courses in Lahore"
-        description="Learn eBay with Ayesha Khan — practical, mentor-led eBay, Shopify, TikTok Shop, Etsy, AI and digital marketing courses in Lahore, Pakistan. Trusted by 2,500+ students. Online and in-person batches."
+        description="Learn eBay with Ayesha Khan: practical, mentor-led eBay, Shopify, TikTok Shop and digital marketing courses in Lahore, Pakistan. Online and in-person."
         path="/"
       />
 
@@ -763,7 +763,7 @@ export default function Home() {
               </h2>
             </div>
             <Link
-              to="/courses"
+              to="/courses/"
               className="flex items-center gap-2 text-sm font-bold text-brand-600 transition-colors duration-300 hover:text-brand-700"
             >
               View All Courses <IconArrowRight width={18} height={18} />
@@ -807,7 +807,7 @@ export default function Home() {
                     ))}
                   </ul>
                   <Link
-                    to={`/courses/${c.slug}`}
+                    to={`/courses/${c.slug}/`}
                     className={`mt-6 flex items-center justify-center gap-2 rounded-full py-2.5 text-sm font-bold transition-all duration-300 ${
                       i === 0
                         ? 'bg-brand-600 text-white hover:bg-brand-700 hover:shadow-lg'
@@ -904,7 +904,7 @@ export default function Home() {
                 </p>
                 <div className="mt-6 flex flex-col gap-3">
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     className="flex items-center justify-center gap-2 rounded-full bg-brand-600 py-3 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-700 hover:shadow-lg"
                   >
                     Contact Us Now <IconArrowRight width={16} height={16} />

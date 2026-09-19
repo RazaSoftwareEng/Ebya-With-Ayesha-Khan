@@ -1,4 +1,5 @@
 import { Link, useSearchParams } from 'react-router-dom'
+import { useHydrated } from '../useHydrated'
 import PageHero from '../components/PageHero'
 import CTASection from '../components/CTASection'
 import Seo from '../components/Seo'
@@ -7,7 +8,9 @@ import { courses } from '../data/courses'
 
 export default function Courses() {
   const [searchParams, setSearchParams] = useSearchParams()
-  const q = (searchParams.get('q') || '').trim()
+  // The prerendered HTML has no query string, so apply ?q= only after hydration.
+  const hydrated = useHydrated()
+  const q = hydrated ? (searchParams.get('q') || '').trim() : ''
   const qLower = q.toLowerCase()
 
   const filteredCourses = qLower
@@ -57,7 +60,7 @@ export default function Courses() {
           {filteredCourses.length === 0 && (
             <p className="py-10 text-center text-slate-600">
               Try a different keyword, or{' '}
-              <Link to="/contact" className="font-semibold text-brand-700 hover:text-brand-800">
+              <Link to="/contact/" className="font-semibold text-brand-700 hover:text-brand-800">
                 contact us
               </Link>{' '}
               and we'll help you find the right course.
@@ -107,7 +110,7 @@ export default function Courses() {
                   </ul>
 
                   <Link
-                    to={`/courses/${c.slug}`}
+                    to={`/courses/${c.slug}/`}
                     className="mt-6 flex items-center justify-center gap-2 rounded-full bg-brand-600 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-700 hover:shadow-lg"
                   >
                     View Full Details <IconArrowRight width={16} height={16} />
