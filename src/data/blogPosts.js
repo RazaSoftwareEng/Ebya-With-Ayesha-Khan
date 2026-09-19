@@ -4,6 +4,201 @@ import { IconBox, IconMegaphone, IconRocket, IconSparkles, IconTarget, IconTikto
 // any external source. Update dates/author as new posts are published.
 export const blogPosts = [
   {
+    slug: 'pakistan-se-ebay-kaise-shuru-karein',
+    lang: 'ur-Latn',
+    title: 'Pakistan Se eBay Kaise Shuru Karein: Beginners Ke Liye Step-by-Step Guide',
+    excerpt:
+      'Agar aap Pakistan se eBay par selling shuru karna chahte hain lekin samajh nahi aa raha ke kahan se start karein, to ye guide aapko pehle qadam se pehli sale tak ka seedha raasta batati hai.',
+    category: 'Roman Urdu Guide',
+    author: 'Ayesha Khan',
+    date: '2026-09-19',
+    readTime: '7 min read',
+    icon: IconRocket,
+    thumb: 'from-brand-700 to-navy-900',
+    body: [
+      {
+        type: 'p',
+        text: "eBay dunya ke sab se bade online marketplaces mein se ek hai, jahan har roz lakhon log cheezein khareedte hain. Pakistan ke bohat se log yehi sawal poochte hain: \"eBay par selling kaise shuru karein?\" Is guide mein hum bina kisi ulajhan ke, pehle qadam se le kar pehli sale tak ka raasta samjhate hain.",
+      },
+      { type: 'h2', text: '1. Pehle samjhein ke eBay kaam kaise karta hai' },
+      {
+        type: 'p',
+        text: "eBay par aap apni product ki listing lagate hain, buyers usay search karke dekhte hain, aur order milne par aap item buyer tak pahunchate hain. Zyada tar Pakistani sellers international buyers ko sell karte hain, is liye shipping aur payment ka nizam pehle se samajh lena zaroori hai.",
+      },
+      { type: 'h2', text: '2. Apna maqsad aur budget tay karein' },
+      {
+        type: 'p',
+        text: "Shuru karne se pehle tay karein ke aap kitna waqt aur kitna sarmaya lagana chahte hain. Bohat se beginners bina plan ke bari investment kar dete hain aur pehle hi mahine mein ghabra jate hain. Chhoti shuruat karein, seekhein, phir barhayein.",
+      },
+      { type: 'h2', text: '3. eBay seller account ki tayyari' },
+      {
+        type: 'p',
+        text: "Account banane se pehle eBay ki official seller requirements aur policies zaroor parh lein, kyunke ye waqt ke sath tabdeel hoti rehti hain. Apni sahi maloomat (naam, address, contact details) tayyar rakhein aur account sirf apne naam par chalayein. Ghalat ya jhoothi maloomat account band hone ki bari wajah banti hain.",
+      },
+      { type: 'h2', text: '4. Product ka intikhab (product research)' },
+      {
+        type: 'p',
+        text: "Aisi product chunein jiski demand ho, jis mein munafa achha ho, aur jo shipping mein nazuk ya bohat bhari na ho. eBay ke \"sold items\" filter se dekhein ke kya cheez waqai bik rahi hai — sirf listing dekh kar faisla na karein.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Demand: kya ye item pichle mahinon mein bar bar bik chuka hai?',
+          'Munafa: sourcing, shipping aur eBay fees nikaal kar kitna bachta hai?',
+          'Muqabla: kitne sellers wohi item bech rahe hain aur kis qeemat par?',
+          'Shipping: wazan, size aur delivery ka waqt kitna hai?',
+        ],
+      },
+      { type: 'h2', text: '5. Sourcing: maal kahan se laayein' },
+      {
+        type: 'p',
+        text: "Maal local markets, wholesalers ya suppliers se liya ja sakta hai. Supplier ki quality aur delivery ka waqt pehle chhote order se test karein. Behtar hai ke pehle sample mangwa kar khud dekh lein.",
+      },
+      { type: 'h2', text: '6. Behtar listing banayein' },
+      {
+        type: 'p',
+        text: "Listing ka title aisa likhein jo buyer search mein type karta hai: brand, model, size, rang aur condition. Saaf roshni mein, sada background par kai angles se tasveerein lein, aur description mein sab kuch imandari se likhein.",
+      },
+      { type: 'h2', text: '7. Shipping aur payment ka nizam' },
+      {
+        type: 'p',
+        text: "Shipping ki asal keemat pehle hi pata kar lein taake munafa khatam na ho jaye. Payment receive karne ke liye eBay ke supported payout tareeqe check karein. Bohat se sellers is maqsad ke liye Payoneer jaisi services istemal karte hain, lekin apne case ke liye maujooda options khud verify karein.",
+      },
+      { type: 'h2', text: '8. Buyer se rabta aur pehli sale ke baad' },
+      {
+        type: 'p',
+        text: "Buyer ke messages ka jaldi jawab dein, waqt par ship karein aur koi masla ho to sharafat se hal karein. Pehli sale manzil nahi, shuruat hai: dekhte rahein ke kaun si listing chal rahi hai aur usi par focus barhayein.",
+      },
+      {
+        type: 'p',
+        text: "Agar aap ye sab kuch ek mentor ke sath, step-by-step aur practical tareeqe se seekhna chahte hain to hamara eBay Selling Mastery course Lahore mein in-person aur online dono tarah available hai. WhatsApp par rabta karke agli batch ki tafseelat pooch sakte hain.",
+      },
+    ],
+  },
+  {
+    slug: 'ebay-winning-product-kaise-dhoondein',
+    lang: 'ur-Latn',
+    title: 'eBay Par Winning Product Kaise Dhoondein? Asaan Framework Roman Urdu Mein',
+    excerpt:
+      'Sahi product ka intikhab eBay selling ki kamyabi ka sab se bada hissa hai. Ye asaan framework aapko batata hai ke kaun si product par waqt aur paisa lagana chahiye.',
+    category: 'Roman Urdu Guide',
+    author: 'Ayesha Khan',
+    date: '2026-09-19',
+    readTime: '6 min read',
+    icon: IconTarget,
+    thumb: 'from-emerald-600 to-teal-700',
+    body: [
+      {
+        type: 'p',
+        text: "Naye sellers aksar ye galti karte hain ke wo wohi product bechne lagte hain jo unhein pasand hai, na ke wo jo buyers khareed rahe hain. Winning product ka matlab hai aisi cheez jiski demand ho, munafa bachta ho, aur jise aap asani se sourcing aur ship kar sakein. Neeche paanch sawal hain jo har product par lagane chahiye.",
+      },
+      { type: 'h2', text: 'Pehla sawal: kya is product ki demand hai?' },
+      {
+        type: 'p',
+        text: "eBay par product search karein aur \"Sold items\" filter lagayein. Agar pichle kuch mahinon mein wo item bar bar bik raha hai to demand maujood hai. Agar sirf listings hain lekin sold nahi, to wo product aap ke liye achha intikhab nahi.",
+      },
+      { type: 'h2', text: 'Doosra sawal: kya munafa bachta hai?' },
+      {
+        type: 'p',
+        text: "Sirf product ki qeemat dekh kar faisla na karein. Poori cost jodein: product ki qeemat, sourcing aur packaging, shipping, aur eBay ki fees. Is total ko selling price mein se ghatayein — jo bachta hai wohi asal munafa hai.",
+      },
+      { type: 'h2', text: 'Teesra sawal: muqabla kitna hai?' },
+      {
+        type: 'p',
+        text: "Dekhein ke kitne sellers wohi item bech rahe hain aur kis qeemat par. Agar bohat se bare sellers pehle se bohat sasta bech rahe hain to naye seller ke liye jagah banana mushkil hoga. Aisi products dhoondein jahan muqabla samajhdaar ho.",
+      },
+      { type: 'h2', text: 'Chautha sawal: shipping aur returns ka risk kitna hai?' },
+      {
+        type: 'ul',
+        items: [
+          'Nazuk ya toot-phoot wali cheezein returns aur complaints barhati hain',
+          'Bhari ya bare size ki products ki shipping aksar munafa kha jati hai',
+          'Size aur rang wali cheezon mein returns zyada ho sakte hain',
+        ],
+      },
+      { type: 'h2', text: 'Panchwan sawal: kya aap supplier par bharosa kar sakte hain?' },
+      {
+        type: 'p',
+        text: "Achhi product bhi kharab supplier ki wajah se nuqsan de sakti hai. Bara order dene se pehle sample mangwayein, quality dekhein, aur delivery ka waqt naapein. Ek hi supplier par poora bharosa karne ke bajaye shuru se hi ek backup supplier ka bandobast rakhein.",
+      },
+      { type: 'h2', text: 'Data kahan se dekhein' },
+      {
+        type: 'p',
+        text: "eBay ke sold listings sab se seedha data dete hain. Google Trends se ye samajhne mein madad milti hai ke kisi cheez mein dilchaspi barh rahi hai ya kam ho rahi hai, khaas tor par seasonal products ke liye.",
+      },
+      {
+        type: 'p',
+        text: "Product research ek hunar hai jo mashq se behtar hota hai. Hum ye poora process students ke sath practical tareeqe se karte hain, aur ye hamare eBay Selling Mastery course ka bunyadi hissa hai.",
+      },
+    ],
+  },
+  {
+    slug: 'dropshipping-kya-hai-pakistan-mein',
+    lang: 'ur-Latn',
+    title: 'Dropshipping Kya Hai? Pakistan Ke Sellers Ke Liye Asaan Wazahat',
+    excerpt:
+      'Dropshipping mein maal apne paas rakhe baghair sell kiya jata hai. Jaaniye ye kaise kaam karti hai, iske fawaid aur nuqsanaat kya hain, aur eBay par kin baaton ka khayal rakhna chahiye.',
+    category: 'Roman Urdu Guide',
+    author: 'Ayesha Khan',
+    date: '2026-09-19',
+    readTime: '5 min read',
+    icon: IconBox,
+    thumb: 'from-slate-800 to-slate-950',
+    body: [
+      {
+        type: 'p',
+        text: "Dropshipping ek aisa business model hai jismein aap khud maal stock nahi karte. Jab customer aap se order karta hai to aap wo order apne supplier ko de dete hain, aur supplier item seedha customer tak bhej deta hai. Aap ka munafa selling price aur supplier ki qeemat ke darmiyan ka farq hota hai.",
+      },
+      { type: 'h2', text: 'Dropshipping kaise kaam karti hai' },
+      {
+        type: 'ul',
+        items: [
+          'Aap apni listing (eBay ya store par) lagate hain',
+          'Customer order karta hai aur payment aap ko milti hai',
+          'Aap wohi order apne supplier ko dete hain',
+          'Supplier item customer ko ship karta hai',
+        ],
+      },
+      { type: 'h2', text: 'Iske fawaid' },
+      {
+        type: 'ul',
+        items: [
+          'Shuru mein stock khareedne ke liye bari investment nahi chahiye',
+          'Aap kam risk ke sath alag alag products test kar sakte hain',
+          'Kaam kisi bhi jagah se kiya ja sakta hai',
+        ],
+      },
+      { type: 'h2', text: 'Nuqsanaat aur risks' },
+      {
+        type: 'ul',
+        items: [
+          'Munafa aksar kam hota hai, is liye numbers ka sahi hisab zaroori hai',
+          'Delivery ka waqt aur quality supplier ke haath mein hoti hai',
+          'Customer ke saamne jawabdeh aap hi hote hain, supplier nahi',
+        ],
+      },
+      { type: 'h2', text: 'eBay par khaas ehtiyat' },
+      {
+        type: 'p',
+        text: "eBay ki dropshipping policy ke mutabiq seller ke tor par aap hi zimmedar hote hain. Kisi doosre retail store se khareed kar seedha apne eBay buyer ko bhejna aam tor par policy ke khilaf hota hai. Aap ka supplier aisa hona chahiye jis ke sath aap ka supply ka intizam ho. Policies badalti rehti hain, is liye shuru karne se pehle eBay ka official dropshipping policy page zaroor parh lein.",
+      },
+      { type: 'h2', text: 'Shuru karne ka asaan tareeqa' },
+      {
+        type: 'ul',
+        items: [
+          'Ek chhota niche chunein, bohat saari categories par ek sath na jayein',
+          'Pehle ek bharosemand supplier ke sath chhota test karein',
+          'Har order par munafa, delivery ka waqt aur complaints likhte rahein',
+          'Jo cheez chal rahi ho usi par focus barhayein',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Dropshipping dekhne mein asaan lagti hai lekin isay achhi tarah samajhna zaroori hai. Hamare eBay Selling Mastery course mein dropshipping ek mukammal module ke tor par practical tareeqe se sikhayi jati hai.",
+      },
+    ],
+  },
+  {
     slug: 'ebay-beginner-mistakes-to-avoid',
     title: '7 Mistakes New eBay Sellers Make (and How to Fix Them)',
     excerpt:

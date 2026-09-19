@@ -109,8 +109,8 @@ export default function Services() {
   return (
     <>
       <Seo
-        title="eBay, Shopify & Digital Marketing Services"
-        description="eBay & TikTok Shop management, Shopify stores, business websites, digital marketing, Google & Meta ads, and custom software & CRM development in Lahore, Pakistan."
+        title="eBay Consultancy & Shopify Marketing Services in Lahore"
+        description="eBay consultancy and store management, Shopify stores and marketing, TikTok Shop, business websites, Google & Meta ads, and custom software & CRM development in Lahore, Pakistan."
         path="/services"
       />
 

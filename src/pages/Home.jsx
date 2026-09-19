@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal'
 import Seo from '../components/Seo'
-import banner1 from '../components/assets/1.png'
-import ayeshaAvatar from '../components/assets/ayesha-avatar.png'
+import banner1 from '../components/assets/1.webp'
+import ayeshaAvatar from '../components/assets/ayesha-avatar.webp'
 import {
   IconArrowLeft,
   IconArrowRight,
@@ -17,7 +17,9 @@ import {
   IconPlus,
   IconRocket,
   IconShield,
+  IconShoppingBag,
   IconStar,
+  IconTag,
   IconTarget,
   IconUsers,
   IconWhatsApp,
@@ -199,13 +201,13 @@ function BrandSlide() {
     <div className="relative flex h-full w-full items-center overflow-hidden bg-gradient-to-br from-brand-50 via-white to-gold-50">
       <div className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-brand-200/30 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-gold-200/40 blur-3xl" />
-      <div className="relative mx-auto grid w-full max-w-7xl gap-12 py-10 pr-5 pl-16 sm:pl-20 lg:grid-cols-2 lg:items-center lg:pr-8 lg:pl-24 lg:py-14">
+      <div className="relative mx-auto grid w-full max-w-7xl gap-10 pt-10 pr-5 pb-20 pl-16 sm:pr-16 sm:pl-24 lg:grid-cols-2 lg:items-center lg:gap-12 lg:pt-10 lg:pb-16 lg:pl-24">
       <div className="animate-fade-up">
         <span className="inline-flex items-center gap-2 rounded-full bg-brand-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-700">
           <IconStar /> Pakistan's Trusted Ecommerce Institute
         </span>
-        <h1 className="mt-5 font-heading text-3xl font-extrabold leading-tight text-navy-900 sm:text-4xl lg:text-5xl">
-          Learn. Sell. Succeed.
+        <h1 className="mt-5 font-heading text-3xl font-extrabold leading-tight text-navy-900 sm:text-4xl 2xl:text-5xl">
+          Learn eBay &amp; Ecommerce in Lahore.
           <span className="block text-brand-600">Build a Real Online Business.</span>
         </h1>
         <p className="mt-5 max-w-xl text-base text-slate-600 sm:text-lg">
@@ -306,7 +308,7 @@ function MarketingSlide() {
       <div className="pointer-events-none absolute -top-24 -right-16 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl" />
 
-      <div className="relative mx-auto w-full max-w-7xl py-10 pr-5 pl-16 sm:pl-20 lg:pr-8 lg:pl-24 lg:py-14">
+      <div className="relative mx-auto w-full max-w-7xl pt-10 pr-5 pb-20 pl-16 sm:pr-16 sm:pl-24 lg:pt-10 lg:pb-16 lg:pl-24">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-gold-400">
@@ -378,7 +380,7 @@ function InstituteSlide() {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-navy-950/92 via-navy-950/70 to-navy-950/20" />
 
-      <div className="relative mx-auto flex h-full w-full max-w-7xl items-center py-14 pr-5 pl-16 sm:pl-20 lg:pr-8 lg:pl-24">
+      <div className="relative mx-auto flex h-full w-full max-w-7xl items-center pt-10 pr-5 pb-20 pl-16 sm:pr-16 sm:pl-24 lg:pb-16 lg:pl-24">
         <div className="max-w-lg text-white">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-gold-400">
             <IconLocation width={14} height={14} /> Visit Our Institute
@@ -424,7 +426,127 @@ function InstituteSlide() {
   )
 }
 
-const heroSlideCount = 3
+const consultancyServices = [
+  {
+    icon: IconTag,
+    title: 'eBay Consultancy',
+    tint: 'bg-brand-600',
+    points: [
+      'eBay store setup & development',
+      'Winning product research',
+      'Account & listing management',
+      'One-on-one mentorship',
+    ],
+  },
+  {
+    icon: IconShoppingBag,
+    title: 'Shopify Marketing',
+    tint: 'bg-emerald-600',
+    points: [
+      'Shopify store design & SEO',
+      'Facebook, Instagram & Google ads',
+      'Branding & marketing strategy',
+      'Turning traffic into sales',
+    ],
+  },
+]
+
+const consultancyChips = ['Free consultation', 'Done-for-you setup', 'Ongoing support']
+
+const consultancyProcess = [
+  { title: 'Free Consultation', desc: 'Share your goals, budget and experience.' },
+  { title: 'Custom Plan', desc: 'We map out the right service or course.' },
+  { title: 'Hands-On Execution', desc: 'Setup, training or coaching with you.' },
+  { title: 'Continued Support', desc: 'Stay connected as your store grows.' },
+]
+
+function ConsultancySlide() {
+  return (
+    <div className="relative flex h-full w-full items-center overflow-hidden bg-gradient-to-br from-white via-brand-50 to-emerald-50">
+      <div className="pointer-events-none absolute -top-28 -left-20 h-80 w-80 rounded-full bg-brand-200/30 blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 -bottom-28 h-80 w-80 rounded-full bg-emerald-200/40 blur-3xl" />
+
+      <div className="relative mx-auto grid w-full max-w-7xl gap-10 pt-10 pr-5 pb-20 pl-16 sm:pr-16 sm:pl-24 lg:grid-cols-[1fr_1.05fr] lg:items-center lg:pt-10 lg:pb-16 lg:pl-24">
+        <div>
+          <span className="inline-flex items-center gap-2 rounded-full bg-brand-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-700">
+            <IconAward width={14} height={14} /> Consultancy &amp; Services
+          </span>
+          <h2 className="mt-5 font-heading text-3xl font-extrabold leading-tight text-navy-900 sm:text-4xl 2xl:text-5xl">
+            eBay Consultancy
+            <span className="block text-brand-600">&amp; Shopify Marketing.</span>
+          </h2>
+          <p className="mt-5 max-w-lg text-base text-slate-600 sm:text-lg">
+            Beyond courses — get hands-on expert help to set up, run and grow your eBay store and
+            your Shopify marketing.
+          </p>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            {consultancyChips.map((c) => (
+              <span
+                key={c}
+                className="flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold text-slate-700 shadow-sm ring-1 ring-slate-100"
+              >
+                <IconCheck width={13} height={13} className="text-emerald-600" /> {c}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-7 flex flex-wrap items-center gap-4">
+            <a
+              href={whatsappLink("Hi! I'd like a free consultation for eBay consultancy / Shopify marketing.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-full bg-brand-600 px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-600/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-xl"
+            >
+              <IconWhatsApp width={18} height={18} /> Get a Free Consultation
+            </a>
+            <Link
+              to="/services"
+              className="flex items-center gap-2 rounded-full border-2 border-slate-200 px-7 py-3.5 text-sm font-bold text-navy-900 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-200 hover:bg-brand-50"
+            >
+              View Services <IconArrowRight width={16} height={16} />
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          {consultancyServices.map((s) => (
+            <div key={s.title} className="rounded-2xl bg-white p-5 shadow-lg shadow-brand-900/5 ring-1 ring-slate-100">
+              <span className={`grid h-11 w-11 place-items-center rounded-xl text-white ${s.tint}`}>
+                <s.icon width={22} height={22} />
+              </span>
+              <h3 className="mt-4 font-heading text-lg font-bold text-navy-900">{s.title}</h3>
+              <ul className="mt-3 space-y-2">
+                {s.points.map((p) => (
+                  <li key={p} className="flex items-start gap-2 text-sm text-slate-600">
+                    <IconCheck width={16} height={16} className="mt-0.5 shrink-0 text-emerald-600" />
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden grid-cols-2 gap-x-4 gap-y-5 border-t border-slate-200/70 pt-6 sm:grid lg:col-span-2 lg:grid-cols-4">
+          {consultancyProcess.map((step, i) => (
+            <div key={step.title} className="flex items-start gap-3">
+              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-navy-900 font-heading text-xs font-extrabold text-white">
+                {i + 1}
+              </span>
+              <div>
+                <p className="text-sm font-bold leading-tight text-navy-900">{step.title}</p>
+                <p className="mt-0.5 text-xs leading-snug text-slate-500">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const heroSlideCount = 4
 
 function HeroCarousel() {
   const [index, setIndex] = useState(0)
@@ -438,15 +560,20 @@ function HeroCarousel() {
 
   const go = (dir) => setIndex((i) => (i + dir + heroSlideCount) % heroSlideCount)
 
-  const slides = [<BrandSlide key="brand" />, <MarketingSlide key="marketing" />, <InstituteSlide key="institute" />]
+  const slides = [
+    <ConsultancySlide key="consultancy" />,
+    <BrandSlide key="brand" />,
+    <MarketingSlide key="marketing" />,
+    <InstituteSlide key="institute" />,
+  ]
 
   return (
     <div
-      className="relative h-auto w-full lg:h-[75vh] lg:max-h-[760px] lg:min-h-[600px]"
+      className="relative w-full lg:min-h-[520px]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="grid h-full w-full">
+      <div className="grid w-full">
         {slides.map((slide, i) => (
           <div
             key={i}
@@ -463,7 +590,7 @@ function HeroCarousel() {
         type="button"
         aria-label="Previous slide"
         onClick={() => go(-1)}
-        className="absolute top-1/2 left-2 z-20 hidden h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-navy-900 shadow-lg transition-transform duration-300 hover:scale-110 sm:left-4 sm:grid"
+        className="absolute top-1/2 left-2 z-20 hidden h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-navy-900 shadow-lg transition-transform duration-300 hover:scale-110 sm:left-14 sm:grid"
       >
         <IconArrowLeft width={18} height={18} />
       </button>
@@ -558,8 +685,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="eBay, Shopify & TikTok Shop Courses in Lahore, Pakistan"
-        description="Learn eBay, Shopify, TikTok Shop, Etsy, AI tools and digital marketing through practical, mentor-led courses in Lahore, Pakistan. Trusted by 2,500+ students and companies — online and in-person batches."
+        rawTitle="eBay with Ayesha Khan – eBay & Ecommerce Courses in Lahore"
+        description="Learn eBay with Ayesha Khan — practical, mentor-led eBay, Shopify, TikTok Shop, Etsy, AI and digital marketing courses in Lahore, Pakistan. Trusted by 2,500+ students. Online and in-person batches."
         path="/"
       />
 

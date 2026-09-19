@@ -13,6 +13,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Blog from './pages/Blog'
 import BlogDetail from './pages/BlogDetail'
+import NotFound from './pages/NotFound'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -22,9 +23,9 @@ function ScrollToTop() {
   return null
 }
 
-function App() {
+export function AppShell() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <div className="flex min-h-screen flex-col">
         <Navbar />
@@ -38,6 +39,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
@@ -45,8 +47,14 @@ function App() {
         <WhatsAppButton />
         <ChatBot />
       </div>
-    </BrowserRouter>
+    </>
   )
 }
 
-export default App
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppShell />
+    </BrowserRouter>
+  )
+}

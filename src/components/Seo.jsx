@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { siteUrl } from '../siteConfig'
+import { buildSeoMeta } from '../seoUtils'
+import { seoStore } from '../seoStore'
 
 function upsertMeta(attr, key, content) {
   let tag = document.head.querySelector(`meta[${attr}="${key}"]`)
@@ -25,6 +26,7 @@ function upsertLink(rel, href) {
 
 export default function Seo({
   title,
+  rawTitle,
   description,
   path = '/',
   type = 'website',
@@ -32,28 +34,30 @@ export default function Seo({
   jsonLd,
   noindex = false,
 }) {
+  // Server render only: lets scripts/prerender.mjs read each page's meta tags.
+  if (typeof window === 'undefined') {
+    seoStore.value = { title, rawTitle, description, path, type, image, jsonLd, noindex }
+  }
+
   useEffect(() => {
-    const fullTitle = title ? `${title} | Ayesha Khan Official` : 'Ayesha Khan Official'
-    const url = `${siteUrl}${path}`
-    const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`
+    const meta = buildSeoMeta({ title, rawTitle, description, path, type, image, noindex })
 
-    document.title = fullTitle
-    upsertMeta('name', 'description', description)
-    upsertMeta('name', 'robots', noindex ? 'noindex, nofollow' : 'index, follow')
-    upsertMeta('property', 'og:title', fullTitle)
-    upsertMeta('property', 'og:description', description)
-    upsertMeta('property', 'og:type', type)
-    upsertMeta('property', 'og:url', url)
-    upsertMeta('property', 'og:image', imageUrl)
+    document.title = meta.fullTitle
+    upsertMeta('name', 'description', meta.description)
+    upsertMeta('name', 'robots', meta.robots)
+    upsertMeta('property', 'og:title', meta.fullTitle)
+    upsertMeta('property', 'og:description', meta.description)
+    upsertMeta('property', 'og:type', meta.type)
+    upsertMeta('property', 'og:url', meta.url)
+    upsertMeta('property', 'og:image', meta.imageUrl)
     upsertMeta('name', 'twitter:card', 'summary_large_image')
-    upsertMeta('name', 'twitter:title', fullTitle)
-    upsertMeta('name', 'twitter:description', description)
-    upsertMeta('name', 'twitter:image', imageUrl)
-    upsertLink('canonical', url)
+    upsertMeta('name', 'twitter:title', meta.fullTitle)
+    upsertMeta('name', 'twitter:description', meta.description)
+    upsertMeta('name', 'twitter:image', meta.imageUrl)
+    upsertLink('canonical', meta.url)
 
-    let script = null
     if (jsonLd) {
-      script = document.getElementById('seo-jsonld')
+      let script = document.getElementById('seo-jsonld')
       if (!script) {
         script = document.createElement('script')
         script.id = 'seo-jsonld'
@@ -68,7 +72,7 @@ export default function Seo({
         document.getElementById('seo-jsonld')?.remove()
       }
     }
-  }, [title, description, path, type, image, jsonLd, noindex])
+  }, [title, rawTitle, description, path, type, image, jsonLd, noindex])
 
   return null
 }

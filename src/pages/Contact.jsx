@@ -84,7 +84,7 @@ export default function Contact() {
   return (
     <>
       <Seo
-        title="Contact Us"
+        title="Contact Us – Enroll in eBay Courses in Lahore"
         description="Get in touch with Ayesha Khan Official for course enrollment, corporate training or general questions — by phone, WhatsApp, email or our contact form."
         path="/contact"
       />

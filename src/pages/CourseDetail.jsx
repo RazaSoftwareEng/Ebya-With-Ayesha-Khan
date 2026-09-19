@@ -3,8 +3,10 @@ import Seo from '../components/Seo'
 import CTASection from '../components/CTASection'
 import Reveal from '../components/Reveal'
 import { courses } from '../data/courses'
+import { buildCourseFaqs } from '../data/courseFaqs'
+import { verifiedReviews } from '../data/reviews'
 import { enrollFormUrl, site, siteUrl } from '../siteConfig'
-import { IconArrowLeft, IconArrowRight, IconCheck, IconClock, IconGlobe, IconUsers } from '../components/icons'
+import { IconArrowLeft, IconArrowRight, IconCheck, IconClock, IconGlobe, IconPlus, IconUsers } from '../components/icons'
 
 export default function CourseDetail() {
   const { slug } = useParams()
@@ -13,6 +15,26 @@ export default function CourseDetail() {
   if (!course) return <Navigate to="/courses" replace />
 
   const otherCourses = courses.filter((c) => c.slug !== slug).slice(0, 3)
+  const faqs = buildCourseFaqs(course)
+
+  const courseReviews = verifiedReviews.filter((r) => r.course === course.slug)
+  const reviewSchema = courseReviews.length
+    ? {
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: (courseReviews.reduce((sum, r) => sum + r.rating, 0) / courseReviews.length).toFixed(1),
+          reviewCount: courseReviews.length,
+          bestRating: 5,
+        },
+        review: courseReviews.map((r) => ({
+          '@type': 'Review',
+          author: { '@type': 'Person', name: r.name },
+          datePublished: r.date,
+          reviewBody: r.text,
+          reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5 },
+        })),
+      }
+    : {}
 
   const jsonLd = [
     {
@@ -20,6 +42,7 @@ export default function CourseDetail() {
       '@type': 'Course',
       name: course.title,
       description: course.desc,
+      ...reviewSchema,
       provider: {
         '@type': 'Organization',
         name: site.name,
@@ -44,12 +67,21 @@ export default function CourseDetail() {
         { '@type': 'ListItem', position: 3, name: course.title, item: `${siteUrl}/courses/${course.slug}` },
       ],
     },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
   ]
 
   return (
     <>
       <Seo
-        title={course.title}
+        title={`${course.title} Course in Lahore`}
         description={`${course.desc} Taught in Lahore, Pakistan — online and in-person batches available.`}
         path={`/courses/${course.slug}`}
         jsonLd={jsonLd}
@@ -156,6 +188,33 @@ export default function CourseDetail() {
               {course.whoItsFor}
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl px-5 lg:px-8">
+          <Reveal className="text-center">
+            <span className="text-xs font-bold uppercase tracking-widest text-brand-600">FAQs</span>
+            <h2 className="mt-3 font-heading text-2xl font-extrabold text-navy-900 sm:text-3xl">
+              Questions About {course.title}
+            </h2>
+          </Reveal>
+          <div className="mt-10 space-y-3">
+            {faqs.map((f) => (
+              <details
+                key={f.q}
+                className="group rounded-2xl border border-slate-200 bg-white px-5 py-4 open:border-brand-200 open:shadow-sm"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-heading text-sm font-bold text-navy-900 sm:text-base">
+                  {f.q}
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-brand-50 text-brand-600 transition-transform duration-300 group-open:rotate-45">
+                    <IconPlus width={14} height={14} />
+                  </span>
+                </summary>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">{f.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 

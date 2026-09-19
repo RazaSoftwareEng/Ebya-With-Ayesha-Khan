@@ -11,6 +11,7 @@ function formatDate(dateStr) {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   })
 }
 
@@ -18,8 +19,8 @@ export default function Blog() {
   return (
     <>
       <Seo
-        title="Blog"
-        description="Practical, no-fluff articles on eBay selling, dropshipping and ecommerce growth from Ayesha Khan Official."
+        title="eBay & Dropshipping Blog (English & Roman Urdu)"
+        description="Practical articles on eBay selling, dropshipping and ecommerce growth — in English and Roman Urdu, including a guide on how to start eBay from Pakistan."
         path="/blog"
       />
 

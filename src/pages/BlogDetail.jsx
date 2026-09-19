@@ -11,6 +11,7 @@ function formatDate(dateStr) {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   })
 }
 
@@ -78,6 +79,7 @@ export default function BlogDetail() {
       '@type': 'Article',
       headline: post.title,
       description: post.excerpt,
+      inLanguage: post.lang ?? 'en',
       author: { '@type': 'Person', name: post.author },
       publisher: { '@type': 'Organization', name: site.name },
       datePublished: post.date,
@@ -139,7 +141,7 @@ export default function BlogDetail() {
 
       <section className="bg-white py-14 lg:py-16">
         <div className="mx-auto max-w-3xl px-5 lg:px-8">
-          <Reveal className="text-base">
+          <Reveal className="text-base" lang={post.lang}>
             {post.body.map((block, i) => (
               <BodyBlock key={i} block={block} />
             ))}

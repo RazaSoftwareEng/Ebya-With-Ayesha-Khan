@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { IconPhone, IconMail, IconLocation, IconClock, IconFacebook, IconInstagram, IconLinkedin, IconTiktok, IconWhatsApp } from './icons'
 import { site, whatsappLink } from '../siteConfig'
 import { courses } from '../data/courses'
-import ayeshaAvatar from './assets/ayesha-avatar.png'
+import ayeshaAvatar from './assets/ayesha-avatar.webp'
 
 export default function Footer() {
   const year = new Date().getFullYear()

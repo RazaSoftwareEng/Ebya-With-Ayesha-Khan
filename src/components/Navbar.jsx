@@ -16,7 +16,7 @@ import {
 } from './icons'
 import { site, enrollFormUrl } from '../siteConfig'
 import { courses } from '../data/courses'
-import ayeshaAvatar from './assets/ayesha-avatar.png'
+import ayeshaAvatar from './assets/ayesha-avatar.webp'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
