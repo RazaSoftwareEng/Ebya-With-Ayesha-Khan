@@ -1,102 +1,9 @@
 import PageHero from '../components/PageHero'
 import CTASection from '../components/CTASection'
 import Seo from '../components/Seo'
-import {
-  IconArrowRight,
-  IconAdTarget,
-  IconAward,
-  IconBox,
-  IconCheck,
-  IconChart,
-  IconCode,
-  IconGlobe,
-  IconMegaphone,
-  IconMonitor,
-  IconRocket,
-  IconShield,
-  IconShoppingBag,
-  IconTarget,
-  IconTiktok,
-  IconUsers,
-  IconWhatsApp,
-} from '../components/icons'
+import { IconArrowRight, IconAward, IconCheck, IconUsers } from '../components/icons'
 import { Link } from 'react-router-dom'
-import { whatsappLink } from '../siteConfig'
-
-const services = [
-  {
-    icon: IconBox,
-    title: 'eBay Store Setup & Management',
-    desc: 'End-to-end setup and ongoing management of your eBay seller account — profile, policies, shipping and listing structure done right.',
-    thumb: 'from-slate-800 to-slate-950',
-  },
-  {
-    icon: IconTiktok,
-    title: 'TikTok Shop Setup & Management',
-    desc: 'Full TikTok Shop setup and management — product listings, content strategy and order fulfillment handled for you.',
-    thumb: 'from-rose-600 to-fuchsia-700',
-  },
-  {
-    icon: IconTarget,
-    title: 'Product Research & Sourcing',
-    desc: 'We help you identify winning, profitable products and connect with vetted, reliable suppliers.',
-    thumb: 'from-brand-600 to-navy-800',
-  },
-  {
-    icon: IconRocket,
-    title: 'Dropshipping Setup & Automation',
-    desc: 'Full dropshipping workflow setup — order automation, supplier integration and fulfillment tools configured for you.',
-    thumb: 'from-emerald-600 to-teal-700',
-  },
-  {
-    icon: IconChart,
-    title: 'Store Growth & Ads Management',
-    desc: 'Data-driven strategies and paid advertising guidance to scale your existing store\'s revenue.',
-    thumb: 'from-amber-500 to-orange-600',
-  },
-  {
-    icon: IconShield,
-    title: 'Account Health & Policy Guidance',
-    desc: 'Guidance to keep your seller account in good standing and avoid common suspension triggers.',
-    thumb: 'from-teal-600 to-emerald-800',
-  },
-  {
-    icon: IconMonitor,
-    title: 'Business Website Development',
-    desc: 'Professional, mobile-friendly business websites built to represent your brand and convert visitors into customers.',
-    thumb: 'from-navy-800 to-brand-800',
-  },
-  {
-    icon: IconShoppingBag,
-    title: 'Shopify Store Setup',
-    desc: 'Complete Shopify store build — theme setup, product catalog, payment integration and everything needed to start selling.',
-    thumb: 'from-emerald-700 to-green-900',
-  },
-  {
-    icon: IconGlobe,
-    title: 'Ecommerce Solutions',
-    desc: 'End-to-end ecommerce setup across platforms — store architecture, payment gateways and order management systems.',
-    thumb: 'from-cyan-600 to-sky-800',
-  },
-  {
-    icon: IconMegaphone,
-    title: 'Digital Marketing',
-    desc: 'Data-driven social media, content and marketing strategy to grow your brand\'s visibility and drive consistent traffic.',
-    thumb: 'from-sky-600 to-blue-800',
-  },
-  {
-    icon: IconAdTarget,
-    title: 'Google & Meta Ads',
-    desc: 'Expertly managed Google Search, Shopping and Meta ad campaigns built to lower your cost per sale and scale profitably.',
-    thumb: 'from-blue-600 to-navy-900',
-  },
-  {
-    icon: IconCode,
-    title: 'Custom Software & CRM',
-    desc: 'Tailored software and CRM systems to manage your customers, orders and operations exactly the way your business works.',
-    thumb: 'from-slate-700 to-navy-900',
-  },
-]
+import { services } from '../data/services'
 
 const process = [
   { title: 'Free Consultation', desc: 'Tell us about your goals, budget and experience level.' },
@@ -126,7 +33,7 @@ export default function Services() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
               <div
-                key={s.title}
+                key={s.slug}
                 className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-brand-100"
               >
                 <div className={`relative flex h-32 items-center justify-center bg-gradient-to-br ${s.thumb}`}>
@@ -137,14 +44,13 @@ export default function Services() {
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-heading text-base font-bold text-navy-900">{s.title}</h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{s.desc}</p>
-                  <a
-                    href={whatsappLink(`Hi! I'm interested in your ${s.title} service.`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to={`/services/${s.slug}/`}
+                    aria-label={`View details for ${s.title}`}
                     className="mt-5 flex items-center justify-center gap-2 rounded-full bg-brand-600 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-700 hover:shadow-lg"
                   >
-                    <IconWhatsApp width={16} height={16} /> Contact Now
-                  </a>
+                    View Details <IconArrowRight width={16} height={16} />
+                  </Link>
                 </div>
               </div>
             ))}

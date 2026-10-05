@@ -16,6 +16,7 @@ import {
 } from './icons'
 import { site, enrollFormUrl } from '../siteConfig'
 import { courses } from '../data/courses'
+import { services } from '../data/services'
 import ayeshaAvatar from './assets/ayesha-avatar.webp'
 
 export default function Navbar() {
@@ -23,8 +24,11 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [coursesOpen, setCoursesOpen] = useState(false)
   const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const [query, setQuery] = useState('')
   const coursesRef = useRef(null)
+  const servicesRef = useRef(null)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -48,10 +52,26 @@ export default function Navbar() {
     }
   }, [coursesOpen])
 
+  useEffect(() => {
+    if (!servicesOpen) return
+    const onClickOutside = (e) => {
+      if (servicesRef.current && !servicesRef.current.contains(e.target)) setServicesOpen(false)
+    }
+    const onEscape = (e) => e.key === 'Escape' && setServicesOpen(false)
+    document.addEventListener('mousedown', onClickOutside)
+    document.addEventListener('keydown', onEscape)
+    return () => {
+      document.removeEventListener('mousedown', onClickOutside)
+      document.removeEventListener('keydown', onEscape)
+    }
+  }, [servicesOpen])
+
   const closeAll = () => {
     setOpen(false)
     setCoursesOpen(false)
     setMobileCoursesOpen(false)
+    setServicesOpen(false)
+    setMobileServicesOpen(false)
   }
 
   const submitSearch = (e) => {
@@ -224,9 +244,61 @@ export default function Navbar() {
               </div>
             </div>
 
-            <NavLink to="/services/" className={navLinkClass}>
-              Services
-            </NavLink>
+            <div
+              className="relative"
+              ref={servicesRef}
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <NavLink
+                to="/services/"
+                onClick={closeAll}
+                onFocus={() => setServicesOpen(true)}
+                aria-expanded={servicesOpen}
+                className={`flex items-center gap-1 rounded-full border px-4 py-2 text-sm font-semibold tracking-wide transition-all duration-300 ${
+                  servicesOpen
+                    ? 'border-brand-200 bg-brand-50 text-brand-700'
+                    : 'border-transparent text-slate-600 hover:-translate-y-0.5 hover:border-brand-100 hover:bg-brand-50/60 hover:text-brand-700'
+                }`}
+              >
+                Services
+                <IconChevronDown
+                  width={16}
+                  height={16}
+                  className={`transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
+                />
+              </NavLink>
+
+              <div
+                className={`absolute left-1/2 top-full z-20 mt-2 grid w-[34rem] -translate-x-1/2 grid-cols-2 gap-1 rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl shadow-slate-900/10 transition-all duration-200 ${
+                  servicesOpen
+                    ? 'pointer-events-auto translate-y-0 opacity-100'
+                    : 'pointer-events-none -translate-y-2 opacity-0'
+                }`}
+              >
+                {services.map((s) => (
+                  <NavLink
+                    key={s.slug}
+                    to={`/services/${s.slug}/`}
+                    onClick={closeAll}
+                    className="flex items-center gap-2.5 rounded-xl px-3 py-2 transition-colors duration-200 hover:bg-brand-50/70"
+                  >
+                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-navy-900 text-gold-400">
+                      <s.icon width={15} height={15} />
+                    </span>
+                    <span className="truncate text-sm font-semibold text-navy-900">{s.title}</span>
+                  </NavLink>
+                ))}
+                <NavLink
+                  to="/services/"
+                  onClick={closeAll}
+                  className="col-span-2 mt-1 flex items-center justify-center gap-1.5 rounded-xl bg-brand-50 py-2.5 text-sm font-bold text-brand-700 transition-colors duration-200 hover:bg-brand-100"
+                >
+                  View All Services <IconArrowRight width={14} height={14} />
+                </NavLink>
+              </div>
+            </div>
+
             <NavLink to="/blog/" className={navLinkClass}>
               Blog
             </NavLink>
@@ -363,19 +435,46 @@ export default function Navbar() {
               </div>
             </div>
 
-            <NavLink
-              to="/services/"
-              onClick={closeAll}
-              className={({ isActive }) =>
-                `block rounded-lg border px-3 py-2.5 text-sm font-semibold transition-all duration-300 ${
-                  isActive
-                    ? 'border-brand-200 bg-brand-50 text-brand-700'
-                    : 'border-transparent text-slate-600 hover:border-brand-100 hover:bg-brand-50/60 hover:text-brand-700'
-                }`
-              }
-            >
-              Services
-            </NavLink>
+            <div>
+              <button
+                type="button"
+                onClick={() => setMobileServicesOpen((v) => !v)}
+                aria-expanded={mobileServicesOpen}
+                className="flex w-full items-center justify-between rounded-lg border border-transparent px-3 py-2.5 text-sm font-semibold text-slate-600 transition-all duration-300 hover:border-brand-100 hover:bg-brand-50/60 hover:text-brand-700"
+              >
+                Services
+                <IconChevronDown
+                  width={16}
+                  height={16}
+                  className={`transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              <div
+                className={`grid overflow-hidden transition-all duration-300 ease-out ${
+                  mobileServicesOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                }`}
+              >
+                <div className="min-h-0 space-y-1 py-1 pl-3">
+                  {services.map((s) => (
+                    <NavLink
+                      key={s.slug}
+                      to={`/services/${s.slug}/`}
+                      onClick={closeAll}
+                      className="block rounded-lg px-3 py-2 text-sm text-slate-600 transition-colors duration-200 hover:bg-brand-50/60 hover:text-brand-700"
+                    >
+                      {s.title}
+                    </NavLink>
+                  ))}
+                  <NavLink
+                    to="/services/"
+                    onClick={closeAll}
+                    className="block rounded-lg px-3 py-2 text-sm font-bold text-brand-700"
+                  >
+                    View All Services
+                  </NavLink>
+                </div>
+              </div>
+            </div>
             <NavLink
               to="/blog/"
               onClick={closeAll}

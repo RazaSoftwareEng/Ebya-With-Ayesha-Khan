@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import Courses from './pages/Courses'
 import CourseDetail from './pages/CourseDetail'
 import Services from './pages/Services'
+import ServiceDetail from './pages/ServiceDetail'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Blog from './pages/Blog'
@@ -35,6 +36,7 @@ export function AppShell() {
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:slug" element={<CourseDetail />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />

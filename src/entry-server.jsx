@@ -4,6 +4,7 @@ import { AppShell } from './App.jsx'
 import { seoStore } from './seoStore.js'
 import { buildSeoMeta } from './seoUtils.js'
 import { courses } from './data/courses.js'
+import { services } from './data/services.js'
 import { blogPosts } from './data/blogPosts.js'
 
 export { buildSeoMeta }
@@ -16,6 +17,7 @@ export function getRoutes() {
     { path: '/courses', priority: '0.9' },
     ...courses.map((c) => ({ path: `/courses/${c.slug}`, priority: '0.85' })),
     { path: '/services', priority: '0.8' },
+    ...services.map((s) => ({ path: `/services/${s.slug}`, priority: '0.65' })),
     { path: '/about', priority: '0.7' },
     { path: '/blog', priority: '0.7' },
     ...blogPosts.map((p) => ({ path: `/blog/${p.slug}`, priority: '0.6', lastmod: p.date })),
