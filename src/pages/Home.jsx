@@ -12,7 +12,10 @@ import {
   IconCheck,
   IconClock,
   IconClose,
+  IconFacebook,
   IconGlobe,
+  IconInstagram,
+  IconLinkedin,
   IconLocation,
   IconPlay,
   IconPlus,
@@ -22,6 +25,7 @@ import {
   IconStar,
   IconTag,
   IconTarget,
+  IconTiktok,
   IconUsers,
   IconWhatsApp,
 } from '../components/icons'
@@ -780,7 +784,7 @@ function EnrollPopup() {
           ))}
         </div>
 
-        <div className="px-6 pt-5 pb-6">
+        <div className="px-6 pt-5">
           <Link
             to="/courses/"
             onClick={() => setOpen(false)}
@@ -788,6 +792,27 @@ function EnrollPopup() {
           >
             Enroll Now <IconArrowRight width={16} height={16} />
           </Link>
+        </div>
+
+        <div className="flex items-center justify-center gap-3 px-6 pt-4 pb-6">
+          <span className="text-xs font-semibold text-white/50">Follow Us:</span>
+          {[
+            { href: site.social.facebook, label: 'Facebook', Icon: IconFacebook },
+            { href: site.social.instagram, label: 'Instagram', Icon: IconInstagram },
+            { href: site.social.linkedin, label: 'LinkedIn', Icon: IconLinkedin },
+            { href: site.social.tiktok, label: 'TikTok', Icon: IconTiktok },
+          ].map(({ href, label, Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="grid h-8 w-8 place-items-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-400 hover:text-navy-900"
+            >
+              <Icon width={15} height={15} />
+            </a>
+          ))}
         </div>
       </div>
     </div>
