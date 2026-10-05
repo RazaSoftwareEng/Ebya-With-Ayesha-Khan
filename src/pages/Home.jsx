@@ -253,7 +253,7 @@ function BrandSlide() {
               <span
                 key={initials}
                 className={`grid h-9 w-9 place-items-center rounded-full text-xs font-bold text-white ring-2 ring-white ${
-                  ['bg-brand-500', 'bg-emerald-500', 'bg-amber-500', 'bg-sky-500'][i]
+                  ['bg-brand-600', 'bg-emerald-700', 'bg-amber-700', 'bg-sky-700'][i]
                 }`}
               >
                 {initials}
@@ -278,7 +278,15 @@ function BrandSlide() {
           <div className="overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-900 via-navy-800 to-brand-700 p-2 shadow-2xl shadow-navy-900/25">
             <div className="overflow-hidden rounded-[2.1rem] bg-white">
               <div className="flex justify-center bg-gradient-to-b from-brand-50 to-white pt-8">
-                <img src={ayeshaAvatar} alt="Ayesha Khan — Founder & Lead Mentor" className="w-56 sm:w-64" />
+                <img
+                  src={ayeshaAvatar}
+                  alt="Ayesha Khan — Founder & Lead Mentor"
+                  width={530}
+                  height={529}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-56 sm:w-64"
+                />
               </div>
               <div className="px-6 pb-7 pt-4 text-center">
                 <p className="font-heading text-xl font-extrabold text-navy-900">Ayesha Khan</p>
@@ -376,6 +384,10 @@ function InstituteSlide() {
       <img
         src={banner1}
         alt="Ayesha Khan Official institute in Lahore"
+        width={1440}
+        height={823}
+        fetchPriority="low"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-navy-950/92 via-navy-950/70 to-navy-950/20" />
@@ -603,17 +615,21 @@ function HeroCarousel() {
         <IconArrowRight width={18} height={18} />
       </button>
 
-      <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2 rounded-full bg-navy-950/30 px-3 py-2 backdrop-blur-sm">
+      <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-1 rounded-full bg-navy-950/30 px-1.5 py-1 backdrop-blur-sm">
         {Array.from({ length: heroSlideCount }).map((_, i) => (
           <button
             key={i}
             type="button"
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => setIndex(i)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              i === index ? 'w-6 bg-white' : 'w-2 bg-white/50 hover:bg-white/80'
-            }`}
-          />
+            className="grid h-6 w-6 shrink-0 place-items-center"
+          >
+            <span
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === index ? 'w-6 bg-white' : 'w-2 bg-white/50 hover:bg-white/80'
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>
@@ -698,7 +714,7 @@ export default function Home() {
 
       <section className="border-y border-slate-100 bg-slate-50 py-8">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-400">
+          <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-500">
             Platforms You'll Learn to Sell On
           </p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
@@ -706,7 +722,7 @@ export default function Home() {
               <span
                 key={p.name}
                 style={{ color: p.color }}
-                className="font-heading text-lg font-bold opacity-60 transition-all duration-300 hover:scale-110 hover:opacity-100 hover:[filter:drop-shadow(0_0_10px_currentColor)]"
+                className="font-heading text-xl font-bold transition-transform duration-300 hover:scale-110 hover:[filter:drop-shadow(0_0_10px_currentColor)]"
               >
                 {p.name}
               </span>
@@ -808,6 +824,7 @@ export default function Home() {
                   </ul>
                   <Link
                     to={`/courses/${c.slug}/`}
+                    aria-label={`View details for ${c.title}`}
                     className={`mt-6 flex items-center justify-center gap-2 rounded-full py-2.5 text-sm font-bold transition-all duration-300 ${
                       i === 0
                         ? 'bg-brand-600 text-white hover:bg-brand-700 hover:shadow-lg'

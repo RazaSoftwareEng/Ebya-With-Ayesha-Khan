@@ -144,6 +144,10 @@ export default function Navbar() {
             <img
               src={ayeshaAvatar}
               alt="Ayesha Khan"
+              width={44}
+              height={44}
+              fetchPriority="high"
+              decoding="async"
               className="h-11 w-11 shrink-0 rounded-full object-cover"
             />
             <span className="font-heading leading-tight">

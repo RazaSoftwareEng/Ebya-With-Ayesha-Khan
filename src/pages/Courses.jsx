@@ -111,6 +111,7 @@ export default function Courses() {
 
                   <Link
                     to={`/courses/${c.slug}/`}
+                    aria-label={`View full details for ${c.title}`}
                     className="mt-6 flex items-center justify-center gap-2 rounded-full bg-brand-600 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-700 hover:shadow-lg"
                   >
                     View Full Details <IconArrowRight width={16} height={16} />
