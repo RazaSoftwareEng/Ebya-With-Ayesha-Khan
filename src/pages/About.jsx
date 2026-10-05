@@ -54,7 +54,7 @@ export default function About() {
       <Seo
         title="About Ayesha Khan | Ecommerce Mentor, Lahore"
         description="Meet Ayesha Khan, a Lahore-based eBay and ecommerce mentor. Practical, mentor-led training trusted by thousands of students and companies."
-        keywords="Ayesha Khan eBay, Ayesha Khan Official, eBay mentor Lahore, ecommerce institute Lahore, eBay trainer Pakistan"
+        keywords="Ayesha Khan eBay, Ayesha Khan Official Lahore, eBay mentor in Lahore, best eBay trainer Lahore, ecommerce institute Allama Iqbal Town Lahore, eBay trainer Pakistan, female eBay mentor Pakistan"
         path="/about"
       />
 

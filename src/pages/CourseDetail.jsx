@@ -84,7 +84,7 @@ export default function CourseDetail() {
       <Seo
         title={`${course.title} Course in Lahore`}
         description={`${course.desc} Taught in Lahore, Pakistan — online and in-person batches available.`}
-        keywords={`${course.title}, ${course.title} course Lahore, ${course.title} training Pakistan, ${course.title} course online, learn ${course.title} Lahore`}
+        keywords={`${course.title}, ${course.title} course in Lahore, ${course.title} course fees in Lahore, ${course.title} training Pakistan, ${course.title} course online, learn ${course.title} in Lahore`}
         path={`/courses/${course.slug}`}
         jsonLd={jsonLd}
       />

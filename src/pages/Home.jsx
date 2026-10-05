@@ -703,7 +703,7 @@ export default function Home() {
       <Seo
         rawTitle="eBay with Ayesha Khan – eBay & Ecommerce Courses in Lahore"
         description="Learn eBay with Ayesha Khan: practical, mentor-led eBay, Shopify, TikTok Shop and digital marketing courses in Lahore, Pakistan. Online and in-person."
-        keywords="eBay course Pakistan, eBay course Lahore, dropshipping course Lahore, TikTok Shop course, Shopify course Pakistan, Etsy course, ecommerce training Lahore, Ayesha Khan eBay, AI for ecommerce, digital marketing course Pakistan, online selling course Lahore"
+        keywords="eBay course in Lahore, best eBay course in Lahore, eBay course Pakistan, eBay training institute Lahore, ecommerce institute Lahore, online earning course Lahore, dropshipping course Lahore, TikTok Shop course Lahore, Shopify course Pakistan, Etsy course Lahore, Ayesha Khan eBay, Ayesha Khan Official Lahore, digital marketing course Pakistan, online selling course Lahore, eBay seller training Allama Iqbal Town"
         path="/"
       />
 

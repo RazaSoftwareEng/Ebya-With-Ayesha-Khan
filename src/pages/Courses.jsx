@@ -29,7 +29,7 @@ export default function Courses() {
       <Seo
         title="eBay, Shopify & TikTok Shop Courses in Lahore"
         description="Practical, mentor-led courses in eBay, Shopify, TikTok Shop, Etsy, AI for ecommerce, and digital marketing in Lahore, Pakistan — for beginners through to companies."
-        keywords="eBay course Lahore, Shopify course Lahore, TikTok Shop course Pakistan, Etsy course Pakistan, AI for ecommerce course, digital marketing course Lahore, ecommerce courses Pakistan, dropshipping course Lahore"
+        keywords="eBay course in Lahore, eBay course fees in Lahore, Shopify course Lahore, TikTok Shop course Pakistan, Etsy course Pakistan, AI for ecommerce course Lahore, digital marketing course Lahore, ecommerce courses Pakistan, dropshipping course Lahore, best ecommerce institute Lahore"
         path="/courses"
       />
 

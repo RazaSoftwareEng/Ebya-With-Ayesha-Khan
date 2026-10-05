@@ -90,7 +90,7 @@ export default function Contact() {
       <Seo
         title="Contact Us – Enroll in eBay Courses in Lahore"
         description="Get in touch with Ayesha Khan Official for course enrollment, corporate training or general questions — by phone, WhatsApp, email or our contact form."
-        keywords="contact Ayesha Khan Official, enroll eBay course Lahore, eBay course enquiry Pakistan, ecommerce training Lahore contact"
+        keywords="contact Ayesha Khan Official, enroll eBay course Lahore, eBay institute Lahore address, eBay course enquiry Pakistan, ecommerce training Lahore contact, eBay academy Allama Iqbal Town"
         path="/contact"
       />
 
