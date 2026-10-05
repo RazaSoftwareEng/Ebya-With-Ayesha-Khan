@@ -11,6 +11,7 @@ import {
   IconChart,
   IconCheck,
   IconClock,
+  IconClose,
   IconGlobe,
   IconLocation,
   IconPlay,
@@ -695,6 +696,108 @@ function TestimonialCarousel() {
   )
 }
 
+const popupCourses = [courses[0], courses.find((c) => c.slug === 'tiktok-shop') ?? courses[1]]
+
+function EnrollPopup() {
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (sessionStorage.getItem('enrollPopupSeen')) return
+    const timer = setTimeout(() => {
+      sessionStorage.setItem('enrollPopupSeen', '1')
+      setOpen(true)
+    }, 1800)
+    return () => clearTimeout(timer)
+  }, [])
+
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e) => e.key === 'Escape' && setOpen(false)
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [open])
+
+  if (!open) return null
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-navy-950/70 p-4 backdrop-blur-sm"
+      onClick={() => setOpen(false)}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Course enrollment offer"
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-sm overflow-hidden rounded-3xl bg-gradient-to-br from-navy-900 via-navy-900 to-emerald-900 text-white shadow-2xl"
+      >
+        <button
+          type="button"
+          aria-label="Close"
+          onClick={() => setOpen(false)}
+          className="absolute top-4 right-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-white/10 text-white transition-colors duration-300 hover:bg-white/20"
+        >
+          <IconClose width={16} height={16} />
+        </button>
+
+        <div className="flex items-center gap-3 border-b border-white/10 px-6 py-5">
+          <img
+            src={ayeshaAvatar}
+            alt="Ayesha Khan"
+            width={44}
+            height={44}
+            className="h-11 w-11 shrink-0 rounded-full object-cover"
+          />
+          <div>
+            <p className="font-heading text-sm font-bold">Ayesha Khan</p>
+            <p className="text-xs text-white/60">Founder &amp; Lead Mentor</p>
+          </div>
+        </div>
+
+        <div className="px-6 pt-6 pb-2">
+          <p className="font-heading text-2xl leading-tight font-extrabold">
+            Your Journey to <span className="text-gold-400">Earning Online</span> Starts Here
+          </p>
+          <p className="mt-2 text-sm text-white/70">
+            Join 2,500+ students already selling on eBay &amp; TikTok Shop from Lahore.
+          </p>
+        </div>
+
+        <div className="space-y-3 px-6 pt-4">
+          {popupCourses.map((c) => (
+            <Link
+              key={c.slug}
+              to={`/courses/${c.slug}/`}
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-3 rounded-xl bg-white p-3.5 text-navy-900 transition-transform duration-300 hover:-translate-y-0.5"
+            >
+              <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-gradient-to-br ${c.thumb} text-white`}>
+                <c.icon width={18} height={18} />
+              </span>
+              <span className="text-sm font-bold">{c.title}</span>
+              <IconArrowRight width={16} height={16} className="ml-auto shrink-0 text-slate-400" />
+            </Link>
+          ))}
+        </div>
+
+        <div className="px-6 pt-5 pb-6">
+          <Link
+            to="/courses/"
+            onClick={() => setOpen(false)}
+            className="flex items-center justify-center gap-2 rounded-full bg-gold-500 py-3.5 text-sm font-bold text-navy-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-400"
+          >
+            Enroll Now <IconArrowRight width={16} height={16} />
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function Home() {
   const [openFaq, setOpenFaq] = useState(0)
 
@@ -706,6 +809,8 @@ export default function Home() {
         keywords="eBay course in Lahore, best eBay course in Lahore, eBay course Pakistan, eBay training institute Lahore, ecommerce institute Lahore, online earning course Lahore, dropshipping course Lahore, TikTok Shop course Lahore, Shopify course Pakistan, Etsy course Lahore, Ayesha Khan eBay, Ayesha Khan Official Lahore, digital marketing course Pakistan, online selling course Lahore, eBay seller training Allama Iqbal Town"
         path="/"
       />
+
+      <EnrollPopup />
 
       <section className="relative w-full overflow-hidden">
         <Reveal>
