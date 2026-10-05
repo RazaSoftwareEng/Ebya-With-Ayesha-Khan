@@ -702,11 +702,7 @@ function EnrollPopup() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    if (sessionStorage.getItem('enrollPopupSeen')) return
-    const timer = setTimeout(() => {
-      sessionStorage.setItem('enrollPopupSeen', '1')
-      setOpen(true)
-    }, 1800)
+    const timer = setTimeout(() => setOpen(true), 1800)
     return () => clearTimeout(timer)
   }, [])
 
