@@ -703,6 +703,7 @@ export default function Home() {
       <Seo
         rawTitle="eBay with Ayesha Khan – eBay & Ecommerce Courses in Lahore"
         description="Learn eBay with Ayesha Khan: practical, mentor-led eBay, Shopify, TikTok Shop and digital marketing courses in Lahore, Pakistan. Online and in-person."
+        keywords="eBay course Pakistan, eBay course Lahore, dropshipping course Lahore, TikTok Shop course, Shopify course Pakistan, Etsy course, ecommerce training Lahore, Ayesha Khan eBay, AI for ecommerce, digital marketing course Pakistan, online selling course Lahore"
         path="/"
       />
 

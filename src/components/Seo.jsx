@@ -31,19 +31,21 @@ export default function Seo({
   path = '/',
   type = 'website',
   image = '/og-image.jpg',
+  keywords,
   jsonLd,
   noindex = false,
 }) {
   // Server render only: lets scripts/prerender.mjs read each page's meta tags.
   if (typeof window === 'undefined') {
-    seoStore.value = { title, rawTitle, description, path, type, image, jsonLd, noindex }
+    seoStore.value = { title, rawTitle, description, path, type, image, keywords, jsonLd, noindex }
   }
 
   useEffect(() => {
-    const meta = buildSeoMeta({ title, rawTitle, description, path, type, image, noindex })
+    const meta = buildSeoMeta({ title, rawTitle, description, path, type, image, keywords, noindex })
 
     document.title = meta.fullTitle
     upsertMeta('name', 'description', meta.description)
+    if (meta.keywords) upsertMeta('name', 'keywords', meta.keywords)
     upsertMeta('name', 'robots', meta.robots)
     upsertMeta('property', 'og:title', meta.fullTitle)
     upsertMeta('property', 'og:description', meta.description)
@@ -72,7 +74,7 @@ export default function Seo({
         document.getElementById('seo-jsonld')?.remove()
       }
     }
-  }, [title, rawTitle, description, path, type, image, jsonLd, noindex])
+  }, [title, rawTitle, description, path, type, image, keywords, jsonLd, noindex])
 
   return null
 }

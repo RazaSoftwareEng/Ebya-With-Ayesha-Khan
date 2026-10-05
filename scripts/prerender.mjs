@@ -22,6 +22,7 @@ const esc = (s) =>
 const STRIP = [
   /<title>[\s\S]*?<\/title>\s*/,
   /<meta\s+name="description"[\s\S]*?\/>\s*/,
+  /<meta\s+name="keywords"[\s\S]*?\/>\s*/,
   /<meta\s+name="robots"[\s\S]*?\/>\s*/,
   /<link\s+rel="canonical"[\s\S]*?\/>\s*/,
   /<meta\s+property="og:(?:type|title|description|url|image)"[\s\S]*?\/>\s*/g,
@@ -33,6 +34,9 @@ function headTags(seo) {
   const tags = [
     `<title>${esc(m.fullTitle)}</title>`,
     `<meta name="description" content="${esc(m.description)}" />`,
+  ]
+  if (m.keywords) tags.push(`<meta name="keywords" content="${esc(m.keywords)}" />`)
+  tags.push(
     `<meta name="robots" content="${m.robots}" />`,
     `<link rel="canonical" href="${m.url}" />`,
     `<meta property="og:type" content="${esc(m.type)}" />`,
@@ -44,7 +48,7 @@ function headTags(seo) {
     `<meta name="twitter:title" content="${esc(m.fullTitle)}" />`,
     `<meta name="twitter:description" content="${esc(m.description)}" />`,
     `<meta name="twitter:image" content="${m.imageUrl}" />`,
-  ]
+  )
   if (seo.jsonLd) {
     const json = JSON.stringify(seo.jsonLd).replace(/</g, '\\u003c')
     tags.push(`<script id="seo-jsonld" type="application/ld+json">${json}</script>`)

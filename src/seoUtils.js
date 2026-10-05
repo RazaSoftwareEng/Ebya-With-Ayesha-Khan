@@ -25,6 +25,7 @@ export function buildSeoMeta({
   path = '/',
   type = 'website',
   image = '/og-image.jpg',
+  keywords,
   noindex = false,
 }) {
   const branded = title ? `${title} | ${TITLE_SUFFIX}` : TITLE_SUFFIX
@@ -34,6 +35,7 @@ export function buildSeoMeta({
     type,
     url: pageUrl(path),
     imageUrl: image.startsWith('http') ? image : `${siteUrl}${image}`,
+    keywords: Array.isArray(keywords) ? keywords.join(', ') : keywords || '',
     robots: noindex ? 'noindex, nofollow' : 'index, follow',
   }
 }

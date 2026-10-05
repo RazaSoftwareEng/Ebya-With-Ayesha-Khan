@@ -111,6 +111,7 @@ export default function Services() {
       <Seo
         title="eBay Consultancy & Shopify Marketing in Lahore"
         description="eBay consultancy and store management, Shopify marketing, TikTok Shop, business websites and Google & Meta ads for sellers in Lahore, Pakistan."
+        keywords="eBay consultancy Lahore, eBay account management Pakistan, Shopify marketing Lahore, ecommerce consultancy Pakistan, dropshipping consultancy Lahore, digital marketing services Pakistan, Google ads Meta ads Lahore"
         path="/services"
       />
 

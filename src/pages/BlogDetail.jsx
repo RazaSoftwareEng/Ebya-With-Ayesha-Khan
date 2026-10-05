@@ -102,6 +102,7 @@ export default function BlogDetail() {
       <Seo
         title={post.title}
         description={post.excerpt}
+        keywords={`${post.title}, eBay Pakistan, dropshipping Pakistan, ecommerce blog Lahore`}
         path={`/blog/${post.slug}`}
         type="article"
         jsonLd={jsonLd}
