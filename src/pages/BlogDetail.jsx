@@ -16,6 +16,44 @@ function formatDate(dateStr) {
   })
 }
 
+// Lets body text use simple [label](url) markup for internal and external links,
+// without needing a full markdown renderer or dangerouslySetInnerHTML.
+const LINK_RE = /\[([^\]]+)\]\(([^)]+)\)/g
+
+function renderInline(text) {
+  const parts = []
+  let last = 0
+  let match
+  let i = 0
+  LINK_RE.lastIndex = 0
+  while ((match = LINK_RE.exec(text))) {
+    if (match.index > last) parts.push(text.slice(last, match.index))
+    const [, label, href] = match
+    if (href.startsWith('/')) {
+      parts.push(
+        <Link key={i++} to={href} className="font-semibold text-brand-700 underline decoration-brand-200 underline-offset-2 hover:text-brand-800">
+          {label}
+        </Link>,
+      )
+    } else {
+      parts.push(
+        <a
+          key={i++}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-brand-700 underline decoration-brand-200 underline-offset-2 hover:text-brand-800"
+        >
+          {label}
+        </a>,
+      )
+    }
+    last = LINK_RE.lastIndex
+  }
+  if (last < text.length) parts.push(text.slice(last))
+  return parts
+}
+
 function BodyBlock({ block }) {
   if (block.type === 'h2') {
     return (
@@ -30,13 +68,13 @@ function BodyBlock({ block }) {
         {block.items.map((item) => (
           <li key={item} className="flex items-start gap-2.5 text-slate-600">
             <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
-            {item}
+            <span>{renderInline(item)}</span>
           </li>
         ))}
       </ul>
     )
   }
-  return <p className="mt-4 leading-relaxed text-slate-600">{block.text}</p>
+  return <p className="mt-4 leading-relaxed text-slate-600">{renderInline(block.text)}</p>
 }
 
 export default function BlogDetail() {
@@ -195,6 +233,7 @@ export default function BlogDetail() {
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{r.excerpt}</p>
                     <Link
                       to={`/blog/${r.slug}/`}
+                      aria-label={`Read article: ${r.title}`}
                       className="mt-5 flex items-center gap-2 text-sm font-bold text-brand-600 hover:text-brand-700"
                     >
                       Read Article <IconArrowRight width={16} height={16} />
