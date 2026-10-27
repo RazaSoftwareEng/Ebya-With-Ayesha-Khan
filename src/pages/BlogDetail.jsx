@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import Seo from '../components/Seo'
 import Reveal from '../components/Reveal'
 import CTASection from '../components/CTASection'
-import { IconArrowLeft, IconArrowRight, IconClock, IconUsers } from '../components/icons'
+import { IconArrowLeft, IconArrowRight, IconCheck, IconClock, IconUsers } from '../components/icons'
 import { getBlogPostBySlug, getRelatedPosts } from '../data/blogPosts'
 import { site } from '../siteConfig'
 import { pageUrl } from '../seoUtils'
@@ -56,18 +56,26 @@ function renderInline(text) {
 
 function BodyBlock({ block }) {
   if (block.type === 'h2') {
+    const Icon = block.icon
     return (
-      <h2 className="mt-8 font-heading text-xl font-bold text-navy-900 sm:text-2xl">
+      <h2 className="mt-10 flex items-center gap-3 font-heading text-xl font-bold text-navy-900 sm:text-2xl">
+        {Icon && (
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600">
+            <Icon width={18} height={18} />
+          </span>
+        )}
         {block.text}
       </h2>
     )
   }
   if (block.type === 'ul') {
     return (
-      <ul className="mt-4 space-y-2.5">
+      <ul className="mt-4 space-y-3">
         {block.items.map((item) => (
-          <li key={item} className="flex items-start gap-2.5 text-slate-600">
-            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
+          <li key={item} className="flex items-start gap-3 text-slate-600">
+            <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-50 text-brand-600">
+              <IconCheck width={12} height={12} />
+            </span>
             <span>{renderInline(item)}</span>
           </li>
         ))}

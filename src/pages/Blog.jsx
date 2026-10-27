@@ -19,9 +19,9 @@ export default function Blog() {
   return (
     <>
       <Seo
-        title="eBay & Dropshipping Blog (English & Roman Urdu)"
-        description="Practical articles on eBay selling, dropshipping and ecommerce growth — in English and Roman Urdu, including a guide on how to start eBay from Pakistan."
-        keywords="eBay blog Pakistan, eBay guide Lahore, dropshipping blog Pakistan, ecommerce blog Lahore, eBay tips Pakistan, eBay Roman Urdu guide, dropshipping Roman Urdu, online selling tips Lahore"
+        title="eBay, Dropshipping & Ecommerce Blog"
+        description="Practical, in-depth articles on eBay selling, dropshipping, TikTok Shop, Etsy and ecommerce growth — written from real teaching experience, not recycled tips."
+        keywords="eBay blog Pakistan, eBay guide Lahore, dropshipping blog Pakistan, ecommerce blog Lahore, eBay tips Pakistan, TikTok Shop blog, Etsy blog Pakistan, online selling tips Lahore"
         path="/blog"
       />
 
