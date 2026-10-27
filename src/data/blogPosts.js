@@ -767,6 +767,14 @@ export function getBlogPostBySlug(slug) {
   return blogPosts.find((post) => post.slug === slug)
 }
 
-export function getRelatedPosts(slug, count = 2) {
-  return blogPosts.filter((post) => post.slug !== slug).slice(0, count)
+export function getRelatedPosts(slug, count = 3) {
+  const current = getBlogPostBySlug(slug)
+  const others = blogPosts.filter((post) => post.slug !== slug)
+  if (!current) return others.slice(0, count)
+
+  // Prefer posts in the same category so "related" is actually related,
+  // then fill any remaining slots with the rest.
+  const sameCategory = others.filter((post) => post.category === current.category)
+  const rest = others.filter((post) => post.category !== current.category)
+  return [...sameCategory, ...rest].slice(0, count)
 }
