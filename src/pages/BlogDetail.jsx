@@ -188,8 +188,8 @@ export default function BlogDetail() {
       </section>
 
       <section className="bg-white py-14 lg:py-16">
-        <div className="mx-auto max-w-3xl px-5 lg:px-8">
-          <Reveal className="text-base" lang={post.lang}>
+        <div className="mx-auto max-w-5xl px-5 lg:px-8">
+          <Reveal className="text-base">
             {post.body.map((block, i) => (
               <BodyBlock key={i} block={block} />
             ))}
