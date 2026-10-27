@@ -5,6 +5,7 @@ import {
   IconCheck,
   IconChart,
   IconClock,
+  IconCode,
   IconGift,
   IconGlobe,
   IconMegaphone,
@@ -12,6 +13,7 @@ import {
   IconRocket,
   IconSearch,
   IconShield,
+  IconShoppingBag,
   IconSparkles,
   IconStar,
   IconTag,
@@ -815,6 +817,206 @@ export const blogPosts = [
       {
         type: 'p',
         text: "If you're currently facing a restriction and aren't sure how to respond, our [account health & policy guidance service](/services/account-health-policy-guidance/) reviews your specific case and helps you put together a proper appeal — [message us on WhatsApp](/contact/) with the details and we'll tell you honestly what we think your options are.",
+      },
+    ],
+  },
+  {
+    slug: 'shopify-store-setup-checklist',
+    title: 'Shopify Store Setup Checklist: Everything to Do Before You Launch',
+    excerpt:
+      "A Shopify store that looks finished and one that's actually ready to take orders are two different things. Here's the full checklist we run through before any store goes live.",
+    category: 'Shopify',
+    author: 'Ayesha Khan',
+    date: '2026-11-02',
+    readTime: '10 min read',
+    icon: IconShoppingBag,
+    thumb: 'from-emerald-700 to-green-900',
+    body: [
+      {
+        type: 'p',
+        text: "Shopify makes it dangerously easy to launch a store that looks finished but isn't actually ready to sell — a theme installed, a few products added, and a \"Launch\" button that quietly skips a dozen things that matter. This is the exact checklist we run through with students and clients before any store goes live, in the order we recommend doing it.",
+      },
+      { type: 'h2', text: 'Choosing and Customizing Your Theme', icon: IconMonitor },
+      {
+        type: 'p',
+        text: "Pick a theme built for your product type and traffic volume, not just the one that looks best in the demo — a theme loaded with animations and large images can slow your store down on mobile, where most of your traffic will come from. Customize the colors, fonts and homepage layout to match your brand, but resist the urge to install every feature a theme offers. More sections and widgets usually mean slower load times, not more sales.",
+      },
+      { type: 'h2', text: 'Building Your Product Catalog Properly', icon: IconTag },
+      {
+        type: 'p',
+        text: "Every product needs a clear title, an honest description that answers real buyer questions, accurate variants (size, color, material) and at least three to five genuine photos. Organize products into collections that make sense to a buyer browsing your store, not just categories that make sense to you internally — this directly affects how easy your store is to navigate and how well it performs in Shopify's own search.",
+      },
+      { type: 'h2', text: 'Payment Gateway and Checkout Setup', icon: IconChart },
+      {
+        type: 'p',
+        text: "Set up and fully test your payment gateway before launch — a checkout that fails or looks untrustworthy at the final step is one of the most common reasons stores lose sales they've already won. Place a real test order yourself, all the way through to payment, so you experience exactly what your customer will.",
+      },
+      { type: 'h2', text: 'Shipping Rates and Policies', icon: IconBox },
+      {
+        type: 'p',
+        text: "Decide your shipping rates based on real costs, not guesswork — the same mistake that quietly kills margin on marketplaces like eBay kills it here too. Write clear shipping, return and refund policies and publish them where buyers can actually find them before checkout, not buried in a footer link nobody clicks.",
+      },
+      { type: 'h2', text: 'Essential Apps Worth Installing', icon: IconSparkles },
+      {
+        type: 'ul',
+        items: [
+          'A reviews app, so social proof starts building from your first sale',
+          'Abandoned cart recovery, which recovers sales you\'d otherwise lose silently',
+          'An email capture tool, so you can market to visitors who don\'t buy immediately',
+          'Analytics beyond Shopify\'s default dashboard, once your store has real traffic',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Install only what you'll actually use — a store loaded with a dozen apps you never configured properly is slower and harder to maintain than one with five apps doing real work. Shopify's own [App Store](https://apps.shopify.com/) and [Help Center](https://help.shopify.com/) are the first place to check an app's reviews before installing.",
+      },
+      { type: 'h2', text: 'Legal Pages and Trust Signals', icon: IconShield },
+      {
+        type: 'p',
+        text: "A privacy policy, terms of service and a visible contact method aren't just legal formalities — they're trust signals that measurably affect whether a first-time visitor feels safe entering their card details. Add a few genuine trust elements: real contact information, clear policies, and if you have any, real customer reviews or a verified social presence.",
+      },
+      { type: 'h2', text: 'SEO Basics Before You Launch', icon: IconSearch },
+      {
+        type: 'p',
+        text: "Set a clear page title and meta description for your homepage and key product pages, use descriptive (not generic) image file names, and submit your sitemap through [Google Search Console](https://search.google.com/search-console/about) as soon as the store is live. None of this guarantees traffic overnight, but skipping it guarantees you start from zero visibility instead of a head start.",
+      },
+      { type: 'h2', text: 'Testing a Full Order Before Going Live', icon: IconCheck },
+      {
+        type: 'ul',
+        items: [
+          'Place a real order from a customer\'s perspective, on both desktop and mobile',
+          'Confirm the order confirmation email actually arrives and looks correct',
+          'Check that your fulfillment workflow correctly flags the order to act on',
+          'Test at least one return or refund request through your own process',
+        ],
+      },
+      { type: 'h2', text: 'Launch Day and What Comes After', icon: IconRocket },
+      {
+        type: 'p',
+        text: "Launching isn't the finish line — it's closer to the beginning of the actual work. Expect to adjust pricing, descriptions and even your product lineup based on real customer behavior once the store is live. If you're still deciding whether Shopify is the right platform to start on at all, our [eBay vs Shopify vs TikTok Shop vs Etsy comparison](/blog/ebay-vs-shopify-vs-tiktok-shop-vs-etsy/) is worth reading first, and our note on [dropshipping vs traditional ecommerce](/blog/dropshipping-vs-traditional-ecommerce/) covers how to stock the store you're building.",
+      },
+      {
+        type: 'p',
+        text: "We walk through every item on this checklist hands-on inside our [Shopify Store Mastery course](/courses/shopify/), and if you'd rather have your store built for you from the ground up, our [Shopify store setup service](/services/shopify-store-setup/) handles the entire process — [message us](/contact/) for a free consultation.",
+      },
+    ],
+  },
+  {
+    slug: 'marketplace-vs-your-own-website',
+    title: 'Marketplace vs Your Own Website: Do You Need Both?',
+    excerpt:
+      "Selling on eBay or TikTok Shop and having your own website aren't competing choices — they solve different problems. Here's how to think about which one you need, and when.",
+    category: 'Ecommerce Strategy',
+    author: 'Ayesha Khan',
+    date: '2026-11-05',
+    readTime: '9 min read',
+    icon: IconMonitor,
+    thumb: 'from-navy-800 to-brand-800',
+    body: [
+      {
+        type: 'p',
+        text: "We get this question from students who already have some traction: \"I'm selling fine on eBay — do I actually need my own website too?\" The honest answer is that marketplaces and your own website solve different problems, and the right setup depends on what stage your business is at, not which option sounds more professional.",
+      },
+      { type: "h2", text: "What a Marketplace Gives You That a Website Can't", icon: IconGlobe },
+      {
+        type: 'p',
+        text: "A marketplace like [eBay](/courses/ebay/) or [TikTok Shop](/courses/tiktok-shop/) comes with existing buyer traffic from day one. You don't have to convince anyone your platform is trustworthy — the marketplace already did that work. For a new seller with no audience and no marketing budget, this is the fastest realistic path to a first sale, which is exactly why we recommend it as a starting point in our [platform comparison](/blog/ebay-vs-shopify-vs-tiktok-shop-vs-etsy/).",
+      },
+      { type: "h2", text: "What Your Own Website Gives You That a Marketplace Can't", icon: IconStar },
+      {
+        type: 'p',
+        text: "A website is yours — no marketplace fees on every sale, no algorithm deciding whether your listing gets seen, and full control over branding, customer data and the entire buying experience. It's also the only option that lets you build something a buyer could search for by name, rather than finding you only by browsing a marketplace.",
+      },
+      { type: 'h2', text: 'The Hidden Cost of Marketplace-Only Selling', icon: IconChart },
+      {
+        type: 'p',
+        text: "Marketplace fees, payment processing costs and increasing competition on price all quietly compound over time. More seriously, you don't own the relationship with your customer — a policy change, a suspension, or an algorithm update can affect your visibility overnight, and you have very little recourse. Sellers who rely entirely on one marketplace are building on land they don't own.",
+      },
+      { type: 'h2', text: 'When a Website Starts to Make Sense', icon: IconTarget },
+      {
+        type: 'p',
+        text: "The usual signal isn't a specific revenue number — it's when you've validated that a product genuinely sells, and you want to stop paying marketplace fees on every single order, or you want repeat customers to find you directly instead of searching a marketplace each time. Many of our students build their marketplace presence first, then add a website once a product is proven, rather than the other way around.",
+      },
+      { type: 'h2', text: 'What a Good Small Business Website Actually Needs', icon: IconMonitor },
+      {
+        type: 'ul',
+        items: [
+          'Fast load times and a design that works properly on mobile',
+          'Clear product pages, pricing and a simple path to checkout or contact',
+          'Real trust signals: contact details, policies, genuine reviews',
+          'Basic SEO so the site can actually be found, not just exist',
+        ],
+      },
+      { type: 'h2', text: 'Running Both Without Doubling Your Work', icon: IconCode },
+      {
+        type: 'p',
+        text: "The practical risk of running a marketplace and a website together is double data-entry — updating stock in two places, or missing an order because it landed somewhere you weren't checking. This is exactly what proper system architecture solves: connected inventory, orders and payments across every channel you sell on, which is what our [ecommerce solutions service](/services/ecommerce-solutions/) is built around.",
+      },
+      { type: 'h2', text: 'A Simple Way to Decide', icon: IconCheck },
+      {
+        type: 'p',
+        text: "If you're brand new with no proven product yet, start on a marketplace — it's faster, cheaper, and teaches you what actually sells. Once you have a product with consistent demand, a website stops being a \"nice to have\" and starts being a way to keep more of every sale you're already making.",
+      },
+      {
+        type: 'p',
+        text: "Not sure which stage you're at, or want a website that actually represents your brand properly? Our [business website development service](/services/business-website-development/) builds exactly that, and [a free consultation](/contact/) costs nothing to find out what we'd recommend for your specific situation.",
+      },
+    ],
+  },
+  {
+    slug: 'scaling-past-first-100-sales',
+    title: 'Scaling Past Your First 100 Sales: What Actually Changes',
+    excerpt:
+      "The habits that get you to your first 100 sales often stop working right after — and most sellers don't notice until something breaks. Here's what actually changes as you scale.",
+    category: 'Growth & Scaling',
+    author: 'Ayesha Khan',
+    date: '2026-11-08',
+    readTime: '9 min read',
+    icon: IconChart,
+    thumb: 'from-blue-600 to-navy-900',
+    body: [
+      {
+        type: 'p',
+        text: "Your first 100 sales prove that people will actually buy what you're selling — that's a real milestone. What surprises most sellers is that the habits that got them there (doing everything manually, checking messages whenever, tracking numbers in your head) are exactly what starts breaking right after. Here's what actually changes as volume grows, and what to fix before it becomes a problem.",
+      },
+      { type: 'h2', text: 'Your First 100 Sales Prove the Concept — Then What?', icon: IconTarget },
+      {
+        type: 'p',
+        text: "Getting to 100 sales tells you the product, pricing and positioning work at a small scale. It doesn't tell you whether your current process works at three or five times that volume — and most sellers find out the hard way, mid-rush, instead of planning for it in advance.",
+      },
+      { type: "h2", text: "Fulfillment Starts to Break Before Anything Else Does", icon: IconBox },
+      {
+        type: 'p',
+        text: "Manually packing and shipping ten orders a week is manageable. Thirty or fifty a week, done the same manual way, is where mistakes start creeping in — wrong items, missed orders, shipping delays. This is usually the first real bottleneck sellers hit, and it's exactly what our [dropshipping setup & automation service](/services/dropshipping-setup-automation/) and [product research & sourcing service](/services/product-research-sourcing/) are designed to get ahead of.",
+      },
+      { type: "h2", text: "Customer Service Needs a System, Not Just You", icon: IconUsers },
+      {
+        type: 'p',
+        text: "Answering every message personally works at low volume and becomes unsustainable fast as orders grow. Before you're overwhelmed, put basic structure in place: saved replies for common questions, clear response-time expectations, and a simple way to track which messages are still open. An AI-assisted first line of support — which we cover in [practical AI tools for sellers](/blog/ai-tools-for-ecommerce-sellers/) — is often the first upgrade worth making here.",
+      },
+      { type: 'h2', text: "Ad Spend That Worked Small Doesn't Always Scale Cleanly", icon: IconAdTarget },
+      {
+        type: 'p',
+        text: "A campaign that performed well on a small daily budget doesn't always perform the same way once you increase spend significantly — audiences saturate, costs per sale creep up, and what worked at a small scale needs active management at a larger one. Our [beginner's ad budget framework](/blog/facebook-google-ads-budget-for-beginners/) covers the testing phase; scaling spend responsibly is a different, ongoing discipline, which is exactly what our [store growth & ads management service](/services/store-growth-ads-management/) handles for sellers past that early stage.",
+      },
+      { type: 'h2', text: 'Your Tracking Needs to Grow Up Too', icon: IconChart },
+      {
+        type: 'p',
+        text: "Tracking orders, customers and inventory in your head — or in a single spreadsheet — works until it suddenly doesn't, usually right when volume spikes and you can least afford the confusion. If you're finding it harder to answer basic questions like \"how many of this item do I have left\" or \"which customers haven't received their order,\" that's the signal. Our [custom software & CRM service](/services/custom-software-crm/) builds systems around exactly this kind of growing pain, instead of forcing your business into a generic tool that doesn't fit how you actually work.",
+      },
+      { type: 'h2', text: 'Cash Flow Gets Tighter, Not Easier, as You Grow', icon: IconShield },
+      {
+        type: 'p',
+        text: "Counterintuitively, growth often strains cash flow rather than relieving it — more inventory tied up, more ad spend committed before it's returned, more staff or help needed before the extra revenue has actually landed in your account. Plan your reorders and ad budget increases around cash you've already received, not sales you expect to make.",
+      },
+      { type: 'h2', text: 'Knowing When to Bring in Help', icon: IconRocket },
+      {
+        type: 'p',
+        text: "Trying to personally handle fulfillment, customer service, ad management and bookkeeping all at once past a certain volume isn't dedication — it's usually what quietly caps how big the business can get. Recognizing which specific piece to hand off first (often fulfillment or ad management) is more valuable than trying to do everything a little better yourself.",
+      },
+      {
+        type: 'p',
+        text: "If your store has outgrown the systems that got you here, [message us for a free consultation](/contact/) — we'll tell you honestly which service actually fits where you are, whether that's ad management, automation, or a custom system built around how you work.",
       },
     ],
   },
