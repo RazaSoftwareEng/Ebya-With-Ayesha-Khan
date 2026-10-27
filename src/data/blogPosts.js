@@ -827,7 +827,7 @@ export const blogPosts = [
       "A Shopify store that looks finished and one that's actually ready to take orders are two different things. Here's the full checklist we run through before any store goes live.",
     category: 'Shopify',
     author: 'Ayesha Khan',
-    date: '2026-11-02',
+    date: '2026-10-24',
     readTime: '10 min read',
     icon: IconShoppingBag,
     thumb: 'from-emerald-700 to-green-900',
@@ -908,7 +908,7 @@ export const blogPosts = [
       "Selling on eBay or TikTok Shop and having your own website aren't competing choices — they solve different problems. Here's how to think about which one you need, and when.",
     category: 'Ecommerce Strategy',
     author: 'Ayesha Khan',
-    date: '2026-11-05',
+    date: '2026-10-25',
     readTime: '9 min read',
     icon: IconMonitor,
     thumb: 'from-navy-800 to-brand-800',
@@ -970,7 +970,7 @@ export const blogPosts = [
       "The habits that get you to your first 100 sales often stop working right after — and most sellers don't notice until something breaks. Here's what actually changes as you scale.",
     category: 'Growth & Scaling',
     author: 'Ayesha Khan',
-    date: '2026-11-08',
+    date: '2026-10-26',
     readTime: '9 min read',
     icon: IconChart,
     thumb: 'from-blue-600 to-navy-900',
@@ -1026,13 +1026,22 @@ export function getBlogPostBySlug(slug) {
   return blogPosts.find((post) => post.slug === slug)
 }
 
+// Newest first — the order posts are defined in above isn't chronological,
+// so anything display-facing (the blog listing) should use this instead
+// of the raw array.
+export function getSortedBlogPosts() {
+  return [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date))
+}
+
 export function getRelatedPosts(slug, count = 3) {
   const current = getBlogPostBySlug(slug)
-  const others = blogPosts.filter((post) => post.slug !== slug)
+  const byNewest = (a, b) => new Date(b.date) - new Date(a.date)
+  const others = blogPosts.filter((post) => post.slug !== slug).sort(byNewest)
   if (!current) return others.slice(0, count)
 
   // Prefer posts in the same category so "related" is actually related,
-  // then fill any remaining slots with the rest.
+  // then fill any remaining slots with the rest — newest first within
+  // each group.
   const sameCategory = others.filter((post) => post.category === current.category)
   const rest = others.filter((post) => post.category !== current.category)
   return [...sameCategory, ...rest].slice(0, count)

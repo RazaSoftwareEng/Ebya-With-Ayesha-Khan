@@ -4,7 +4,7 @@ import CTASection from '../components/CTASection'
 import Reveal from '../components/Reveal'
 import Seo from '../components/Seo'
 import { IconArrowRight, IconClock } from '../components/icons'
-import { blogPosts } from '../data/blogPosts'
+import { getSortedBlogPosts } from '../data/blogPosts'
 
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-US', {
@@ -16,6 +16,8 @@ function formatDate(dateStr) {
 }
 
 export default function Blog() {
+  const posts = getSortedBlogPosts()
+
   return (
     <>
       <Seo
@@ -34,7 +36,7 @@ export default function Blog() {
       <section className="bg-white py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.map((post, i) => (
+            {posts.map((post, i) => (
               <Reveal
                 key={post.slug}
                 delay={i * 80}
