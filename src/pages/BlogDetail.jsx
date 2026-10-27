@@ -158,7 +158,7 @@ export default function BlogDetail() {
         <div className="absolute inset-0 bg-navy-950/55" />
         <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
-        <div className="relative mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-20">
+        <div className="relative mx-auto max-w-5xl px-5 py-16 lg:px-8 lg:py-20">
           <nav className="flex items-center gap-2 text-xs font-semibold text-white/60">
             <Link to="/" className="hover:text-white">Home</Link>
             <span>/</span>
