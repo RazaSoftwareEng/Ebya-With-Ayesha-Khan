@@ -12,15 +12,15 @@ export function buildServiceFaqs(service) {
     },
     {
       q: `How much does ${service.title} cost?`,
-      a: `Pricing depends on your current setup and goals. Message us on WhatsApp at ${site.whatsappDisplay} with a few details and we'll share a clear quote — no obligation.`,
+      a: `Pricing depends on your current setup and goals. Message us on WhatsApp at ${site.whatsappDisplay} with a few details and we'll share a clear quote, no obligation.`,
     },
     {
       q: `Do you offer this service online or in-person?`,
-      a: `Both. We work with clients in Lahore in-person and with sellers across Pakistan and internationally online — the process is the same either way.`,
+      a: `Both. We work with clients in Lahore in-person and with sellers across Pakistan and internationally online, the process is the same either way.`,
     },
     {
       q: `How do I get started with ${service.title}?`,
-      a: `Click "Get a Free Consultation" on this page or message us on WhatsApp. We'll discuss your goals and recommend the right starting point.`,
+      a: `Click Get a Free Consultation on this page or message us on WhatsApp. We'll discuss your goals and recommend the right starting point.`,
     },
   ]
 }

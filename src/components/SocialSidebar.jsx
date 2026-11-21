@@ -15,8 +15,10 @@ const items = [
 ]
 
 export default function SocialSidebar() {
+  // Only on wide screens: below ~1400px it sits on top of page content.
+  // Social links are still in the top bar and footer.
   return (
-    <div className="fixed left-0 top-1/2 z-40 flex -translate-y-1/2 flex-col gap-1.5">
+    <div className="fixed left-0 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-1.5 min-[1400px]:flex">
       {items.map(({ href, label, Icon, bg }) => (
         <a
           key={label}

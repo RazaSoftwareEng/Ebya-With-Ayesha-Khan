@@ -12,7 +12,7 @@ export const courses = [
     icon: IconTag,
     tag: 'Bestseller',
     thumb: 'from-slate-800 to-slate-950',
-    desc: 'Our complete, flagship eBay course — from creating your first account to running a fully automated, multi-model selling business.',
+    desc: 'Our complete, flagship eBay course, from creating your first account to running a fully automated, multi-model selling business.',
     points: [
       'Account setup, automation & complete account management',
       'Product hunting (5 proven methods), sourcing & Pakistani suppliers',
@@ -20,13 +20,13 @@ export const courses = [
       'Business models: dropshipping, arbitrage, wholesale, private & white label',
     ],
     whatIsIt:
-      "eBay is one of the world's largest online marketplaces, connecting millions of buyers with sellers across nearly every product category — from everyday items to rare collectibles.",
+      "eBay is one of the world's largest online marketplaces, connecting millions of buyers with sellers across nearly every product category, from everyday items to rare collectibles.",
     whyItMatters:
       "With built-in buyer traffic and a trusted global brand, eBay remains one of the fastest ways for a new seller to make their first sale without building an audience from scratch.",
     curriculum: [
       'Account creation & verification',
       'Complete account management & automation',
-      'Product hunting — 5 proven methods',
+      'Product hunting, 5 proven methods',
       'Product sourcing, including Pakistani suppliers',
       'Creating & optimizing listings',
       'Title building for maximum visibility',
@@ -60,7 +60,7 @@ export const courses = [
     mode: 'Online / In-Person',
     icon: IconShoppingBag,
     thumb: 'from-emerald-600 to-teal-700',
-    desc: 'Build and launch your own branded Shopify store — from theme setup to your first paid ad campaign.',
+    desc: 'Build and launch your own branded Shopify store, from theme setup to your first paid ad campaign.',
     points: [
       'Store setup & theme customization',
       'Product pages that convert',
@@ -68,9 +68,9 @@ export const courses = [
       'Driving traffic with paid ads',
     ],
     whatIsIt:
-      'Shopify is the leading platform for building your own independent online store — giving you full control over branding, pricing and the customer experience, unlike marketplace selling.',
+      'Shopify is the leading platform for building your own independent online store, giving you full control over branding, pricing and the customer experience, unlike marketplace selling.',
     whyItMatters:
-      'Owning your store means owning your customer relationships, your brand and your profit margins — Shopify is how most successful dropshipping and branded ecommerce businesses are built today.',
+      'Owning your store means owning your customer relationships, your brand and your profit margins, Shopify is how most successful dropshipping and branded ecommerce businesses are built today.',
     curriculum: [
       'Setting up your store, domain & theme',
       'Product research & building your catalog',
@@ -95,7 +95,7 @@ export const courses = [
     icon: IconTiktok,
     tag: 'Trending',
     thumb: 'from-rose-600 to-fuchsia-700',
-    desc: 'Tap into one of the fastest-growing sales channels — sell directly to buyers through TikTok Shop and viral content.',
+    desc: 'Tap into one of the fastest-growing sales channels, sell directly to buyers through TikTok Shop and viral content.',
     points: [
       'TikTok Shop setup & product listing',
       'Content that drives sales',
@@ -103,9 +103,9 @@ export const courses = [
       'Livestream & video selling basics',
     ],
     whatIsIt:
-      'TikTok Shop lets sellers list and sell products directly inside the TikTok app — buyers can purchase without ever leaving a video or livestream.',
+      'TikTok Shop lets sellers list and sell products directly inside the TikTok app, buyers can purchase without ever leaving a video or livestream.',
     whyItMatters:
-      "It's one of the fastest-growing ecommerce channels right now, rewarding creative, content-driven sellers over big ad budgets — a real opportunity for new sellers.",
+      "It's one of the fastest-growing ecommerce channels right now, rewarding creative, content-driven sellers over big ad budgets, a real opportunity for new sellers.",
     curriculum: [
       'Setting up a TikTok Shop seller account & catalog',
       'Understanding TikTok Shop policies & payouts',
@@ -137,12 +137,12 @@ export const courses = [
       'Print-on-demand basics',
     ],
     whatIsIt:
-      'Etsy is a marketplace built around handmade goods, vintage items, craft supplies and print-on-demand products — with a buyer audience actively searching for unique, personal items.',
+      'Etsy is a marketplace built around handmade goods, vintage items, craft supplies and print-on-demand products, with a buyer audience actively searching for unique, personal items.',
     whyItMatters:
       "Etsy's search-driven marketplace rewards good listing SEO over ad spend, making it one of the most accessible platforms for creative sellers and small-batch producers to get discovered.",
     curriculum: [
       'Setting up a shop that builds buyer trust',
-      'Etsy SEO — keywords, tags & titles that get found',
+      'Etsy SEO, keywords, tags & titles that get found',
       'Photography & listing presentation that sells',
       'Pricing for profit, including fees & materials',
       'Print-on-demand & handmade production workflows',
@@ -164,7 +164,7 @@ export const courses = [
     icon: IconSparkles,
     tag: 'New',
     thumb: 'from-brand-600 to-navy-800',
-    desc: 'Use practical AI tools to research products, write listings, create visuals and automate customer replies — in a fraction of the time.',
+    desc: 'Use practical AI tools to research products, write listings, create visuals and automate customer replies, in a fraction of the time.',
     points: [
       'AI product & niche research',
       'AI-written listings & ad copy',
@@ -172,9 +172,9 @@ export const courses = [
       'Chatbots & automated support',
     ],
     whatIsIt:
-      'A hands-on course covering the AI tools modern ecommerce sellers actually use day-to-day — not the theory, the workflow.',
+      'A hands-on course covering the AI tools modern ecommerce sellers actually use day-to-day, not the theory, the workflow.',
     whyItMatters:
-      'Sellers using AI tools are cutting listing creation, research and customer support time dramatically — giving small sellers the speed that used to require a full team.',
+      'Sellers using AI tools are cutting listing creation, research and customer support time dramatically, giving small sellers the speed that used to require a full team.',
     curriculum: [
       'AI tools for product & trend research',
       'Writing high-converting listings & ad copy with AI',
@@ -186,7 +186,7 @@ export const courses = [
       'Building your own AI-assisted daily workflow',
     ],
     whoItsFor:
-      'Any seller — beginner to advanced — on eBay, Shopify, Etsy or TikTok Shop who wants to work faster.',
+      'Any seller, beginner to advanced, on eBay, Shopify, Etsy or TikTok Shop who wants to work faster.',
   },
   {
     slug: 'digital-marketing',
@@ -198,7 +198,7 @@ export const courses = [
     mode: 'Online / In-Person',
     icon: IconMegaphone,
     thumb: 'from-sky-600 to-blue-800',
-    desc: 'Drive real traffic and sales with Facebook, Instagram, Google & TikTok ads — plus the organic and email tactics that keep customers coming back.',
+    desc: 'Drive real traffic and sales with Facebook, Instagram, Google & TikTok ads, plus the organic and email tactics that keep customers coming back.',
     points: [
       'Paid ad campaigns that convert',
       'Organic social growth',
@@ -206,9 +206,9 @@ export const courses = [
       'Analytics & budget optimization',
     ],
     whatIsIt:
-      'A practical marketing course covering the paid and organic channels ecommerce sellers rely on to drive traffic to their store — whether it is Shopify, Etsy, or a marketplace listing.',
+      'A practical marketing course covering the paid and organic channels ecommerce sellers rely on to drive traffic to their store, whether it is Shopify, Etsy, or a marketplace listing.',
     whyItMatters:
-      'The best product in the world still needs buyers to find it — digital marketing skills are what turn a store with zero traffic into one with consistent daily sales.',
+      'The best product in the world still needs buyers to find it, digital marketing skills are what turn a store with zero traffic into one with consistent daily sales.',
     curriculum: [
       'Facebook & Instagram ad campaigns from scratch',
       'Google Shopping & search ads fundamentals',

@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
           <p className="mt-4 text-sm leading-relaxed">
             Practical eBay, dropshipping &amp; ecommerce short courses that turn beginners into
-            confident online sellers — trusted by students and companies alike.
+            confident online sellers, trusted by students and companies alike.
           </p>
           <div className="mt-5 flex gap-3">
             <a

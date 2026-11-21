@@ -29,6 +29,7 @@
 
   --animate-fade-up: fade-up 0.7s ease both;
   --animate-fade-in: fade-in 0.5s ease both;
+  --animate-marquee: marquee 45s linear infinite;
 
   @keyframes fade-up {
     from {
@@ -38,6 +39,16 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  /* Left → right: starts shifted by one full copy and slides back to 0. */
+  @keyframes marquee {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
     }
   }
 
@@ -51,8 +62,35 @@
   }
 }
 
+/* Native smooth scrolling is the fallback; when Lenis is active it adds
+   .lenis-smooth, whose stylesheet turns this off so the two don't fight. */
 html {
   scroll-behavior: smooth;
+}
+
+/* Slim, on-brand scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #93c5fd transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#60a5fa, #34d399);
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#2563eb, #10b981);
+  background-clip: padding-box;
+}
+html.dark {
+  scrollbar-color: #284379 transparent;
 }
 
 body {
@@ -92,4 +130,141 @@ body {
   .animate-fade-in {
     animation: none;
   }
+}
+
+/* ------------------------------------------------------------------
+   Dark mode — toggled by the `dark` class on <html> (see ThemeToggle).
+   Instead of adding dark: variants to every component, the light-only
+   palette tokens are remapped here. In this codebase slate-50 is only
+   used as a background, slate-100/200 only as borders/rings, slate-400…700
+   only as text, and brand-50…200 as light tints — so remapping the
+   variables is safe. Sections that are already dark (navy / gradient
+   heroes, text-white) are unaffected.
+   ------------------------------------------------------------------ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html.dark {
+  color-scheme: dark;
+  /* Layered deep-navy palette: page < section tint < card surface */
+  --page: #060d1a;
+  --surface: #0e1829;
+
+  --color-slate-50: #0a1424;
+  --color-slate-100: #1a2740;
+  --color-slate-200: #23324c;
+  --color-slate-300: #34445f;
+  --color-slate-400: #8796b0;
+  --color-slate-500: #9aa7bd;
+  --color-slate-600: #b3bfd1;
+  --color-slate-700: #cdd6e3;
+
+  --color-brand-50: #0f1f3d;
+  --color-brand-100: #162b55;
+  --color-brand-200: #23417a;
+
+  --color-gold-50: #0a241e;
+  --color-gold-100: #0e3328;
+  --color-emerald-50: #0a241e;
+  --color-emerald-100: #0e3328;
+  --color-amber-50: #2b210c;
+  --color-rose-50: #2e1220;
+  --color-rose-100: #3d1729;
+  --color-orange-50: #2e1a0c;
+  --color-orange-100: #3d2410;
+  --color-violet-50: #1f1638;
+  --color-violet-100: #2a1e4f;
+  --color-sky-50: #0b2233;
+  --color-sky-100: #0f3047;
+}
+
+html.dark body {
+  background-color: var(--page);
+  color: #e2e8f0;
+}
+
+/* Light surfaces → dark card surface. Low-opacity white overlays (/5–/30, used
+   on coloured thumbnails and dark boxes) are left alone; the frosted ones
+   (/60–/95) become frosted dark. */
+.dark .bg-white {
+  background-color: var(--surface);
+}
+.dark .bg-white\/60,
+.dark .bg-white\/70,
+.dark .bg-white\/80,
+.dark .bg-white\/90,
+.dark .bg-white\/95 {
+  background-color: color-mix(in srgb, var(--surface) 88%, transparent);
+}
+.dark .from-white {
+  --tw-gradient-from: var(--surface);
+}
+.dark .via-white {
+  --tw-gradient-via: var(--surface);
+}
+.dark .to-white {
+  --tw-gradient-to: var(--surface);
+}
+.dark .border-white {
+  border-color: var(--color-slate-100);
+}
+.dark .ring-white {
+  --tw-ring-color: var(--surface);
+}
+
+/* Headings flip to light, except on gold/emerald badges that keep dark text. */
+.dark .text-navy-900:not([class*='bg-gold']),
+.dark .text-navy-800:not([class*='bg-gold']) {
+  color: #f1f5f9;
+}
+
+.dark .text-brand-700,
+.dark .hover\:text-brand-700:hover,
+.dark .group:hover .group-hover\:text-brand-800,
+.dark .group\/item:hover .group-hover\/item\:text-brand-700 {
+  color: #8ab8ff;
+}
+.dark .text-brand-600 {
+  color: #6aa6ff;
+}
+
+/* Navy buttons would vanish on the dark page — lift them to a lighter blue. */
+.dark a.bg-navy-900,
+.dark button.bg-navy-900 {
+  background-color: #1d3b72;
+}
+
+/* Softer, darker shadows so cards don't glow grey. */
+.dark [class*='shadow-slate-900'] {
+  --tw-shadow-color: rgb(0 0 0 / 0.35);
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  color: #e2e8f0;
+}
+
+.dark .bg-dot-grid {
+  background-image: radial-gradient(circle, #1d3563 1.5px, transparent 1.5px);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Brand treatments for the platform strip on Home */
+.tiktok-glitch {
+  filter: drop-shadow(1.5px 1px 0 #fe2c55) drop-shadow(-1.5px -1px 0 #25f4ee);
+}
+.instagram-gradient {
+  color: #ff0069;
+}
+.instagram-gradient path {
+  fill: url(#ig-grad);
+}
+.dark .tiktok-glitch {
+  color: #fff;
 }

@@ -1,14 +1,33 @@
 import PageHero from '../components/PageHero'
 import CTASection from '../components/CTASection'
 import Seo from '../components/Seo'
-import { IconArrowRight, IconAward, IconCheck, IconUsers } from '../components/icons'
+import Reveal from '../components/Reveal'
+import { AccentCard, IconTile, SectionHeading, ServiceCard, StepCards } from '../components/ui'
+import { accentAt, btnGreen, btnOutline } from '../components/uiTokens'
+import { IconArrowRight, IconAward, IconCheck, IconTarget, IconUsers, IconWhatsApp } from '../components/icons'
 import { Link } from 'react-router-dom'
 import { services } from '../data/services'
+import { whatsappLink } from '../siteConfig'
+
+const audiences = [
+  {
+    icon: IconAward,
+    title: 'For individual students',
+    desc: 'Personal mentorship, practical training and continued support as you build your own eBay or dropshipping business from scratch.',
+    items: ['Flexible course schedules', 'Beginner to advanced tracks', 'Direct mentor access'],
+  },
+  {
+    icon: IconUsers,
+    title: 'For companies',
+    desc: 'Equip your team with in-demand ecommerce skills through a customized corporate training program built around your business.',
+    items: ['Tailored curriculum', 'On-site or online delivery', 'Progress tracking & reporting'],
+  },
+]
 
 const process = [
   { title: 'Free Consultation', desc: 'Tell us about your goals, budget and experience level.' },
   { title: 'Custom Plan', desc: 'We map out the right service or course package for your needs.' },
-  { title: 'Hands-On Execution', desc: 'We work alongside you — setup, training or ongoing coaching.' },
+  { title: 'Hands-On Execution', desc: 'We work alongside you on setup, training or ongoing coaching.' },
   { title: 'Continued Support', desc: 'Stay connected with our team as your store grows.' },
 ]
 
@@ -24,114 +43,75 @@ export default function Services() {
 
       <PageHero
         eyebrow="Our Services"
-        title="More Than Courses — Full Ecommerce Support"
+        icon={IconUsers}
+        title="More than courses:"
+        highlight="full ecommerce support."
         subtitle="From store setup to ongoing growth coaching, we support students and companies at every stage of their ecommerce journey."
-      />
+      >
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <a
+            href={whatsappLink('Hi! I would like a free consultation for my store.')}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={btnGreen}
+          >
+            <IconWhatsApp width={18} height={18} /> Free consultation
+          </a>
+          <Link to="/contact/" className={btnOutline}>
+            Discuss your requirements <IconArrowRight width={16} height={16} />
+          </Link>
+        </div>
+      </PageHero>
 
-      <section className="bg-white py-16 lg:py-20">
+      <section className="bg-gradient-to-b from-white via-slate-50/70 to-white py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
-              <div
-                key={s.slug}
-                className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-brand-100"
-              >
-                <div className={`relative flex h-32 items-center justify-center bg-gradient-to-br ${s.thumb}`}>
-                  <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white/15 text-white shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-                    <s.icon width={26} height={26} />
-                  </span>
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-heading text-base font-bold text-navy-900">{s.title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{s.desc}</p>
-                  <Link
-                    to={`/services/${s.slug}/`}
-                    aria-label={`View details for ${s.title}`}
-                    className="mt-5 flex items-center justify-center gap-2 rounded-full bg-brand-600 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-700 hover:shadow-lg"
-                  >
-                    View Details <IconArrowRight width={16} height={16} />
-                  </Link>
-                </div>
-              </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s, i) => (
+              <Reveal key={s.slug} delay={(i % 3) * 80} className="h-full">
+                <ServiceCard service={s} index={i} />
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-slate-50 py-16 lg:py-20">
+      <section className="bg-white py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-600">
-              How We Work
-            </span>
-            <h2 className="mt-3 font-heading text-2xl font-extrabold text-navy-900 sm:text-3xl">
-              A Simple, Guided Process
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {process.map((s, i) => (
-              <div key={s.title} className="text-center">
-                <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-navy-900 font-heading text-lg font-extrabold text-gold-400">
-                  {String(i + 1).padStart(2, '0')}
-                </div>
-                <h3 className="mt-4 font-heading text-base font-bold text-navy-900">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{s.desc}</p>
-              </div>
-            ))}
+          <Reveal>
+            <SectionHeading center eyebrow="How we work" icon={IconTarget} title="A simple," highlight="guided process." />
+          </Reveal>
+          <div className="mt-12">
+            <StepCards steps={process} />
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-16 lg:py-20">
-        <div className="mx-auto max-w-5xl px-5 lg:px-8">
-          <div className="grid gap-10 rounded-3xl bg-navy-900 p-10 text-white sm:grid-cols-2 lg:p-14">
-            <div>
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-gold-500 text-navy-900">
-                <IconAward width={22} height={22} />
-              </div>
-              <h3 className="mt-4 font-heading text-xl font-bold">For Individual Students</h3>
-              <p className="mt-2 text-sm text-white/75">
-                Get personal mentorship, practical training and continued support as you build your
-                own eBay or dropshipping business from scratch.
-              </p>
-              <ul className="mt-4 space-y-2 text-sm text-white/80">
-                {['Flexible course schedules', 'Beginner to advanced tracks', 'Direct mentor access'].map(
-                  (i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <IconCheck width={16} height={16} className="text-gold-400" /> {i}
-                    </li>
-                  ),
-                )}
-              </ul>
-            </div>
-            <div>
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-gold-500 text-navy-900">
-                <IconUsers width={22} height={22} />
-              </div>
-              <h3 className="mt-4 font-heading text-xl font-bold">For Companies</h3>
-              <p className="mt-2 text-sm text-white/75">
-                Equip your team with in-demand ecommerce skills through a customized corporate
-                training program built around your business.
-              </p>
-              <ul className="mt-4 space-y-2 text-sm text-white/80">
-                {['Tailored curriculum', 'On-site or online delivery', 'Progress tracking & reporting'].map(
-                  (i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <IconCheck width={16} height={16} className="text-gold-400" /> {i}
-                    </li>
-                  ),
-                )}
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <Link
-              to="/contact/"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-600/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
-            >
-              Discuss Your Requirements <IconArrowRight />
-            </Link>
+      <section className="relative overflow-hidden bg-gradient-to-br from-brand-50/70 via-white to-gold-50/60 py-14 sm:py-16 lg:py-20">
+        <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-brand-100/60 blur-3xl" />
+        <div className="relative mx-auto max-w-6xl px-5 lg:px-8">
+          <Reveal>
+            <SectionHeading center eyebrow="Who we help" icon={IconUsers} title="Built for students" highlight="and companies." />
+          </Reveal>
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            {audiences.map((a, i) => (
+              <Reveal key={a.title} delay={i * 80} className="h-full">
+                <AccentCard accent={accentAt(i)}>
+                  <IconTile accent={accentAt(i)} icon={a.icon} />
+                  <h3 className="relative mt-5 font-heading text-xl font-bold text-navy-900">{a.title}</h3>
+                  <p className="relative mt-2 text-sm leading-relaxed text-slate-600">{a.desc}</p>
+                  <ul className="relative mt-5 space-y-2.5">
+                    {a.items.map((it) => (
+                      <li key={it} className="flex items-center gap-2.5 text-sm text-slate-700">
+                        <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-emerald-500 text-white">
+                          <IconCheck width={12} height={12} strokeWidth={2.6} />
+                        </span>
+                        {it}
+                      </li>
+                    ))}
+                  </ul>
+                </AccentCard>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

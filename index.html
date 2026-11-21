@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      try {
+        // Light by default; dark only when the visitor has chosen it with the toggle.
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark')
+      } catch (e) {}
+    </script>
 
     <title>eBay with Ayesha Khan – eBay &amp; Ecommerce Courses in Lahore</title>
     <meta

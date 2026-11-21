@@ -8,11 +8,11 @@ export function buildCourseFaqs(course) {
     },
     {
       q: `Do I need any experience to join ${course.title}?`,
-      a: `No. The course is designed for "${course.level}" learners and your mentor guides you step by step, so you can join without prior experience.`,
+      a: `No. The course is designed for ${course.level} learners and your mentor guides you step by step, so you can join without prior experience.`,
     },
     {
       q: `How long is ${course.title} and is it online or in-person?`,
-      a: `Duration: ${course.duration}. Format: ${course.mode}. Classes are run by our team in Lahore, Pakistan — contact us for the next batch dates.`,
+      a: `Duration: ${course.duration}. Format: ${course.mode}. Classes are run by our team in Lahore, Pakistan, contact us for the next batch dates.`,
     },
     {
       q: `What is the fee for the ${course.title} course?`,
@@ -24,7 +24,7 @@ export function buildCourseFaqs(course) {
     },
     {
       q: `How do I enroll in ${course.title}?`,
-      a: `Click "Enroll Now" to fill in the enrollment form, or message us on WhatsApp at ${site.whatsappDisplay}. Our team will confirm the next batch dates with you.`,
+      a: `Click Enroll Now to fill in the enrollment form, or message us on WhatsApp at ${site.whatsappDisplay}. Our team will confirm the next batch dates with you.`,
     },
   ]
 }

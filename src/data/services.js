@@ -19,11 +19,11 @@ export const services = [
     title: 'eBay Store Setup & Management',
     icon: IconBox,
     thumb: 'from-slate-800 to-slate-950',
-    desc: 'End-to-end setup and ongoing management of your eBay seller account — profile, policies, shipping and listing structure done right.',
+    desc: 'End-to-end setup and ongoing management of your eBay seller account, profile, policies, shipping and listing structure done right.',
     whatIsIt:
       'A done-for-you (or done-with-you) eBay seller account build: profile and business policies, shipping templates, category and listing structure, and the settings that keep new accounts healthy from day one.',
     whyItMatters:
-      "Most account suspensions and slow sales come from mistakes made in the first few weeks — wrong policies, missing verification, or a listing structure that doesn't scale. Getting this right from the start saves months of avoidable problems.",
+      "Most account suspensions and slow sales come from mistakes made in the first few weeks, wrong policies, missing verification, or a listing structure that doesn't scale. Getting this right from the start saves months of avoidable problems.",
     included: [
       'eBay seller account creation & identity verification guidance',
       'Business policies: returns, payment, shipping',
@@ -39,11 +39,11 @@ export const services = [
     title: 'TikTok Shop Setup & Management',
     icon: IconTiktok,
     thumb: 'from-rose-600 to-fuchsia-700',
-    desc: 'Full TikTok Shop setup and management — product listings, content strategy and order fulfillment handled for you.',
+    desc: 'Full TikTok Shop setup and management, product listings, content strategy and order fulfillment handled for you.',
     whatIsIt:
       'Complete TikTok Shop seller onboarding: shop registration, product catalog upload, a short-form content plan built around your products, and order/fulfillment workflow setup.',
     whyItMatters:
-      "TikTok Shop rewards sellers who pair the right product listings with consistent, native-feeling content — the two rarely come from the same person in-house. We set up both so your shop is actually discoverable, not just live.",
+      "TikTok Shop rewards sellers who pair the right product listings with consistent, native-feeling content, the two rarely come from the same person in-house. We set up both so your shop is actually discoverable, not just live.",
     included: [
       'TikTok Shop account & catalog setup',
       'Product listing optimization for TikTok search',
@@ -63,7 +63,7 @@ export const services = [
     whatIsIt:
       'A structured product-hunting process using demand, competition and margin data to shortlist products worth selling, followed by introductions to suppliers we have vetted for reliability and pricing.',
     whyItMatters:
-      "The single biggest reason new stores fail isn't marketing — it's picking the wrong product. Validating demand and supplier reliability before you invest time or money removes most of that risk.",
+      "The single biggest reason new stores fail isn't marketing, it's picking the wrong product. Validating demand and supplier reliability before you invest time or money removes most of that risk.",
     included: [
       'Niche and product shortlisting using proven research methods',
       'Demand, competition & margin analysis for each candidate',
@@ -79,11 +79,11 @@ export const services = [
     title: 'Dropshipping Setup & Automation',
     icon: IconRocket,
     thumb: 'from-emerald-600 to-teal-700',
-    desc: 'Full dropshipping workflow setup — order automation, supplier integration and fulfillment tools configured for you.',
+    desc: 'Full dropshipping workflow setup, order automation, supplier integration and fulfillment tools configured for you.',
     whatIsIt:
       'The complete dropshipping backend: supplier integration, automated order routing, tracking sync and the tools that let orders fulfill themselves without you manually processing each one.',
     whyItMatters:
-      "Dropshipping only scales when fulfillment is automated. Sellers who process every order by hand hit a ceiling fast — and usually hit it right when sales start picking up.",
+      "Dropshipping only scales when fulfillment is automated. Sellers who process every order by hand hit a ceiling fast, and usually hit it right when sales start picking up.",
     included: [
       'Supplier/platform integration (AliExpress, CJ, local suppliers & more)',
       'Automated order routing and tracking sync',
@@ -103,7 +103,7 @@ export const services = [
     whatIsIt:
       "Ongoing, data-driven growth support for stores that are already selling: pricing and listing optimization, paid ad strategy, and a review cadence focused on raising revenue and margin.",
     whyItMatters:
-      "A store that's already making sales usually has specific bottlenecks — conversion rate, ad spend efficiency, repeat purchases — that generic advice won't fix. Growth needs to be diagnosed per-store, not templated.",
+      "A store that's already making sales usually has specific bottlenecks, conversion rate, ad spend efficiency, repeat purchases, that generic advice won't fix. Growth needs to be diagnosed per-store, not templated.",
     included: [
       'Store and listing performance audit',
       'Pricing and conversion-rate optimization',
@@ -121,7 +121,7 @@ export const services = [
     thumb: 'from-teal-600 to-emerald-800',
     desc: 'Guidance to keep your seller account in good standing and avoid common suspension triggers.',
     whatIsIt:
-      "A review of your account's current health metrics, policies and listing practices, flagging the issues that commonly lead to warnings, restrictions or suspensions — plus a plan to fix them.",
+      "A review of your account's current health metrics, policies and listing practices, flagging the issues that commonly lead to warnings, restrictions or suspensions, plus a plan to fix them.",
     whyItMatters:
       "A suspended account stops your income overnight, often with little warning. Most suspensions trace back to a handful of avoidable patterns, and catching them early is far easier than appealing after the fact.",
     included: [
@@ -141,9 +141,9 @@ export const services = [
     thumb: 'from-navy-800 to-brand-800',
     desc: 'Professional, mobile-friendly business websites built to represent your brand and convert visitors into customers.',
     whatIsIt:
-      'A custom-built, mobile-friendly website for your business — brand presence, service or product pages, and a clear path for visitors to contact or buy, built rather than assembled from a generic template.',
+      'A custom-built, mobile-friendly website for your business, brand presence, service or product pages, and a clear path for visitors to contact or buy, built rather than assembled from a generic template.',
     whyItMatters:
-      "Many buyers and partners check your website before they trust your brand. A slow, outdated or template-looking site quietly costs you credibility — and customers — before you ever get a chance to talk to them.",
+      "Many buyers and partners check your website before they trust your brand. A slow, outdated or template-looking site quietly costs you credibility, and customers, before you ever get a chance to talk to them.",
     included: [
       'Custom design matched to your brand',
       'Mobile-responsive, fast-loading pages',
@@ -159,11 +159,11 @@ export const services = [
     title: 'Shopify Store Setup',
     icon: IconShoppingBag,
     thumb: 'from-emerald-700 to-green-900',
-    desc: 'Complete Shopify store build — theme setup, product catalog, payment integration and everything needed to start selling.',
+    desc: 'Complete Shopify store build, theme setup, product catalog, payment integration and everything needed to start selling.',
     whatIsIt:
       'A complete Shopify store build from the ground up: theme setup and customization, product catalog, payment and shipping configuration, and the essential apps needed to run a store properly.',
     whyItMatters:
-      "Shopify makes it easy to launch a store that looks unfinished — missing policies, no payment gateway configured correctly, a theme that isn't optimized for mobile. We make sure it's actually ready to take orders.",
+      "Shopify makes it easy to launch a store that looks unfinished, missing policies, no payment gateway configured correctly, a theme that isn't optimized for mobile. We make sure it's actually ready to take orders.",
     included: [
       'Theme selection and customization to match your brand',
       'Product catalog upload and collection structure',
@@ -179,9 +179,9 @@ export const services = [
     title: 'Ecommerce Solutions',
     icon: IconGlobe,
     thumb: 'from-cyan-600 to-sky-800',
-    desc: 'End-to-end ecommerce setup across platforms — store architecture, payment gateways and order management systems.',
+    desc: 'End-to-end ecommerce setup across platforms, store architecture, payment gateways and order management systems.',
     whatIsIt:
-      'A broader, platform-agnostic ecommerce build for businesses selling (or planning to sell) across more than one channel — store architecture, payment gateways, and order management tying it together.',
+      'A broader, platform-agnostic ecommerce build for businesses selling (or planning to sell) across more than one channel, store architecture, payment gateways, and order management tying it together.',
     whyItMatters:
       "Selling across multiple platforms without a connected system means double data-entry, stock mismatches and missed orders. The right architecture from the start prevents that from ever becoming a problem.",
     included: [
@@ -201,9 +201,9 @@ export const services = [
     thumb: 'from-sky-600 to-blue-800',
     desc: "Data-driven social media, content and marketing strategy to grow your brand's visibility and drive consistent traffic.",
     whatIsIt:
-      "A content and social media strategy built around your brand and audience — what to post, where, and how often — paired with the tracking needed to know what's actually driving traffic and sales.",
+      "A content and social media strategy built around your brand and audience, what to post, where, and how often, paired with the tracking needed to know what's actually driving traffic and sales.",
     whyItMatters:
-      "Posting without a strategy rarely builds an audience. A clear content plan tied to real goals — traffic, followers, or sales — is what turns social media from a time sink into a growth channel.",
+      "Posting without a strategy rarely builds an audience. A clear content plan tied to real goals, traffic, followers, or sales, is what turns social media from a time sink into a growth channel.",
     included: [
       'Brand and audience strategy',
       'Content calendar and posting plan',
@@ -221,7 +221,7 @@ export const services = [
     thumb: 'from-blue-600 to-navy-900',
     desc: 'Expertly managed Google Search, Shopping and Meta ad campaigns built to lower your cost per sale and scale profitably.',
     whatIsIt:
-      'Fully managed paid advertising on Google (Search & Shopping) and Meta (Facebook & Instagram) — campaign setup, audience and keyword targeting, creative guidance, and ongoing optimization.',
+      'Fully managed paid advertising on Google (Search & Shopping) and Meta (Facebook & Instagram), campaign setup, audience and keyword targeting, creative guidance, and ongoing optimization.',
     whyItMatters:
       "Paid ads can scale a store fast, or burn through a budget just as fast, depending on how they're set up and managed. Proper tracking and weekly optimization is the difference between the two outcomes.",
     included: [
@@ -241,7 +241,7 @@ export const services = [
     thumb: 'from-slate-700 to-navy-900',
     desc: 'Tailored software and CRM systems to manage your customers, orders and operations exactly the way your business works.',
     whatIsIt:
-      'A custom-built software or CRM system designed around how your business actually operates — tracking customers, orders and processes — instead of forcing your workflow into an off-the-shelf tool.',
+      'A custom-built software or CRM system designed around how your business actually operates, tracking customers, orders and processes, instead of forcing your workflow into an off-the-shelf tool.',
     whyItMatters:
       "Generic CRM and spreadsheet systems break down as a business grows. A system built around your real workflow saves hours every week and reduces the errors that come from manual tracking.",
     included: [

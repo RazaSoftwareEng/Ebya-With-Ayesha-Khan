@@ -42,7 +42,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState([
     {
       from: 'bot',
-      text: "Hi! I'm Ayesha Khan Official's assistant. Ask me about our courses, fees, or timings — or pick an option below.",
+      text: "Hi! I'm Ayesha Khan Official's assistant. Ask me about our courses, fees, or timings, or pick an option below.",
     },
   ])
   const scrollRef = useRef(null)

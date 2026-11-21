@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
 import ChatBot from './components/ChatBot'
 import SocialSidebar from './components/SocialSidebar'
+import { BackToTop, ScrollProgress, SmoothScroll } from './components/SmoothScroll'
 import Home from './pages/Home'
 import Courses from './pages/Courses'
 import CourseDetail from './pages/CourseDetail'
@@ -16,18 +16,11 @@ import Blog from './pages/Blog'
 import BlogDetail from './pages/BlogDetail'
 import NotFound from './pages/NotFound'
 
-function ScrollToTop() {
-  const { pathname } = useLocation()
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
-  return null
-}
-
 export function AppShell() {
   return (
     <>
-      <ScrollToTop />
+      <SmoothScroll />
+      <ScrollProgress />
       <div className="flex min-h-screen flex-col">
         <Navbar />
         <main className="flex-1">
@@ -48,6 +41,7 @@ export function AppShell() {
         <SocialSidebar />
         <WhatsAppButton />
         <ChatBot />
+        <BackToTop />
       </div>
     </>
   )
