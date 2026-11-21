@@ -13,8 +13,9 @@ import {
   IconChevronDown,
   IconSearch,
   IconArrowRight,
+  IconWhatsApp,
 } from './icons'
-import { site, enrollFormUrl } from '../siteConfig'
+import { site, enrollFormUrl, whatsappLink } from '../siteConfig'
 import { courses } from '../data/courses'
 import { services } from '../data/services'
 import ayeshaAvatar from './assets/ayesha-avatar.webp'
@@ -30,6 +31,21 @@ export default function Navbar() {
   const coursesRef = useRef(null)
   const servicesRef = useRef(null)
   const navigate = useNavigate()
+  const hoverTimer = useRef(null)
+
+  const openMenu = (which) => {
+    clearTimeout(hoverTimer.current)
+    setCoursesOpen(which === 'courses')
+    setServicesOpen(which === 'services')
+  }
+  const scheduleClose = () => {
+    clearTimeout(hoverTimer.current)
+    hoverTimer.current = setTimeout(() => {
+      setCoursesOpen(false)
+      setServicesOpen(false)
+    }, 200)
+  }
+  useEffect(() => () => clearTimeout(hoverTimer.current), [])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -67,6 +83,8 @@ export default function Navbar() {
   }, [servicesOpen])
 
   const closeAll = () => {
+    clearTimeout(hoverTimer.current)
+    if (document.activeElement instanceof HTMLElement) document.activeElement.blur()
     setOpen(false)
     setCoursesOpen(false)
     setMobileCoursesOpen(false)
@@ -100,6 +118,14 @@ export default function Navbar() {
               className="flex items-center gap-2 transition-colors duration-300 hover:text-gold-400"
             >
               <IconPhone width={17} height={17} /> {site.phoneDisplay}
+            </a>
+            <a
+              href={whatsappLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 transition-colors duration-300 hover:text-gold-400"
+            >
+              <IconWhatsApp width={17} height={17} /> {site.whatsappDisplay}
             </a>
             <a
               href={`mailto:${site.email}`}
@@ -189,8 +215,8 @@ export default function Navbar() {
             <div
               className="relative"
               ref={coursesRef}
-              onMouseEnter={() => setCoursesOpen(true)}
-              onMouseLeave={() => setCoursesOpen(false)}
+              onMouseEnter={() => openMenu('courses')}
+              onMouseLeave={scheduleClose}
             >
               <NavLink
                 to="/courses/"
@@ -212,12 +238,13 @@ export default function Navbar() {
               </NavLink>
 
               <div
-                className={`absolute left-1/2 top-full z-20 mt-2 w-80 -translate-x-1/2 rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl shadow-slate-900/10 transition-all duration-200 ${
+                className={`absolute left-1/2 top-full z-20 w-80 -translate-x-1/2 pt-3 transition-all duration-200 ${
                   coursesOpen
-                    ? 'pointer-events-auto translate-y-0 opacity-100'
-                    : 'pointer-events-none -translate-y-2 opacity-0'
+                    ? 'pointer-events-auto visible translate-y-0 opacity-100'
+                    : 'pointer-events-none invisible -translate-y-2 opacity-0'
                 }`}
               >
+               <div className="rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl shadow-slate-900/10">
                 {courses.map((c) => (
                   <NavLink
                     key={c.slug}
@@ -230,7 +257,7 @@ export default function Navbar() {
                     </span>
                     <span className="min-w-0">
                       <span className="block truncate text-sm font-semibold text-navy-900">{c.title}</span>
-                      <span className="block text-xs text-slate-500">{c.level} · {c.duration}</span>
+                      <span className="block text-xs text-slate-500">{c.level} · {c.duration} · {c.fee}</span>
                     </span>
                   </NavLink>
                 ))}
@@ -242,13 +269,14 @@ export default function Navbar() {
                   View All Courses <IconArrowRight width={14} height={14} />
                 </NavLink>
               </div>
+               </div>
             </div>
 
             <div
               className="relative"
               ref={servicesRef}
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
+              onMouseEnter={() => openMenu('services')}
+              onMouseLeave={scheduleClose}
             >
               <NavLink
                 to="/services/"
@@ -270,12 +298,13 @@ export default function Navbar() {
               </NavLink>
 
               <div
-                className={`absolute left-1/2 top-full z-20 mt-2 grid w-[34rem] -translate-x-1/2 grid-cols-2 gap-1 rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl shadow-slate-900/10 transition-all duration-200 ${
+                className={`absolute left-1/2 top-full z-20 w-[34rem] -translate-x-1/2 pt-3 transition-all duration-200 ${
                   servicesOpen
-                    ? 'pointer-events-auto translate-y-0 opacity-100'
-                    : 'pointer-events-none -translate-y-2 opacity-0'
+                    ? 'pointer-events-auto visible translate-y-0 opacity-100'
+                    : 'pointer-events-none invisible -translate-y-2 opacity-0'
                 }`}
               >
+               <div className="grid grid-cols-2 gap-1 rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl shadow-slate-900/10">
                 {services.map((s) => (
                   <NavLink
                     key={s.slug}
@@ -297,6 +326,7 @@ export default function Navbar() {
                   View All Services <IconArrowRight width={14} height={14} />
                 </NavLink>
               </div>
+               </div>
             </div>
 
             <NavLink to="/blog/" className={navLinkClass}>
@@ -508,6 +538,14 @@ export default function Navbar() {
                 className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-slate-600"
               >
                 <IconPhone width={17} height={17} /> {site.phoneDisplay}
+              </a>
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-slate-600"
+              >
+                <IconWhatsApp width={17} height={17} /> {site.whatsappDisplay}
               </a>
               <a
                 href={`mailto:${site.email}`}

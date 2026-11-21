@@ -10,7 +10,7 @@ import {
   IconPhone,
   IconWhatsApp,
 } from '../components/icons'
-import { site, whatsappLink } from '../siteConfig'
+import { site, whatsappLink, web3formsKey } from '../siteConfig'
 import { useHydrated } from '../useHydrated'
 import { courses } from '../data/courses'
 
@@ -25,7 +25,7 @@ const contactCards = [
   {
     icon: IconWhatsApp,
     title: 'WhatsApp',
-    lines: ['Fastest way to reach us'],
+    lines: [site.whatsappDisplay, 'Fastest way to reach us'],
     href: whatsappLink(),
     cta: 'Message on WhatsApp',
     external: true,
@@ -80,7 +80,45 @@ export default function Contact() {
     const errs = validate()
     setErrors(errs)
     if (Object.keys(errs).length === 0) {
-      setSubmitted(true)
+      const course = form.course || prefilledCourse || 'Not specified'
+      const text = [
+        '*New Enquiry — Website Contact Form*',
+        '',
+        `*Name:* ${form.name.trim()}`,
+        `*Phone:* ${form.phone.trim()}`,
+        `*Email:* ${form.email.trim()}`,
+        `*Interested In:* ${course}`,
+        '',
+        `*Message:* ${form.message.trim()}`,
+      ].join('\n')
+      // Email copy via Web3Forms — arrives even if the visitor never taps Send in WhatsApp.
+      if (web3formsKey) {
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          keepalive: true,
+          body: JSON.stringify({
+            access_key: web3formsKey,
+            subject: `New Website Enquiry — ${form.name.trim()} (${course})`,
+            from_name: 'Ayesha Khan Official Website',
+            replyto: form.email.trim(),
+            Name: form.name.trim(),
+            Phone: form.phone.trim(),
+            Email: form.email.trim(),
+            'Interested In': course,
+            Message: form.message.trim(),
+          }),
+        }).catch(() => {})
+      }
+
+      const link = whatsappLink(text)
+      // Opens WhatsApp (app on mobile, WhatsApp Web on desktop) with the details pre-typed.
+      // (No "noopener" feature here: with it window.open always returns null, which would
+      // trigger the fallback and open WhatsApp twice.)
+      const win = window.open(link, '_blank')
+      if (win) win.opener = null
+      else window.location.href = link
+      setSubmitted(link)
       setForm(emptyForm)
     }
   }
@@ -90,7 +128,7 @@ export default function Contact() {
       <Seo
         title="Contact Us – Enroll in eBay Courses in Lahore"
         description="Get in touch with Ayesha Khan Official for course enrollment, corporate training or general questions — by phone, WhatsApp, email or our contact form."
-        keywords="contact Ayesha Khan Official, enroll eBay course Lahore, eBay institute Lahore address, eBay course enquiry Pakistan, ecommerce training Lahore contact, eBay academy Allama Iqbal Town"
+        keywords="contact Ayesha Khan Official, enroll eBay course Lahore, eBay institute Lahore address, eBay course enquiry Pakistan, ecommerce training Lahore contact, eBay academy Paragon City"
         path="/contact"
       />
 
@@ -146,11 +184,12 @@ export default function Contact() {
                   <div className="mt-6 flex items-start gap-3 rounded-xl bg-green-50 p-4 text-sm text-green-700 ring-1 ring-green-200">
                     <IconCheck width={18} height={18} className="mt-0.5 shrink-0" />
                     <span>
-                      Thank you! Your message has been noted. For a faster response, feel free to{' '}
-                      <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="font-bold underline">
-                        WhatsApp us
-                      </a>{' '}
-                      right away.
+                      Almost done! WhatsApp has opened with your details — just tap <b>Send</b> there so
+                      we receive them. WhatsApp didn't open?{' '}
+                      <a href={submitted} target="_blank" rel="noopener noreferrer" className="font-bold underline">
+                        Click here
+                      </a>
+                      .
                     </span>
                   </div>
                 )}
@@ -243,9 +282,9 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-navy-900 py-3.5 text-sm font-bold text-white transition hover:bg-navy-800 sm:w-auto sm:px-10"
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] py-3.5 text-sm font-bold text-white transition hover:opacity-90 sm:w-auto sm:px-10"
                   >
-                    Send Message
+                    <IconWhatsApp width={18} height={18} /> Send via WhatsApp
                   </button>
                 </form>
               </div>
@@ -285,13 +324,13 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="mt-8 flex items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3.5 text-sm font-bold text-white transition hover:opacity-90"
                 >
-                  <IconWhatsApp width={20} height={20} /> Chat with Us Instantly
+                  <IconWhatsApp width={20} height={20} /> WhatsApp: {site.whatsappDisplay}
                 </a>
                 <a
                   href={`tel:${site.phoneDial}`}
                   className="mt-3 flex items-center justify-center gap-2 rounded-xl border-2 border-white/25 py-3.5 text-sm font-bold transition hover:bg-white/10"
                 >
-                  <IconPhone width={18} height={18} /> {site.phoneDisplay}
+                  <IconPhone width={18} height={18} /> Call: {site.phoneDisplay}
                 </a>
 
                 <div className="mt-8 rounded-2xl border border-dashed border-white/20 p-5 text-center">

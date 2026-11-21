@@ -1020,6 +1020,235 @@ export const blogPosts = [
       },
     ],
   },
+  {
+    slug: 'lahore-mein-best-ebay-course-kaise-chunein',
+    title: 'How to Choose the Right eBay Course in Lahore: 8 Questions to Ask Before You Pay',
+    excerpt:
+      "There are plenty of eBay and ecommerce courses in Lahore — and they are not all equal. These eight questions help you separate a course that builds real skills from one that just sells promises.",
+    category: 'Getting Started',
+    author: 'Ayesha Khan',
+    date: '2026-11-21',
+    readTime: '8 min read',
+    icon: IconAward,
+    thumb: 'from-brand-600 to-navy-900',
+    body: [
+      {
+        type: 'p',
+        text: "Search for \"eBay course in Lahore\" and you will find dozens of options — institutes, freelancers, YouTube channels and WhatsApp groups, all promising that you will be earning in dollars within weeks. Some of them are genuinely good. Others are recycled free content with a fee attached. Before you spend your money (and, more importantly, three months of your time), ask these eight questions.",
+      },
+      { type: 'h2', text: '1. Who Is Actually Teaching the Class?', icon: IconUsers },
+      {
+        type: 'p',
+        text: "Ask whether your trainer runs live eBay accounts today, not just whether they did years ago. eBay's policies, search behaviour and payment rules change regularly, and a trainer who sells every week will teach you what works now. A good institute will happily tell you who your mentor is and what they sell.",
+      },
+      { type: 'h2', text: '2. Is the Course Hands-On or Just Lectures?', icon: IconMonitor },
+      {
+        type: 'p',
+        text: "You learn eBay by doing it: researching products, writing titles, pricing, and answering buyer messages. Ask how many practical assignments there are and whether someone actually reviews your work. A course with an assignment after every module will teach you far more than one that only shows slides.",
+      },
+      { type: 'h2', text: '3. Does the Curriculum Cover the Full Journey?', icon: IconCheck },
+      {
+        type: 'p',
+        text: "Look for a written curriculum before you join. At minimum, a complete eBay course should cover:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Account setup, verification and keeping the account healthy',
+          'Product research and sourcing, including local Pakistani suppliers',
+          'Listing creation, title building and eBay search optimization',
+          'Business models — dropshipping, arbitrage, wholesale and private label — and when each one makes sense',
+          'Pricing, shipping, taxation basics and customer support',
+        ],
+      },
+      {
+        type: 'p',
+        text: "If a course only teaches one model (usually dropshipping) and skips account health and policy, you will be exposed the first time something goes wrong. Our own [eBay Selling Mastery curriculum](/courses/ebay/) is published in full on the course page for exactly this reason.",
+      },
+      { type: 'h2', text: '4. Is the Fee Clear Up Front?', icon: IconTag },
+      {
+        type: 'p',
+        text: "You should know the full fee before you visit, with no surprise \"advanced module\" charges halfway through. Ask whether software, tools or account setup cost extra. For reference, every course at Ayesha Khan Official — eBay, Shopify, TikTok Shop, Etsy, AI and digital marketing — is Rs. 25,000 for the complete three-month course, and that is listed on each course page.",
+      },
+      { type: 'h2', text: '5. Online, In-Person, or Both?', icon: IconGlobe },
+      {
+        type: 'p',
+        text: "In-person classes suit people who learn best with a mentor sitting beside them and want to meet other sellers. Online batches suit students outside Lahore or people with jobs. Ask whether you can switch between the two, and whether online students get the same assignment reviews as in-person ones.",
+      },
+      { type: 'h2', text: '6. What Happens After the Last Class?', icon: IconShield },
+      {
+        type: 'p',
+        text: "Most real problems — a listing removed, a payment on hold, a difficult buyer — happen after the course ends. Ask whether you can still message your mentor when that happens. Ongoing support is often worth more than any single module.",
+      },
+      { type: 'h2', text: '7. Are the Income Promises Realistic?', icon: IconChart },
+      {
+        type: 'p',
+        text: "Be careful with anyone who guarantees a fixed monthly income. eBay results depend on your effort, your capital and your product choices. An honest trainer will tell you that most consistent sellers see their first sale within a few weeks and a steady income after a few months of work — not overnight.",
+      },
+      { type: 'h2', text: '8. Can You Talk to Them Before You Pay?', icon: IconSearch },
+      {
+        type: 'p',
+        text: "A trustworthy institute will answer your questions before you enrol, by phone, WhatsApp or in person. If you can't get a straight answer about the curriculum, the trainer or the fee, take that as your answer.",
+      },
+      {
+        type: 'p',
+        text: "If you're comparing options, compare us too. Read the full [eBay Selling Mastery course details](/courses/ebay/), see our [other courses](/courses/), or [contact us](/contact/) with your questions — our classes run in Paragon City, Lahore and online.",
+      },
+    ],
+  },
+  {
+    slug: 'ghar-baithe-online-earning-ecommerce-pakistan',
+    title: 'Online Earning From Home in Pakistan: A Realistic Ecommerce Roadmap for Students and Housewives',
+    excerpt:
+      "Ecommerce is one of the most practical ways to earn online from home in Pakistan — if you approach it with the right expectations. Here's a realistic, step-by-step roadmap.",
+    category: 'Getting Started',
+    author: 'Ayesha Khan',
+    date: '2026-11-21',
+    readTime: '9 min read',
+    icon: IconRocket,
+    thumb: 'from-emerald-600 to-teal-700',
+    body: [
+      {
+        type: 'p',
+        text: "\"Ghar baithe online earning\" is one of the most searched phrases in Pakistan, and for good reason. Students want income alongside their studies, housewives want work that fits around the family, and many working people want a second source of income. Ecommerce — selling products online to buyers in Pakistan or abroad — is one of the few online paths that can grow into a real business. Here is how to approach it realistically.",
+      },
+      { type: 'h2', text: 'Why Ecommerce Works Well From Home', icon: IconAward },
+      {
+        type: 'ul',
+        items: [
+          'Flexible hours — most work (research, listing, messaging buyers) can be done whenever you have time',
+          'No office or shop needed — a laptop or even a good smartphone and an internet connection is enough to start',
+          'Skills that compound — what you learn about products, pricing and marketing keeps paying off',
+          'Low starting cost — models like dropshipping and print-on-demand let you start without buying stock up front',
+        ],
+      },
+      { type: 'h2', text: 'Step 1: Pick One Platform to Start', icon: IconTarget },
+      {
+        type: 'p',
+        text: "The biggest beginner mistake is trying everything at once. Pick one platform and stay with it for at least three months. eBay suits people who want buyers already searching from day one. Etsy suits creative people with handmade or printable products. TikTok Shop suits people comfortable making short videos. Our [platform comparison guide](/blog/ebay-vs-shopify-vs-tiktok-shop-vs-etsy/) explains the trade-offs in detail.",
+      },
+      { type: 'h2', text: 'Step 2: Set Aside Time and a Small Budget', icon: IconClock },
+      {
+        type: 'p',
+        text: "Treat it like a part-time job: one to three focused hours a day is enough to make real progress. Keep a small budget for things like a few test products or tools, and only spend money you can afford to learn with. Write down what you spend and what you earn from day one — that simple habit will save you from many mistakes later.",
+      },
+      { type: 'h2', text: 'Step 3: Learn the Fundamentals Properly', icon: IconSearch },
+      {
+        type: 'p',
+        text: "Free videos are a fine start, but they are scattered and often out of date. Whichever route you choose, make sure you understand these basics before you spend money:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'How to research products that have real demand and a healthy margin',
+          'How to write listings and titles that buyers actually find',
+          'How shipping, platform fees and payouts affect your real profit',
+          "The platform's rules — breaking them by accident is the fastest way to lose an account",
+        ],
+      },
+      { type: 'h2', text: 'Step 4: Start Small and Learn From Real Data', icon: IconChart },
+      {
+        type: 'p',
+        text: "List a handful of products, watch which ones get views and sales, and improve from there. Your first listings won't be perfect, and that's fine — the goal of the first month is to learn, not to get rich. Our [winning product framework](/blog/ebay-winning-product-kaise-dhoondein/) is a good place to start your research.",
+      },
+      { type: 'h2', text: 'Step 5: Get Paid Safely', icon: IconShield },
+      {
+        type: 'p',
+        text: "Before your first sale, understand exactly how the platform pays you and how that money reaches a Pakistani bank account. Payout options vary by platform and change over time, so always confirm the current options in your seller account rather than relying on old videos. Never share your account login with anyone who offers to \"handle payments\" for you.",
+      },
+      { type: 'h2', text: 'Be Careful of Online Earning Scams', icon: IconShield },
+      {
+        type: 'p',
+        text: "Anyone asking you to pay a \"registration fee\" to receive guaranteed daily income, or to rent out your account or CNIC, is not offering you a business. Real ecommerce income comes from selling real products to real buyers — it takes work, and nobody can guarantee a fixed amount.",
+      },
+      {
+        type: 'p',
+        text: "If you'd like a mentor to guide you step by step, our courses run in-person in Paragon City, Lahore and fully online, so you can learn from home. Start with the [eBay Selling Mastery course](/courses/ebay/), browse [all courses](/courses/), or [message us](/contact/) and we'll help you pick the right starting point.",
+      },
+    ],
+  },
+  {
+    slug: 'ebay-listing-seo-search-mein-upar-kaise-aayein',
+    title: 'eBay Listing SEO: How to Rank Higher in eBay Search',
+    excerpt:
+      "A great product won't sell if buyers never see it. Here's how eBay search decides which listings to show first — and the practical changes that move your listings up.",
+    category: 'eBay Selling',
+    author: 'Ayesha Khan',
+    date: '2026-11-21',
+    readTime: '9 min read',
+    icon: IconSearch,
+    thumb: 'from-amber-500 to-orange-600',
+    body: [
+      {
+        type: 'p',
+        text: "Most eBay buyers never scroll far past the first page of results. If your listing appears on page five, it might as well not exist. The good news is that eBay search isn't random — it rewards listings that are relevant, complete and trusted by buyers. Here's what actually moves a listing up, and what quietly holds it back.",
+      },
+      { type: 'h2', text: 'How eBay Search Thinks', icon: IconGlobe },
+      {
+        type: 'p',
+        text: "eBay wants buyers to find what they're looking for and buy it, so it favours listings that match the search closely and that buyers actually click and purchase. In practice, three things matter most: relevance (does your listing match the words the buyer typed?), completeness (have you filled in everything eBay asks for?) and performance (do buyers click, buy and leave happy?).",
+      },
+      { type: 'h2', text: 'Build Titles From Real Search Terms', icon: IconTag },
+      {
+        type: 'p',
+        text: "Your title is the single most important ranking factor you control. Use the full space with words buyers actually type, in a natural order:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Brand + product type + model — e.g. the exact name a buyer would search',
+          'Key specifics: size, colour, material, quantity or compatibility',
+          'Condition where it matters (new, refurbished, used)',
+          'No filler words like "WOW", "L@@K" or "best" — they waste space and buyers don\'t search for them',
+        ],
+      },
+      {
+        type: 'p',
+        text: "To find the right words, type your product into eBay's search bar and note the suggestions that appear, then look at the titles of listings that have actually sold.",
+      },
+      { type: 'h2', text: 'Fill In Every Item Specific', icon: IconCheck },
+      {
+        type: 'p',
+        text: "Item specifics (brand, size, colour, type and so on) power eBay's search filters. When a buyer filters by \"Colour: Black\" and you left colour empty, your listing disappears from their results. Fill in every specific that applies, including the optional ones.",
+      },
+      { type: 'h2', text: 'Choose the Right Category', icon: IconBox },
+      {
+        type: 'p',
+        text: "Listing in the wrong category hurts both relevance and filters. Search for your product, look at which category the top-selling listings use, and match it.",
+      },
+      { type: 'h2', text: 'Photos That Earn the Click', icon: IconMonitor },
+      {
+        type: 'p',
+        text: "A clear main photo on a clean, light background gets more clicks, and more clicks tell eBay your listing is relevant. Use several photos from different angles, show size and details, and never use blurry or watermarked images.",
+      },
+      { type: 'h2', text: 'Competitive Price and Shipping', icon: IconChart },
+      {
+        type: 'p',
+        text: "Buyers compare the total cost, not just the item price. Check sold listings for similar items, price competitively, and offer reasonable handling times and clear shipping. Free or low-cost shipping often improves both clicks and sales.",
+      },
+      { type: 'h2', text: 'Seller Performance Matters Too', icon: IconStar },
+      {
+        type: 'p',
+        text: "Late shipments, cancelled orders and unhappy buyers hurt your account standing, and a weaker account tends to show up lower in search. Ship on time, upload tracking, answer messages quickly and describe items honestly. See our guide to [common beginner mistakes](/blog/ebay-beginner-mistakes-to-avoid/) for the habits that protect your account.",
+      },
+      { type: 'h2', text: 'A Quick Listing SEO Checklist', icon: IconCheck },
+      {
+        type: 'ul',
+        items: [
+          'Title uses real search terms, with brand, model and key specifics',
+          'Every relevant item specific is filled in',
+          'Category matches what top sellers use',
+          'At least several clear, well-lit photos',
+          'Price and shipping checked against sold listings',
+          'Accurate, honest description that answers buyer questions',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Title building and eBay search optimization are core, hands-on modules in our [eBay Selling Mastery course](/courses/ebay/), where your mentor reviews your real listings. If you'd rather have experts optimise your existing listings, our [eBay store setup & management service](/services/ebay-store-setup-management/) can help. [Contact us](/contact/) to get started.",
+      },
+    ],
+  },
 ]
 
 export function getBlogPostBySlug(slug) {

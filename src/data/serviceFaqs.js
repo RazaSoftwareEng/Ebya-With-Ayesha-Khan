@@ -12,7 +12,7 @@ export function buildServiceFaqs(service) {
     },
     {
       q: `How much does ${service.title} cost?`,
-      a: `Pricing depends on your current setup and goals. Message us on WhatsApp at ${site.phoneDisplay} with a few details and we'll share a clear quote — no obligation.`,
+      a: `Pricing depends on your current setup and goals. Message us on WhatsApp at ${site.whatsappDisplay} with a few details and we'll share a clear quote — no obligation.`,
     },
     {
       q: `Do you offer this service online or in-person?`,

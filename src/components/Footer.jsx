@@ -109,7 +109,11 @@ export default function Footer() {
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex items-start gap-2.5">
               <IconPhone width={18} height={18} className="mt-0.5 shrink-0 text-gold-400" />
-              <a href={`tel:${site.phoneDial}`} className="hover:text-gold-400">{site.phoneDisplay}</a>
+              <a href={`tel:${site.phoneDial}`} className="hover:text-gold-400">{site.phoneDisplay} <span className="text-white/50">(Call)</span></a>
+            </li>
+            <li className="flex items-start gap-2.5">
+              <IconWhatsApp width={18} height={18} className="mt-0.5 shrink-0 text-gold-400" />
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="hover:text-gold-400">{site.whatsappDisplay} <span className="text-white/50">(WhatsApp)</span></a>
             </li>
             <li className="flex items-start gap-2.5">
               <IconMail width={18} height={18} className="mt-0.5 shrink-0 text-gold-400" />

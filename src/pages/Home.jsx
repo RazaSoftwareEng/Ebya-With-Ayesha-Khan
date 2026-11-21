@@ -827,7 +827,7 @@ export default function Home() {
       <Seo
         rawTitle="eBay with Ayesha Khan – eBay & Ecommerce Courses in Lahore"
         description="Learn eBay with Ayesha Khan: practical, mentor-led eBay, Shopify, TikTok Shop and digital marketing courses in Lahore, Pakistan. Online and in-person."
-        keywords="eBay course in Lahore, best eBay course in Lahore, eBay course Pakistan, eBay training institute Lahore, ecommerce institute Lahore, online earning course Lahore, dropshipping course Lahore, TikTok Shop course Lahore, Shopify course Pakistan, Etsy course Lahore, Ayesha Khan eBay, Ayesha Khan Official Lahore, digital marketing course Pakistan, online selling course Lahore, eBay seller training Allama Iqbal Town"
+        keywords="eBay course in Lahore, best eBay course in Lahore, eBay course Pakistan, eBay training institute Lahore, ecommerce institute Lahore, online earning course Lahore, dropshipping course Lahore, TikTok Shop course Lahore, Shopify course Pakistan, Etsy course Lahore, Ayesha Khan eBay, Ayesha Khan Official Lahore, digital marketing course Pakistan, online selling course Lahore, eBay seller training Paragon City"
         path="/"
       />
 
@@ -941,6 +941,7 @@ export default function Home() {
                     </span>
                   </div>
                   <h3 className="mt-4 font-heading text-lg font-bold text-navy-900">{c.title}</h3>
+                  <p className="mt-1 text-sm font-bold text-brand-600">Fee: {c.fee}</p>
                   <ul className="mt-4 flex-1 space-y-2.5">
                     {c.points.map((p) => (
                       <li key={p} className="flex items-start gap-2 text-sm text-slate-600">

@@ -99,6 +99,9 @@ export default function Courses() {
                     <span className="flex items-center gap-1.5">
                       <IconGlobe width={16} height={16} /> {c.mode}
                     </span>
+                    <span className="rounded-full bg-gold-500/15 px-2.5 py-0.5 font-bold text-navy-900">
+                      Fee: {c.fee}
+                    </span>
                   </div>
 
                   <ul className="mt-5 flex-1 space-y-2.5 border-t border-slate-200 pt-5">
