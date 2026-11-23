@@ -16,6 +16,7 @@ import { getBlogPostBySlug, getRelatedPosts } from '../data/blogPosts'
 import { courses } from '../data/courses'
 import { site, whatsappLink } from '../siteConfig'
 import { pageUrl } from '../seoUtils'
+import { renderInline } from '../components/richText'
 
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-US', {
@@ -42,40 +43,6 @@ const categoryCourse = {
 }
 const courseForPost = (post) =>
   courses.find((c) => c.slug === (categoryCourse[post.category] ?? 'ebay')) ?? courses[0]
-
-// Lets body text use simple [label](url) markup for internal and external links,
-// without needing a full markdown renderer or dangerouslySetInnerHTML.
-const LINK_RE = /\[([^\]]+)\]\(([^)]+)\)/g
-const linkClass =
-  'font-semibold text-brand-700 underline decoration-brand-200 decoration-2 underline-offset-4 transition-colors hover:text-brand-800 hover:decoration-brand-400'
-
-function renderInline(text) {
-  const parts = []
-  let last = 0
-  let match
-  let i = 0
-  LINK_RE.lastIndex = 0
-  while ((match = LINK_RE.exec(text))) {
-    if (match.index > last) parts.push(text.slice(last, match.index))
-    const [, label, href] = match
-    if (href.startsWith('/')) {
-      parts.push(
-        <Link key={i++} to={href} className={linkClass}>
-          {label}
-        </Link>,
-      )
-    } else {
-      parts.push(
-        <a key={i++} href={href} target="_blank" rel="noopener noreferrer" className={linkClass}>
-          {label}
-        </a>,
-      )
-    }
-    last = LINK_RE.lastIndex
-  }
-  if (last < text.length) parts.push(text.slice(last))
-  return parts
-}
 
 function SectionHeading({ block, number }) {
   const Icon = block.icon

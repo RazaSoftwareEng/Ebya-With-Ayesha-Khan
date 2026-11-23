@@ -22,7 +22,7 @@ export const courses = [
     whatIsIt:
       "eBay is one of the world's largest online marketplaces, connecting millions of buyers with sellers across nearly every product category, from everyday items to rare collectibles.",
     whyItMatters:
-      "With built-in buyer traffic and a trusted global brand, eBay remains one of the fastest ways for a new seller to make their first sale without building an audience from scratch.",
+      "With built-in buyer traffic and a trusted global brand, eBay remains one of the fastest ways for a new seller to make their first sale without building an audience from scratch. Read our [step-by-step guide to starting on eBay from Pakistan](/blog/pakistan-se-ebay-kaise-shuru-karein/), or let our [eBay store setup & management service](/services/ebay-store-setup-management/) build it for you.",
     curriculum: [
       'Account creation & verification',
       'Complete account management & automation',
@@ -70,7 +70,7 @@ export const courses = [
     whatIsIt:
       'Shopify is the leading platform for building your own independent online store, giving you full control over branding, pricing and the customer experience, unlike marketplace selling.',
     whyItMatters:
-      'Owning your store means owning your customer relationships, your brand and your profit margins, Shopify is how most successful dropshipping and branded ecommerce businesses are built today.',
+      "Owning your store means owning your customer relationships, your brand and your profit margins, Shopify is how most successful dropshipping and branded ecommerce businesses are built today. See our [full Shopify store setup checklist](/blog/shopify-store-setup-checklist/), or let our [Shopify store setup service](/services/shopify-store-setup/) build it for you.",
     curriculum: [
       'Setting up your store, domain & theme',
       'Product research & building your catalog',
@@ -105,7 +105,7 @@ export const courses = [
     whatIsIt:
       'TikTok Shop lets sellers list and sell products directly inside the TikTok app, buyers can purchase without ever leaving a video or livestream.',
     whyItMatters:
-      "It's one of the fastest-growing ecommerce channels right now, rewarding creative, content-driven sellers over big ad budgets, a real opportunity for new sellers.",
+      "It's one of the fastest-growing ecommerce channels right now, rewarding creative, content-driven sellers over big ad budgets, a real opportunity for new sellers. Our [TikTok Shop beginner's guide](/blog/tiktok-shop-beginners-guide/) explains exactly how the discovery process works, and our [TikTok Shop setup & management service](/services/tiktok-shop-setup-management/) handles the technical side.",
     curriculum: [
       'Setting up a TikTok Shop seller account & catalog',
       'Understanding TikTok Shop policies & payouts',
@@ -139,7 +139,7 @@ export const courses = [
     whatIsIt:
       'Etsy is a marketplace built around handmade goods, vintage items, craft supplies and print-on-demand products, with a buyer audience actively searching for unique, personal items.',
     whyItMatters:
-      "Etsy's search-driven marketplace rewards good listing SEO over ad spend, making it one of the most accessible platforms for creative sellers and small-batch producers to get discovered.",
+      "Etsy's search-driven marketplace rewards good listing SEO over ad spend, making it one of the most accessible platforms for creative sellers and small-batch producers to get discovered. Our [Etsy shop setup guide](/blog/etsy-shop-setup-guide-pakistan/) covers what qualifies and how to price handmade work correctly.",
     curriculum: [
       'Setting up a shop that builds buyer trust',
       'Etsy SEO, keywords, tags & titles that get found',
@@ -174,7 +174,7 @@ export const courses = [
     whatIsIt:
       'A hands-on course covering the AI tools modern ecommerce sellers actually use day-to-day, not the theory, the workflow.',
     whyItMatters:
-      'Sellers using AI tools are cutting listing creation, research and customer support time dramatically, giving small sellers the speed that used to require a full team.',
+      "Sellers using AI tools are cutting listing creation, research and customer support time dramatically, giving small sellers the speed that used to require a full team. See our breakdown of [5 practical ways ecommerce sellers are using AI right now](/blog/ai-tools-for-ecommerce-sellers/), and if your systems have outgrown spreadsheets entirely, our [custom software & CRM service](/services/custom-software-crm/) builds the next step.",
     curriculum: [
       'AI tools for product & trend research',
       'Writing high-converting listings & ad copy with AI',
@@ -208,7 +208,7 @@ export const courses = [
     whatIsIt:
       'A practical marketing course covering the paid and organic channels ecommerce sellers rely on to drive traffic to their store, whether it is Shopify, Etsy, or a marketplace listing.',
     whyItMatters:
-      'The best product in the world still needs buyers to find it, digital marketing skills are what turn a store with zero traffic into one with consistent daily sales.',
+      "The best product in the world still needs buyers to find it, digital marketing skills are what turn a store with zero traffic into one with consistent daily sales. Our [beginner's ad budget framework](/blog/facebook-google-ads-budget-for-beginners/) covers exactly how much to spend when testing campaigns, and our [Google & Meta Ads service](/services/google-meta-ads/) manages campaigns hands-on once you're ready to scale.",
     curriculum: [
       'Facebook & Instagram ad campaigns from scratch',
       'Google Shopping & search ads fundamentals',

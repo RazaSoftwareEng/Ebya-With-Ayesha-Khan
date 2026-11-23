@@ -8,6 +8,7 @@ import { verifiedReviews } from '../data/reviews'
 import { enrollFormUrl, site, siteUrl, whatsappLink } from '../siteConfig'
 import { pageUrl } from '../seoUtils'
 import { AccentCard, CourseCard, FaqList, IconTile, SectionHeading } from '../components/ui'
+import { renderInline } from '../components/richText'
 import { accentAt, btnPrimary, courseAccent } from '../components/uiTokens'
 import {
   IconArrowRight,
@@ -257,7 +258,7 @@ export default function CourseDetail() {
               <AccentCard accent={b.a}>
                 <IconTile accent={b.a} icon={b.icon} size="sm" />
                 <h2 className="relative mt-5 font-heading text-xl font-bold text-navy-900">{b.title}</h2>
-                <p className="relative mt-2 text-[15px] leading-relaxed text-slate-600">{b.text}</p>
+                <p className="relative mt-2 text-[15px] leading-relaxed text-slate-600">{renderInline(b.text)}</p>
               </AccentCard>
             </Reveal>
           ))}
@@ -304,7 +305,7 @@ export default function CourseDetail() {
               <IconUsers width={22} height={22} />
             </span>
             <h2 className="relative font-heading text-2xl font-bold text-navy-900 sm:text-3xl">Who it&apos;s for</h2>
-            <p className="relative max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">{course.whoItsFor}</p>
+            <p className="relative max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">{renderInline(course.whoItsFor)}</p>
             <a href={enrollFormUrl} target="_blank" rel="noopener noreferrer" className={`relative ${btnPrimary}`}>
               Enroll for {course.fee} <IconArrowRight width={16} height={16} />
             </a>

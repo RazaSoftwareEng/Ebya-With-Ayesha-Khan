@@ -237,7 +237,7 @@ function FaqItem({ faq, isOpen, onToggle }) {
 }
 
 function HeroGraphic() {
-  const shown = courses.slice(0, 3)
+  const shown = courses
   return (
     <div className="relative mx-auto w-full max-w-md lg:max-w-none">
       <div className="pointer-events-none absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-brand-100/70 via-white to-gold-100/70" />
@@ -261,7 +261,7 @@ function HeroGraphic() {
           </span>
         </div>
 
-        <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Popular courses</p>
+        <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Our courses</p>
         <ul className="mt-3 space-y-2">
           {shown.map((c) => (
             <li key={c.slug}>
