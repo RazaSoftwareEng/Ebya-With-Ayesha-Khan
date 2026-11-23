@@ -1249,6 +1249,96 @@ export const blogPosts = [
       },
     ],
   },
+  {
+    slug: 'how-pakistani-sellers-get-paid-payoneer-fund-holds',
+    title: 'How Pakistani Online Sellers Actually Get Paid: Payoneer, Payouts and Avoiding Fund Holds',
+    excerpt:
+      "Making a sale is only half the job, getting the money out of eBay, Etsy or Shopify and into your bank account in Pakistan is a separate skill. Here's how payouts really work, and how to avoid a frozen balance.",
+    category: 'Payments & Payouts',
+    author: 'Ayesha Khan',
+    date: '2026-11-22',
+    readTime: '10 min read',
+    icon: IconGlobe,
+    thumb: 'from-violet-600 to-indigo-900',
+    body: [
+      {
+        type: 'p',
+        text: "A sale on eBay, Etsy or Shopify feels like the finish line, but for a seller in Pakistan it's really the halfway point. The real question is how that money, sitting in a foreign marketplace's system, actually reaches your bank account, and why it sometimes doesn't for weeks. This guide walks through how payouts work on each major platform, what triggers a fund hold, and what to do to keep your cash flow predictable.",
+      },
+      { type: 'h2', text: 'Why This Trips Up So Many New Sellers', icon: IconGlobe },
+      {
+        type: 'p',
+        text: "Most beginners focus entirely on getting the sale and never research how they'll actually withdraw the money until it's already stuck. International marketplaces weren't built with Pakistan's banking system in mind, so there's always a middle step, a payment processor that converts and routes the funds, before anything lands in a local account. Understanding that step before your first sale saves weeks of confusion later.",
+      },
+      { type: 'h2', text: 'Payoneer: The Standard Choice for Pakistani Sellers', icon: IconShield },
+      {
+        type: 'p',
+        text: "[Payoneer](https://www.payoneer.com/) is the payout method most Pakistani eBay and Etsy sellers rely on. You link a Payoneer account to your marketplace account, the marketplace pays Payoneer in US dollars (or another supported currency), and you withdraw from Payoneer to your local Pakistani bank account. Approval isn't automatic, Payoneer reviews new accounts, so apply early, before you need your first payout, not after a sale is already waiting to clear.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Use your real, verifiable identity documents, mismatched details are the most common rejection reason',
+          'Link Payoneer to your marketplace account before your first sale, not after',
+          'Keep your Payoneer profile details (address, phone) consistent with your marketplace account',
+          'Expect a currency conversion fee on withdrawal, factor it into your pricing, not as a surprise later',
+        ],
+      },
+      { type: 'h2', text: 'How Each Platform Actually Pays You', icon: IconChart },
+      {
+        type: 'p',
+        text: "Payout mechanics differ by platform, and assuming they all work the same way causes real mistakes. On our [eBay Selling Mastery](/courses/ebay/) and [Etsy Shop Launch](/courses/etsy/) courses, we walk students through each platform's live payment dashboard, not just the theory, because the settings that matter are buried differently on every platform.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'eBay: pays out through its managed payments system, typically to a linked Payoneer account for Pakistani sellers, on a rolling schedule',
+          'Etsy: pays through Etsy Payments, with Payoneer again the common bridge for sellers without a supported local bank option',
+          'Shopify: depends on which payment gateway you connect, since Shopify Payments isn\'t available everywhere, most Pakistani store owners connect a gateway through our [Shopify store setup service](/services/shopify-store-setup/) to get this right from day one',
+          'TikTok Shop: settles through its own seller payment system, with its own verification and schedule, covered hands-on in our [TikTok Shop course](/courses/tiktok-shop/)',
+        ],
+      },
+      { type: 'h2', text: 'Why Marketplaces Freeze or Hold Your Funds', icon: IconBox },
+      {
+        type: 'p',
+        text: "A payout hold almost always traces back to account health, not bad luck. New accounts, sudden spikes in sales volume, buyer complaints, late shipments or policy violations all trigger a marketplace to hold funds until it's confident the transaction is legitimate and the buyer is satisfied. We cover the exact triggers and recovery steps in [what to do if your eBay account gets suspended](/blog/ebay-account-suspended-what-to-do/), the same underlying causes apply to fund holds across every platform.",
+      },
+      {
+        type: 'p',
+        text: "This is exactly the kind of issue our [account health & policy guidance service](/services/account-health-policy-guidance/) exists for, catching the warning signs before a hold happens, rather than scrambling to fix it after your cash flow is already stuck.",
+      },
+      { type: 'h2', text: 'A Practical Checklist for Avoiding a Payout Hold', icon: IconCheck },
+      {
+        type: 'ul',
+        items: [
+          'Ship every order on time and upload tracking the same day it moves',
+          'Keep your account information (name, address, phone) fully verified and consistent everywhere',
+          'Respond to buyer messages and disputes quickly, before they escalate into a claim',
+          'Avoid sudden, unexplained jumps in sales volume in your first few months, scale gradually instead',
+          'Read each platform\'s payment and selling policies directly rather than relying on forum advice',
+        ],
+      },
+      { type: 'h2', text: 'Currency Conversion Fees Quietly Eating Your Margin', icon: IconChart },
+      {
+        type: 'p',
+        text: "Every step between a foreign marketplace and your local bank account typically takes a small cut, the marketplace's payment processing fee, Payoneer's withdrawal fee, and the exchange rate spread when dollars convert to rupees. None of these individually feel large, but stacked together they can quietly erase a thin margin. Build these costs into your pricing from the start rather than discovering them after a month of sales looks less profitable than it should.",
+      },
+      { type: 'h2', text: 'Reducing Your Dependence on Any One Payout System', icon: IconMonitor },
+      {
+        type: 'p',
+        text: "Selling exclusively through marketplaces means your entire cash flow depends on their payment systems and their rules. Many sellers eventually add their own website with a direct payment gateway, giving them a second, independent channel for revenue. We explore this trade-off fully in [marketplace selling vs. your own website](/blog/marketplace-vs-your-own-website/), and our [business website development](/services/business-website-development/) and [ecommerce solutions](/services/ecommerce-solutions/) services can build that channel for you once you're ready to diversify.",
+      },
+      { type: 'h2', text: 'Once Your Payouts Are Stable', icon: IconRocket },
+      {
+        type: 'p',
+        text: "Predictable payouts are what let you reinvest in inventory and ads with confidence instead of guessing when money will actually arrive. Once you've got a reliable rhythm, our guide on [scaling past your first 100 sales](/blog/scaling-past-first-100-sales/) covers the next stage, growing volume without breaking the account health that keeps your funds flowing smoothly.",
+      },
+      {
+        type: 'p',
+        text: "Payout setup, Payoneer verification and account health are covered hands-on inside every course at Ayesha Khan Official, so you're never guessing how to actually get your money. [Contact us](/contact/) if you'd like help setting this up correctly from day one.",
+      },
+    ],
+  },
 ]
 
 export function getBlogPostBySlug(slug) {
