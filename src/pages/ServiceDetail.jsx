@@ -7,6 +7,7 @@ import { buildServiceFaqs } from '../data/serviceFaqs'
 import { site, siteUrl, whatsappLink } from '../siteConfig'
 import { pageUrl } from '../seoUtils'
 import { AccentCard, DetailHero, FaqList, IconTile, SectionHeading, ServiceCard } from '../components/ui'
+import { renderInline } from '../components/richText'
 import { accentAt, btnGreen, btnOutline } from '../components/uiTokens'
 import { IconAward, IconChart, IconChat, IconCheck, IconPhone, IconTarget, IconUsers, IconWhatsApp } from '../components/icons'
 
@@ -99,7 +100,7 @@ export default function ServiceDetail() {
               <AccentCard accent={b.a}>
                 <IconTile accent={b.a} icon={b.icon} size="sm" />
                 <h2 className="relative mt-5 font-heading text-xl font-bold text-navy-900">{b.title}</h2>
-                <p className="relative mt-2 text-[15px] leading-relaxed text-slate-600">{b.text}</p>
+                <p className="relative mt-2 text-[15px] leading-relaxed text-slate-600">{renderInline(b.text)}</p>
               </AccentCard>
             </Reveal>
           ))}
@@ -138,7 +139,7 @@ export default function ServiceDetail() {
               <IconUsers width={22} height={22} />
             </span>
             <h2 className="relative mt-5 font-heading text-2xl font-bold text-navy-900 sm:text-3xl">Who it&apos;s for</h2>
-            <p className="relative mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">{service.whoItsFor}</p>
+            <p className="relative mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">{renderInline(service.whoItsFor)}</p>
           </Reveal>
         </div>
       </section>

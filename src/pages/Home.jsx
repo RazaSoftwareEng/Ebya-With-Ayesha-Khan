@@ -35,7 +35,7 @@ import {
   LogoTikTok,
 } from '../components/brandLogos'
 import { site, whatsappLink } from '../siteConfig'
-import { courses } from '../data/courses'
+import { courses, startingFee } from '../data/courses'
 
 // Soft, per-course accent used for the icon tiles (light surfaces, no heavy gradients).
 const courseTint = {
@@ -45,12 +45,13 @@ const courseTint = {
   etsy: 'bg-orange-50 text-orange-600',
   ai: 'bg-violet-50 text-violet-600',
   'digital-marketing': 'bg-sky-50 text-sky-600',
+  dropshipping: 'bg-indigo-50 text-indigo-600',
 }
 
-const fee = courses[0].fee
+const fee = startingFee
 
 const facts = [
-  { icon: IconTag, label: 'Course fee', value: `${fee} each` },
+  { icon: IconTag, label: 'Course fee', value: `From ${fee}` },
   { icon: IconClock, label: 'Duration', value: '3 months' },
   { icon: IconGlobe, label: 'Classes', value: 'Online & in-person' },
   { icon: IconLocation, label: 'Campus', value: site.address },
@@ -347,8 +348,8 @@ function CoursesSlide() {
         </h1>
 
         <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-600">
-          Practical, mentor-led courses in eBay, Shopify, TikTok Shop, Etsy, AI and digital marketing, taught by
-          Ayesha Khan in {site.address} and online.
+          Practical, mentor-led courses in eBay, Shopify, TikTok Shop, Etsy, dropshipping, AI and digital marketing,
+          taught by Ayesha Khan in {site.address} and online.
         </p>
 
         <div className="mt-6 flex flex-wrap gap-3">
@@ -760,7 +761,7 @@ function EnrollPopup() {
             Your journey to <span className="text-brand-600">earning online</span> starts here
           </p>
           <p className="mt-2 text-sm text-slate-600">
-            3-month, mentor-led courses, {fee} each, online or in Lahore.
+            3-month, mentor-led courses, from {fee}, online or in Lahore.
           </p>
         </div>
 
@@ -872,9 +873,9 @@ export default function Home() {
             <SectionHeading
               eyebrow="Our courses"
               icon={IconAward}
-              title="Six practical courses. One clear path to"
+              title="Seven practical courses. One clear path to"
               highlight="selling online."
-              desc={`Every course runs for 3 months with weekly classes and hands-on assignments, ${fee} each.`}
+              desc={`Every course runs for 3 months with weekly classes and hands-on assignments, from ${fee}.`}
             />
             <Link
               to="/courses/"

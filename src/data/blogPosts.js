@@ -1068,7 +1068,7 @@ export const blogPosts = [
       { type: 'h2', text: '4. Is the Fee Clear Up Front?', icon: IconTag },
       {
         type: 'p',
-        text: "You should know the full fee before you visit, with no surprise advanced module charges halfway through. Ask whether software, tools or account setup cost extra. For reference, every course at Ayesha Khan Official, eBay, Shopify, TikTok Shop, Etsy, AI and digital marketing, is Rs. 25,000 for the complete three-month course, and that is listed on each course page.",
+        text: "You should know the full fee before you visit, with no surprise advanced module charges halfway through. Ask whether software, tools or account setup cost extra. For reference, courses at Ayesha Khan Official start from [Rs. 9,000](/courses/) for the complete three-month course, and the exact fee for each one is listed on its own course page.",
       },
       { type: 'h2', text: '5. Online, In-Person, or Both?', icon: IconGlobe },
       {

@@ -19,7 +19,7 @@ import {
   IconMonitor,
 } from './icons'
 import { site, enrollFormUrl, whatsappLink } from '../siteConfig'
-import { courses } from '../data/courses'
+import { courses, startingFee } from '../data/courses'
 import { services } from '../data/services'
 import ayeshaAvatar from './assets/ayesha-avatar.webp'
 import ThemeToggle from './ThemeToggle'
@@ -306,7 +306,7 @@ export default function Navbar() {
                     <span className="inline-block rounded-full bg-emerald-500 px-2.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase">
                       Admissions open
                     </span>
-                    <p className="mt-3 font-heading text-2xl font-bold text-navy-900">{courses[0].fee}</p>
+                    <p className="mt-3 font-heading text-2xl font-bold text-navy-900">From {startingFee}</p>
                     <p className="text-xs text-slate-500">per course · 3 months</p>
                     <p className="mt-3 text-xs leading-relaxed text-slate-600">
                       Online &amp; in-person classes in {site.address}.

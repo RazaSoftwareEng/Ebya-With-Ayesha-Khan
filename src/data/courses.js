@@ -1,4 +1,4 @@
-import { IconTag, IconShoppingBag, IconTiktok, IconGift, IconSparkles, IconMegaphone } from '../components/icons'
+import { IconTag, IconShoppingBag, IconTiktok, IconGift, IconSparkles, IconMegaphone, IconRocket } from '../components/icons'
 
 export const courses = [
   {
@@ -6,8 +6,8 @@ export const courses = [
     title: 'eBay Selling Mastery',
     level: 'Beginner to Advanced',
     duration: '3 Months',
-    fee: 'Rs. 25,000',
-    feeAmount: 25000,
+    fee: 'Rs. 30,000',
+    feeAmount: 30000,
     mode: 'Online / In-Person',
     icon: IconTag,
     tag: 'Bestseller',
@@ -55,8 +55,8 @@ export const courses = [
     title: 'Shopify Store Mastery',
     level: 'Beginner to Advanced',
     duration: '3 Months',
-    fee: 'Rs. 25,000',
-    feeAmount: 25000,
+    fee: 'Rs. 21,000',
+    feeAmount: 21000,
     mode: 'Online / In-Person',
     icon: IconShoppingBag,
     thumb: 'from-emerald-600 to-teal-700',
@@ -89,8 +89,8 @@ export const courses = [
     title: 'TikTok Shop Selling',
     level: 'Beginner to Intermediate',
     duration: '3 Months',
-    fee: 'Rs. 25,000',
-    feeAmount: 25000,
+    fee: 'Rs. 30,000',
+    feeAmount: 30000,
     mode: 'Online',
     icon: IconTiktok,
     tag: 'Trending',
@@ -124,8 +124,8 @@ export const courses = [
     title: 'Etsy Store Success',
     level: 'Beginner to Intermediate',
     duration: '3 Months',
-    fee: 'Rs. 25,000',
-    feeAmount: 25000,
+    fee: 'Rs. 30,000',
+    feeAmount: 30000,
     mode: 'Online',
     icon: IconGift,
     thumb: 'from-amber-500 to-orange-600',
@@ -158,8 +158,8 @@ export const courses = [
     title: 'AI for Ecommerce Sellers',
     level: 'All Levels',
     duration: '3 Months',
-    fee: 'Rs. 25,000',
-    feeAmount: 25000,
+    fee: 'Rs. 3,000/month',
+    feeAmount: 9000,
     mode: 'Online',
     icon: IconSparkles,
     tag: 'New',
@@ -193,8 +193,8 @@ export const courses = [
     title: 'Digital Marketing for Ecommerce',
     level: 'Beginner to Advanced',
     duration: '3 Months',
-    fee: 'Rs. 25,000',
-    feeAmount: 25000,
+    fee: 'Rs. 30,000',
+    feeAmount: 30000,
     mode: 'Online / In-Person',
     icon: IconMegaphone,
     thumb: 'from-sky-600 to-blue-800',
@@ -222,4 +222,45 @@ export const courses = [
     whoItsFor:
       'Store owners and sellers on any platform who want consistent traffic instead of relying on luck.',
   },
+  {
+    slug: 'dropshipping',
+    title: 'Dropshipping Mastery',
+    level: 'Beginner to Intermediate',
+    duration: '3 Months',
+    fee: 'Rs. 5,000/month',
+    feeAmount: 15000,
+    mode: 'Online / In-Person',
+    icon: IconRocket,
+    tag: 'Low Investment',
+    thumb: 'from-indigo-600 to-violet-800',
+    desc: 'Start selling online without holding any inventory, from picking a winning product to automating order fulfillment on eBay and Shopify.',
+    points: [
+      'Winning product research & supplier vetting',
+      'Store or listing setup for dropshipping',
+      'Order automation & fulfillment workflow',
+      'Scaling into bulk inventory once a product is proven',
+    ],
+    whatIsIt:
+      "Dropshipping is a business model where you list and sell a product without stocking it yourself, your supplier ships it directly to the customer once an order comes in.",
+    whyItMatters:
+      "It's the lowest-investment way to start selling online, letting you test multiple products and niches before committing real money to inventory. Read our [clear explanation of dropshipping for Pakistani sellers](/blog/dropshipping-kya-hai-pakistan-mein/) and [how to find winning dropshipping products](/blog/find-winning-dropshipping-products/), or let our [dropshipping setup & automation service](/services/dropshipping-setup-automation/) build the backend for you.",
+    curriculum: [
+      'How dropshipping actually works, platform by platform',
+      'Winning product research, demand, margin & competition',
+      'Vetting suppliers & ordering samples before committing',
+      'Setting up listings or a store for a dropshipping workflow',
+      'Automating order routing, tracking sync & fulfillment',
+      'Pricing for margin after shipping, fees & ad spend',
+      'Handling returns, disputes & customer service',
+      'Deciding when and how to move a winning product into bulk inventory',
+    ],
+    whoItsFor:
+      'Beginners with a limited starting budget who want to test online selling before investing in inventory, and existing sellers wanting to automate a manual fulfillment process.',
+  },
 ]
+
+// Lowest course fee across the catalog, used anywhere the site promises a
+// starting price instead of a flat "every course costs X" figure, since fees
+// now vary by course (see each course's feeAmount above).
+export const startingFeeAmount = Math.min(...courses.map((c) => c.feeAmount))
+export const startingFee = `Rs. ${startingFeeAmount.toLocaleString('en-US')}`

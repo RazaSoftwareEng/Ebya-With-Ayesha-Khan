@@ -40,6 +40,7 @@ const categoryCourse = {
   Etsy: 'etsy',
   'AI Tools': 'ai',
   'Digital Marketing': 'digital-marketing',
+  'Dropshipping Basics': 'dropshipping',
 }
 const courseForPost = (post) =>
   courses.find((c) => c.slug === (categoryCourse[post.category] ?? 'ebay')) ?? courses[0]

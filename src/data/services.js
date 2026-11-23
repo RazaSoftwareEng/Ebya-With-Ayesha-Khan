@@ -83,7 +83,7 @@ export const services = [
     whatIsIt:
       'The complete dropshipping backend: supplier integration, automated order routing, tracking sync and the tools that let orders fulfill themselves without you manually processing each one.',
     whyItMatters:
-      "Dropshipping only scales when fulfillment is automated. Sellers who process every order by hand hit a ceiling fast, and usually hit it right when sales start picking up.",
+      "Dropshipping only scales when fulfillment is automated. Sellers who process every order by hand hit a ceiling fast, and usually hit it right when sales start picking up. If you'd rather learn the full model yourself first, our [Dropshipping Mastery course](/courses/dropshipping/) covers product research through to automation hands-on.",
     included: [
       'Supplier/platform integration (AliExpress, CJ, local suppliers & more)',
       'Automated order routing and tracking sync',

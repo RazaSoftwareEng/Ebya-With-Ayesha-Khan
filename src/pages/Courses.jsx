@@ -8,7 +8,7 @@ import { CourseCard, SectionHeading } from '../components/ui'
 import { btnGreen, btnOutline } from '../components/uiTokens'
 import { IconArrowRight, IconClose, IconStar, IconWhatsApp } from '../components/icons'
 import { whatsappLink } from '../siteConfig'
-import { courses } from '../data/courses'
+import { courses, startingFee } from '../data/courses'
 
 export default function Courses() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -32,7 +32,7 @@ export default function Courses() {
     <>
       <Seo
         title="eBay, Shopify & TikTok Shop Courses in Lahore"
-        description="Practical, mentor-led courses in eBay, Shopify, TikTok Shop, Etsy, AI for ecommerce, and digital marketing in Lahore, Pakistan, for beginners through to companies."
+        description="Practical, mentor-led courses in eBay, Shopify, TikTok Shop, Etsy, dropshipping, AI for ecommerce, and digital marketing in Lahore, Pakistan, for beginners through to companies."
         keywords="eBay course in Lahore, eBay course fees in Lahore, Shopify course Lahore, TikTok Shop course Pakistan, Etsy course Pakistan, AI for ecommerce course Lahore, digital marketing course Lahore, ecommerce courses Pakistan, dropshipping course Lahore, best ecommerce institute Lahore"
         path="/courses"
       />
@@ -41,7 +41,7 @@ export default function Courses() {
         eyebrow="Our Courses"
         title="Master the platforms that"
         highlight="actually sell."
-        subtitle={`eBay, Shopify, TikTok Shop, Etsy, AI and digital marketing. Every course is 3 months, mentor-led and hands-on, ${courses[0].fee} each.`}
+        subtitle={`eBay, Shopify, TikTok Shop, Etsy, dropshipping, AI and digital marketing. Every course is 3 months, mentor-led and hands-on, from ${startingFee}.`}
       />
 
       <section className="bg-gradient-to-b from-white via-slate-50/70 to-white py-14 sm:py-16 lg:py-20">
